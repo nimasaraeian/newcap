@@ -1,55 +1,61 @@
-# NEWCAP — وب‌سایت
+# NEWCAP — kurumsal web sitesi / وب‌سایت شرکتی / corporate website
 
-سایت دوزبانه (فارسی / انگلیسی) شرکت NEWCAP، ساخته‌شده بر اساس بوردهای هویت برند.
+Static, pre-rendered, trilingual (EN / FA / TR).
 
-## ساختار
+## Why it is built this way
 
-سایت یک فایل HTML خودبسنده است. تمام تصاویر، آیکون‌ها و استایل‌ها داخل همان فایل جاسازی شده‌اند، پس هیچ مرحلهٔ build، هیچ وابستگی npm و هیچ سرویس تصویر بیرونی لازم نیست. تنها منبع بیرونی، فونت‌ها از Google Fonts است.
+Every language and every page is a **real URL with a real HTML file**, so
+search engines index them without executing JavaScript first:
 
 ```
-index.html            کل سایت — هفت صفحه با مسیریابی hash
-favicon-512.png       نشان NC
-favicon-256.png
-apple-touch-icon.png
-og.png                کارت پیش‌نمایش شبکه‌های اجتماعی
-vercel.json           هدرهای امنیتی و کشینگ
-robots.txt            دامنه را در آن جایگزین کنید
+/                     /fa/                  /tr/
+/products             /fa/products          /tr/products
+/industries           /insights/filling-line            ... 36 pages total
 ```
 
-## صفحات
+Each file carries its own `<title>`, meta description, canonical URL,
+`hreflang` alternates for all three languages, Open Graph tags and
+schema.org JSON-LD (Organization, WebPage, BreadcrumbList and Article on
+the insight pages). `sitemap.xml` lists all 36 URLs with their language
+alternates; `robots.txt` points at it.
 
-`#/` خانه · `#/products` محصولات · `#/industries` صنایع · `#/capabilities` توانمندی‌ها · `#/quality` کیفیت · `#/about` درباره ما · `#/resources` منابع · `#/contact` تماس
+CSS and JavaScript are shared files under `/assets`, so a visitor downloads
+them once and every later page is about 21 KB.
 
-## استقرار روی Vercel
+## Structure
 
-**روش یک — کشیدن و رها کردن (سریع‌ترین)**
-
-به `vercel.com/new` بروید و پوشه را داخل کادر رها کنید. Vercel آن را به‌عنوان سایت ایستا تشخیص می‌دهد و ظرف چند ثانیه یک دامنهٔ موقت `*.vercel.app` می‌دهد.
-
-**روش دو — از طریق Git**
-
-```bash
-git init
-git add .
-git commit -m "NEWCAP website"
-git remote add origin https://github.com/YOUR-ORG/newcap.git
-git push -u origin main
+```
+index.html + 35 more    one folder per route, per language
+assets/app.css          shared stylesheet
+assets/app.js           shared application
+img/*.webp              product imagery
+og.png                  social preview card
+favicon-*.png, apple-touch-icon.png
+sitemap.xml, robots.txt, vercel.json
 ```
 
-سپس در Vercel روی Import Git Repository بزنید. تنظیمات build را خالی بگذارید — پروژه فریم‌ورک ندارد.
+## Deploy
 
-**روش سه — خط فرمان**
+**Drag and drop** — open `vercel.com/new` and drop this folder in. Vercel
+detects a static site; no build step, no framework.
 
-```bash
-npm i -g vercel
-vercel          # پیش‌نمایش
-vercel --prod   # نسخهٔ نهایی
-```
+**Git** — push the folder, then import the repository in Vercel. Leave all
+build settings empty.
 
-## کارهای باقی‌مانده پیش از انتشار عمومی
+**CLI** — `npm i -g vercel` then `vercel --prod`.
 
-- [ ] جایگزینی تصاویر با رندرهای اصلی با رزولوشن بالا
-- [ ] جایگزینی شمارهٔ تماس، ایمیل و نشانی واقعی در صفحهٔ تماس
-- [ ] بازبینی متون فنی صفحات محصولات، کیفیت و توانمندی‌ها با داده‌های واقعی
-- [ ] وصل‌کردن فرم تماس به یک سرویس دریافت فرم (فرم فعلی فقط برنامهٔ ایمیل را باز می‌کند)
-- [ ] افزودن sitemap.xml و تنظیم دامنه در robots.txt
+## Before going live
+
+1. Set the real domain: change `SITE` at the top of the build script and
+   regenerate, or find-and-replace `https://newcap.ir` across the HTML,
+   `sitemap.xml` and `robots.txt`. Canonicals and hreflang depend on it.
+2. Replace the product imagery with the original high-resolution renders.
+3. Replace the placeholder phone number, email and address on the contact page.
+4. Add the real social profile URLs — the three footer icons currently link to `#`.
+5. Review the technical copy on Products, Quality and Capabilities against
+   real NEWCAP data, especially anything implying a certification.
+6. Have a native Turkish speaker in the packaging trade review the TR copy.
+7. Connect the contact form to a form service; it currently opens the
+   visitor's email client.
+8. Add publication dates to the insight articles and extend the Article
+   JSON-LD with `datePublished`.
