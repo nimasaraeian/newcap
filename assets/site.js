@@ -20,7 +20,7 @@ const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 function settle(el){
   if (!el.hasAttribute('data-rv')) return;
   const d = parseFloat(getComputedStyle(el).getPropertyValue('--d')) || 0;
-  const extra = el.closest('.hero') ? 700 : 0;
+  const extra = el.closest('.hero') ? 150 : 0;
   setTimeout(() => el.removeAttribute('data-rv'), reduce ? 0 : d + extra + 2400);
 }
 const io = new IntersectionObserver(es=>{
@@ -47,7 +47,7 @@ function watch(el){
 function initMotion(root){
   root.querySelectorAll('.grid4 .pcard').forEach((el,i)=>el.style.setProperty('--d',(i*90)+'ms'));
   root.querySelectorAll('.indrow .icard').forEach((el,i)=>el.style.setProperty('--d',(i*80)+'ms'));
-  root.querySelectorAll('.vals li').forEach((el,i)=>el.style.setProperty('--d',(1150+i*120)+'ms'));
+  root.querySelectorAll('.vals li').forEach((el,i)=>el.style.setProperty('--d',(480+i*90)+'ms'));
   root.querySelectorAll('.checks li').forEach((el,i)=>el.style.setProperty('--d',(i*110)+'ms'));
   root.querySelectorAll('.steps .stp, .tiles .tile').forEach((el,i)=>el.style.setProperty('--d',(i*70)+'ms'));
   root.querySelectorAll('[data-rv], .vals li, .checks li').forEach(watch);
@@ -702,6 +702,11 @@ function setTheme(t){
 }
 let stored = null;
 try { stored = localStorage.getItem('nc_theme'); } catch(e){}
+/* a shared link can choose the theme: ?theme=dark or ?theme=light */
+try {
+  const qt = new URLSearchParams(location.search).get('theme');
+  if (qt === 'dark' || qt === 'light') { stored = qt; localStorage.setItem('nc_theme', qt); }
+} catch(e){}
 root.setAttribute('data-theme',
   (stored === 'dark' || stored === 'light') ? stored
   : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
@@ -1699,8 +1704,8 @@ function initHero3D(){
     const AUTO = still ? 0 : .26, FALL = .95, INTRO = 3.6;
     const ease3 = x => 1 - Math.pow(1 - x, 3);
     const easeIO = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
-    let rot = still ? .2 : -2.2, vel = still ? 0 : 7, dragging = false, lastX = 0, lastT = 0, running = true, first = true;
-    let tilt = 0, tiltV = 0, lastY = 0, relT = -99, tt = 0, landT = -1, px = 0, py = 0, tx = 0, ty = 0, sp = 0, spS = 0;
+    let rot = .2, vel = still ? 0 : AUTO, dragging = false, lastX = 0, lastT = 0, running = true, first = true;
+    let tilt = 0, tiltV = 0, lastY = 0, relT = -99, tt = 0, landT = 0, px = 0, py = 0, tx = 0, ty = 0, sp = 0, spS = 0;
     const cv = renderer.domElement;
     cv.addEventListener('pointerdown', e => { dragging = true; lastX = e.clientX; lastY = e.clientY; lastT = performance.now(); cv.setPointerCapture(e.pointerId); });
     cv.addEventListener('pointermove', e => {
@@ -1735,7 +1740,7 @@ function initHero3D(){
       ticking = false;
       if (!running) return;
       const dt = Math.min(clock.getDelta(), .05); tt += dt;
-      const t = still ? 99 : tt;
+      const t = still ? 99 : tt + 30;   /* opening sequence skipped: start in the resting shot */
 
       /* the fall: accelerating, so the landing has weight */
       const fk = Math.min(1, t / FALL), drop = 1.9 * (1 - fk * fk);
@@ -1761,7 +1766,7 @@ function initHero3D(){
       if (!dragging) {
         const slow = .35 + .65 * (1 - Math.cos(rot)) / 2;
         vel += (AUTO * slow * (1 - face) - vel) * Math.min(1, dt * .95); rot += vel * dt;
-        if (face > .01 && tt > INTRO) { const tgt = Math.round(rot / (2 * Math.PI)) * 2 * Math.PI; rot += (tgt - rot) * Math.min(1, dt * 2.4 * face); }
+        if (face > .01) { const tgt = Math.round(rot / (2 * Math.PI)) * 2 * Math.PI; rot += (tgt - rot) * Math.min(1, dt * 2.4 * face); }
         if (tt - relT > 3.2) tilt += (0 - tilt) * Math.min(1, dt * 1.2);   /* the view settles back after a while */
       }
       cap.rotation.y = rot;

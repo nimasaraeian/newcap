@@ -854,7 +854,7 @@ html.js [data-rv].in{opacity:1;transform:none;filter:blur(0)}
 html.js h1[data-rv],html.js h2[data-rv]{clip-path:inset(100% -8% -30% -8%);transform:translate3d(0,42rem,0);filter:none}
 html.js h1[data-rv].in,html.js h2[data-rv].in{clip-path:inset(-30% -8% -30% -8%);transform:none}
 /* the hero plays after the cap has landed */
-html.js .hero [data-rv]{transition-duration:1.2s,1.6s,1.2s,1.6s;transition-delay:calc(var(--d,0ms) + 700ms)}
+html.js .hero [data-rv]{transition-duration:1.2s,1.6s,1.2s,1.6s;transition-delay:calc(var(--d,0ms) + 150ms)}
 html.js .hero .eyebrow i{transition:transform 1.3s var(--ease-c) .9s}
 html.js .hero .shot{transition:opacity 1.6s var(--ease-c),transform 2.6s var(--ease-c)}
 /* panels wipe open, their photo eases back from a push-in */
