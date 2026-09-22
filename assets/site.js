@@ -1741,7 +1741,7 @@ function initHero3D(){
     const fit = () => {
       const w = stage.clientWidth, h = stage.clientHeight; if (!w || !h) return;
       renderer.setSize(w, h, false); camera.aspect = w / h;
-      camera.fov = w / h < 1.15 ? 26 : 22;
+      camera.fov = w / h < 1.3 ? 27 : 22;
       camera.updateProjectionMatrix();
     };
     fit(); new ResizeObserver(fit).observe(stage);
@@ -1766,8 +1766,8 @@ function initHero3D(){
     const cv = renderer.domElement;
     /* touch screens on laptops and tablets with a trackpad or mouse turn the cap freely with a finger;
        on phones a vertical swipe still scrolls the page, so there the finger turns it sideways */
-    const FREE_TOUCH = matchMedia('(any-pointer: fine)').matches || innerWidth > 900;
-    if (FREE_TOUCH) cv.style.touchAction = 'none';
+    const FREE_TOUCH = true;                            /* a finger turns the cap in any direction, on phones as well */
+    cv.style.touchAction = 'none';                      /* the page still scrolls from anywhere outside the cap */
     cv.addEventListener('pointerdown', e => {
       if (e.pointerType === 'mouse' && e.button !== 0) return;
       e.preventDefault();                                /* no text selection or drag-image stealing the gesture */
@@ -1786,7 +1786,7 @@ function initHero3D(){
       if (!dragging) return;
       const now = performance.now(), k = Math.max(.016, (now - lastT) / 1000);
       const ay = (e.clientX - lastX) / cv.clientWidth * 4.2;
-      const ax = (e.pointerType === 'touch' && !FREE_TOUCH) ? 0 : (e.clientY - lastY) / cv.clientHeight * 4.2;
+      const ax = (e.clientY - lastY) / cv.clientHeight * 4.2;
       turn(ay, ax); wy = ay / k; wx = ax / k;
       lastX = e.clientX; lastY = e.clientY; lastT = now;
     });

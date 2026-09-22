@@ -1194,3 +1194,11 @@ html[dir="rtl"] .hero .stage .backshade{left:58%}
    and the still background lives on its own layer so scrolling never repaints it */
 html.js [data-rv]{filter:none!important}
 .ambient{will-change:transform;contain:strict}
+
+@media (max-width:900px){
+  .hero .stage{height:370px!important}
+  /* if the 3D cap cannot load, the fallback photo shows whole, not cut by a fade */
+  .hero .shot,:root[data-theme="dark"] .hero .shot{-webkit-mask-image:none!important;mask-image:none!important;object-fit:contain;background:transparent}
+  .hero .stage .drag-hint{bottom:10px;font-size:11.5px;padding:7px 14px 7px 30px}
+  html[dir="rtl"] .hero .stage .drag-hint{padding:7px 30px 7px 14px}
+}
