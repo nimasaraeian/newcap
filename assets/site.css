@@ -1159,3 +1159,38 @@ html[dir="rtl"] .pal-prog i{transform-origin:right center}
 .ambient .glow,.ambient .glow{filter:none!important}
 .ambient .g1{background:radial-gradient(closest-side,var(--amb-g1),transparent)}
 .ambient .g2{background:radial-gradient(closest-side,var(--amb-g2),transparent)}
+
+/* drag hint under the 3D cap */
+.hero .stage .drag-hint{position:absolute;z-index:2;left:50%;bottom:10rem;translate:-50% 0;pointer-events:none;
+  padding:6rem 14rem 6rem 30rem;border-radius:30rem;font-size:10rem;font-weight:600;letter-spacing:.04em;white-space:nowrap;
+  color:var(--navy);background:rgba(255,255,255,.86);
+  box-shadow:0 6rem 18rem rgba(8,24,48,.12);opacity:0;animation:hintIn .8s ease 1.6s forwards;transition:opacity .5s ease}
+.hero .stage .drag-hint::before{content:"⟲";position:absolute;left:12rem;top:50%;translate:0 -52%;font-size:13rem;color:var(--orange)}
+html[dir="rtl"] .hero .stage .drag-hint{padding:6rem 30rem 6rem 14rem}
+html[dir="rtl"] .hero .stage .drag-hint::before{left:auto;right:12rem}
+:root[data-theme="dark"] .hero .stage .drag-hint{color:#EAF1FA;background:rgba(10,30,60,.82)}
+.hero .stage .drag-hint.gone{opacity:0!important;animation:none}
+@keyframes hintIn{to{opacity:1}}
+@media (max-width:900px){ .hero .stage .drag-hint{font-size:11px;bottom:8px} }
+
+/* a soft shade behind the cap, as if thrown on a backdrop: depth without a visible set */
+.hero .stage .backshade{position:absolute;z-index:0;pointer-events:none;left:58%;top:43%;width:46%;height:66%;
+  translate:-50% -50%;border-radius:48% 48% 42% 42%;
+  background:radial-gradient(closest-side,rgba(10,24,48,.30),rgba(10,24,48,.12) 55%,rgba(10,24,48,0));filter:blur(18rem)}
+html[dir="rtl"] .hero .stage .backshade{left:58%}
+:root[data-theme="dark"] .hero .stage .backshade{background:radial-gradient(closest-side,rgba(0,4,14,.62),rgba(0,4,14,.25) 55%,rgba(0,4,14,0))}
+.hero .stage .glow3d{z-index:0}
+.hero .stage canvas{z-index:1}
+@media (max-width:900px){ .hero .stage .backshade{filter:blur(12px)} }
+
+.hero .stage,.hero .stage canvas{-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none}
+
+/* performance: a still background. The animated rings and drifting lights repainted the whole
+   viewport on every frame and made scrolling stutter */
+.ambient .ring svg,.ambient .tr,.ambient .glow{animation:none!important}
+.ambient .ring{translate:none!important;rotate:none!important}
+
+/* performance: reveals move and fade only (a blur on every revealing element was expensive while scrolling),
+   and the still background lives on its own layer so scrolling never repaints it */
+html.js [data-rv]{filter:none!important}
+.ambient{will-change:transform;contain:strict}
