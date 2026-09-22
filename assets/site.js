@@ -1,10 +1,10 @@
 
-const IMG = {"hero": "/img/hero.webp", "p1": "/img/p1.webp", "p4": "/img/p4.webp", "indphoto": "/img/indphoto.webp", "blueprint": "/img/blueprint.webp", "quality": "/img/quality.webp", "cta": "/img/cta.webp", "logo": "/img/logo.webp", "hi_navycap": "/img/hi_navycap.webp", "hi_whitecap": "/img/hi_whitecap.webp", "hi_colors": "/img/hi_colors.webp", "hi_bottles": "/img/hi_bottles.webp", "hi_mould": "/img/hi_mould.webp", "hi_capmacro": "/img/hi_capmacro.webp", "hi_capangle": "/img/hi_capangle.webp"};
-Object.assign(IMG, {"tg_qr": "/img/tg_qr.webp"});
-Object.assign(IMG, {"ps_9": "/img/ps_9.webp", "ps_10": "/img/ps_10.webp"});
-Object.assign(IMG, {"sc_yellow": "/img/sc_yellow.webp", "sc_teal": "/img/sc_teal.webp", "sc_blue": "/img/sc_blue.webp", "sc_green": "/img/sc_green.webp", "sc_orange": "/img/sc_orange.webp", "sc_red": "/img/sc_red.webp", "ps_4": "/img/ps_4.webp", "ps_5": "/img/ps_5.webp", "ps_6": "/img/ps_6.webp", "ps_7": "/img/ps_7.webp", "ps_8": "/img/ps_8.webp"});
-Object.assign(IMG, {"cap_orange": "/img/cap_orange.webp", "cap_red": "/img/cap_red.webp", "cap_green": "/img/cap_green.webp", "cap_teal": "/img/cap_teal.webp", "cap_blue": "/img/cap_blue.webp", "cap_yellow": "/img/cap_yellow.webp"});
-Object.assign(IMG, {"ph_line": "/img/ph_line.webp", "ph_macro": "/img/ph_macro.webp", "ph_studio": "/img/ph_studio.webp", "ph_soft": "/img/ph_soft.webp", "ps_1": "/img/ps_1.webp", "ps_2": "/img/ps_2.webp", "ps_3": "/img/ps_3.webp"});
+const IMG = {"hero": "/img/hero.webp?v=693b069d", "p1": "/img/p1.webp?v=45df4578", "p4": "/img/p4.webp?v=1af7f460", "indphoto": "/img/indphoto.webp?v=e04859e0", "blueprint": "/img/blueprint.webp?v=bd57a0dd", "quality": "/img/quality.webp?v=463d55ca", "cta": "/img/cta.webp?v=13d1a323", "logo": "/img/logo.webp?v=0fc668c3", "hi_navycap": "/img/hi_navycap.webp?v=0cf93cc4", "hi_whitecap": "/img/hi_whitecap.webp?v=e76284a2", "hi_colors": "/img/hi_colors.webp?v=e4ad5f8e", "hi_bottles": "/img/hi_bottles.webp?v=7ba517e8", "hi_mould": "/img/hi_mould.webp?v=37558f6b", "hi_capmacro": "/img/hi_capmacro.webp?v=b96ab2d5", "hi_capangle": "/img/hi_capangle.webp?v=e79cf0ff"};
+Object.assign(IMG, {"tg_qr": "/img/tg_qr.webp?v=9966a5ff"});
+Object.assign(IMG, {"ps_9": "/img/ps_9.webp?v=3d76e96c", "ps_10": "/img/ps_10.webp?v=958a394a"});
+Object.assign(IMG, {"sc_yellow": "/img/sc_yellow.webp?v=2483fb00", "sc_teal": "/img/sc_teal.webp?v=020b52e5", "sc_blue": "/img/sc_blue.webp?v=4767610f", "sc_green": "/img/sc_green.webp?v=868763f1", "sc_orange": "/img/sc_orange.webp?v=a7e116a7", "sc_red": "/img/sc_red.webp?v=65b8b595", "ps_4": "/img/ps_4.webp?v=04e00db5", "ps_5": "/img/ps_5.webp?v=062f62e8", "ps_6": "/img/ps_6.webp?v=65262a48", "ps_7": "/img/ps_7.webp?v=5c38449d", "ps_8": "/img/ps_8.webp?v=7dfc4f4b"});
+Object.assign(IMG, {"cap_orange": "/img/cap_orange.webp?v=0a3834f9", "cap_red": "/img/cap_red.webp?v=8a2132c9", "cap_green": "/img/cap_green.webp?v=af22c0dd", "cap_teal": "/img/cap_teal.webp?v=555cad38", "cap_blue": "/img/cap_blue.webp?v=a1767729", "cap_yellow": "/img/cap_yellow.webp?v=4b5148b7"});
+Object.assign(IMG, {"ph_line": "/img/ph_line.webp?v=7bd10cb8", "ph_macro": "/img/ph_macro.webp?v=544fffdb", "ph_studio": "/img/ph_studio.webp?v=ac1d02b0", "ph_soft": "/img/ph_soft.webp?v=caee72f4", "ps_1": "/img/ps_1.webp?v=2f1aaf47", "ps_2": "/img/ps_2.webp?v=a6e99921", "ps_3": "/img/ps_3.webp?v=46c6d608"});
 for (const [id,key] of [['logoTop','logo'],['logoBot','logo'],['heroShot','hero'],
   ['p1','p1'],['p4','p4'],['indShot','indphoto'],
   ['bpShot','blueprint'],['qShot','quality'],['ctaShot','cta']]) {
@@ -57,7 +57,6 @@ initMotion(document);
 /* hero opens on load rather than on scroll */
 requestAnimationFrame(()=>{
   document.querySelectorAll('.hero [data-rv], .hero .vals li, .hero .eyebrow').forEach(el=>{ el.classList.add('in'); settle(el); });
-  setTimeout(()=>document.getElementById('heroShot').classList.add('in'), reduce?0:80);
 });
 
 /* slow parallax on the CTA ridge line */
@@ -1442,13 +1441,20 @@ function initHero3D(){
   if (initHero3D.done) return;
   const hero = document.querySelector('.hero'), stage = document.getElementById('stage');
   if (!hero || !stage) return;
+  const shot = document.getElementById('heroShot');
+  const showShot = () => { if (!hero.classList.contains('has3d')) shot.classList.add('in'); };
   let probe; try { probe = document.createElement('canvas').getContext('webgl'); } catch(e){}
-  if (!probe) return;                                   /* no WebGL: the photo simply stays */
+  if (!probe) { showShot(); return; }                   /* no WebGL: the photo is shown instead */
   initHero3D.done = true;
-  const s = document.createElement('script');
-  s.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
-  s.onload = () => { try { build(); } catch(e) { console.warn('hero 3D disabled:', e); } };
-  document.head.appendChild(s);
+  setTimeout(showShot, 6000);                           /* very slow connection: photo, then the cap replaces it */
+  const load = (src, next) => {
+    const s = document.createElement('script'); s.src = src;
+    s.onload = () => { try { build(); } catch(e) { console.warn('hero 3D disabled:', e); showShot(); } };
+    s.onerror = next;
+    document.head.appendChild(s);
+  };
+  /* served from our own domain first (proxied and cached by the host), then the public CDN */
+  load('/vendor/three.min.js', () => load('https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js', showShot));
 
   function build(){
     const T = THREE;

@@ -4,10 +4,11 @@
 <meta charset="utf-8">
 <script>window.__BOOT__={"lang": "en", "route": "contact"};window.__SITE__="https://newcap.ir";</script>
 
-<meta name="color-scheme" content="light">
+<meta name="color-scheme" content="light dark">
 <link rel="icon" type="image/png" href="/favicon-512.png">
 <link rel="apple-touch-icon" href="/favicon-512.png">
 <meta name="theme-color" content="#0B2D58">
+<script>(function(){var d=document.documentElement;d.classList.add("js");try{var q=new URLSearchParams(location.search).get("theme"),t=(q==="dark"||q==="light")?q:localStorage.getItem("nc_theme");if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.setAttribute("data-theme",t)}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Tell us what you need to seal | NEWCAP Closures</title>
 <meta name="description" id="mDesc" content="The more you can tell us about the contents, the container and the filling line, the more useful our first reply will be.">
@@ -40,7 +41,7 @@
   <!-- ======================= HEADER ======================= -->
   <header class="hdr">
     <div class="wrap">
-      <a href="#/" aria-label="NEWCAP"><img class="logo logo-img" id="logoTop" alt="NEWCAP — Precision in Every Closure"></a>
+      <a href="#/" aria-label="NEWCAP"><img class="logo logo-img" src="/img/logo.webp?v=0fc668c3" id="logoTop" alt="NEWCAP — Precision in Every Closure"></a>
       <nav id="mainnav">
         <a href="#/" data-t="nav0">Home</a>
         <a href="#/products" data-t="nav1">Products</a>
@@ -78,7 +79,7 @@
   </header>
 
   <main id="main">
-  <div id="home">
+  <div id="home" hidden>
 
   <!-- ========================= HERO ========================= -->
   <section class="hero">
@@ -263,7 +264,48 @@
     </div>
   </section>
   </div><!-- /home -->
-  <div id="sub" hidden></div>
+  <div id="sub">
+<section class="psec phero"><div class="wrap">
+  <p class="eyebrow in" data-rv=""><span data-t="pn_eb">Let us build a cleaner tomorrow</span><i></i></p>
+  <h1 data-rv="" style="--d:90ms" data-t="pn_h1" class="in">Tell us what you need to seal</h1>
+  <p class="lede in" data-rv="" style="--d:170ms" data-t="pn_lede">The more you can tell us about the contents, the container and the filling line, the more useful our first reply will be.</p>
+  <div class="hr"></div>
+</div></section>
+
+<section class="psec"><div class="wrap">
+  <div class="cwrap">
+    <form class="frm in" id="ncForm" novalidate="" data-rv="">
+      <div class="fld"><label for="f_name" data-t="pn_l1">Name</label><input id="f_name" required=""></div>
+      <div class="fld"><label for="f_co" data-t="pn_l2">Company</label><input id="f_co"></div>
+      <div class="fld"><label for="f_mail" data-t="pn_l3">Email</label><input id="f_mail" type="email"></div>
+      <div class="fld"><label for="f_tel" data-t="pn_l4">Phone</label><input id="f_tel"></div>
+      <div class="fld full"><label for="f_sub" data-t="pn_l5">Enquiry type</label>
+        <select id="f_sub">
+          <option data-t="pn_o1">Standard closures</option>
+          <option data-t="pn_o2">Custom development</option>
+          <option data-t="pn_o3">Samples and testing</option>
+          <option data-t="pn_o4">Something else</option>
+        </select></div>
+      <div class="fld full"><label for="f_msg" data-t="pn_l6">What are you packing?</label>
+        <textarea id="f_msg" required=""></textarea></div>
+      <button class="btn-o" type="submit"><span data-t="pn_send">Send via WhatsApp</span>
+        <svg class="ar" viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M0 5h13M9.6 1 14 5l-4.4 4" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+      <p class="fmsg" id="ncFormMsg" data-t="pn_hint">Sending opens WhatsApp with your details filled in, ready to go to our sales team. Nothing is stored by this page.</p>
+    </form>
+    <aside class="info in" data-rv="" style="--d:120ms">
+      <h4 data-t="pn_iL">Direct contact</h4>
+      <div class="it"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1.8 3.2a1.4 1.4 0 0 1 1.4-1.4h1.9l1.1 2.8-1.4 1a8 8 0 0 0 3.6 3.6l1-1.4 2.8 1.1v1.9a1.4 1.4 0 0 1-1.4 1.4A10.6 10.6 0 0 1 1.8 3.2Z" stroke-linejoin="round"></path></svg>
+        <div><b data-t="pn_i1">Telephone</b><a dir="ltr" href="tel:+989032620344"><span data-t="pn_tel">+98 903 262 0344</span></a></div></div>
+      <div class="it"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2.1 12.2 2.9 9.6A5.6 5.6 0 1 1 5 11.5Z" stroke-linejoin="round"></path><path d="M5 4.9c0 2 1.9 4 4 4.1l.8-1-1.3-.7-.6.6c-.8-.3-1.5-1-1.8-1.8l.6-.6-.7-1.3Z" fill="currentColor" stroke="none"></path></svg>
+        <div><b data-t="pn_i5">WhatsApp</b><a href="https://wa.me/989032620344" target="_blank" rel="noopener"><span data-t="pn_wa">Message us on WhatsApp</span></a></div></div>
+      <div class="it"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="7" r="5.6"></circle><path d="M1.4 7h11.2M7 1.4a11 11 0 0 1 0 11.2A11 11 0 0 1 7 1.4Z"></path></svg>
+        <div><b data-t="pn_i3">Web</b><span dir="ltr">www.newcap.ir</span></div></div>
+      <div class="it"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 12.6s4.4-3.9 4.4-7a4.4 4.4 0 0 0-8.8 0c0 3.1 4.4 7 4.4 7Z" stroke-linejoin="round"></path><circle cx="7" cy="5.5" r="1.6"></circle></svg>
+        <div><b data-t="pn_i4">Address</b><span data-t="pn_i4v">Plot 79, corner of Qanun 5, Qanun 2, Qanun 1,<br>East Ibn Sina St., Eshtehard Industrial Estate,<br>Eshtehard, Iran</span></div></div>
+    </aside>
+  </div>
+</div></section></div>
 
   <!-- ========================== CTA ========================== -->
   <section class="cta" id="contact">
@@ -286,7 +328,7 @@
   <footer class="ftr" id="resources">
     <div class="wrap">
       <div class="ftop">
-        <a href="#/" aria-label="NEWCAP"><img class="logo logo-img" id="logoBot" alt="NEWCAP"></a>
+        <a href="#/" aria-label="NEWCAP"><img class="logo logo-img" src="/img/logo.webp?v=0fc668c3" id="logoBot" alt="NEWCAP"></a>
         <nav>
           <a href="#/" data-t="nav0">Home</a>
           <a href="#/products" data-t="nav1">Products</a>
@@ -323,6 +365,6 @@
   </div>
 </div>
 
-<script src="/assets/site.js?v=a5bbf97c"></script>
+<script src="/assets/site.js?v=88e9d542"></script>
 </body>
 </html>

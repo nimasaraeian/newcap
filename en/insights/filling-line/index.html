@@ -4,10 +4,11 @@
 <meta charset="utf-8">
 <script>window.__BOOT__={"lang": "en", "route": "insights/filling-line"};window.__SITE__="https://newcap.ir";</script>
 
-<meta name="color-scheme" content="light">
+<meta name="color-scheme" content="light dark">
 <link rel="icon" type="image/png" href="/favicon-512.png">
 <link rel="apple-touch-icon" href="/favicon-512.png">
 <meta name="theme-color" content="#0B2D58">
+<script>(function(){var d=document.documentElement;d.classList.add("js");try{var q=new URLSearchParams(location.search).get("theme"),t=(q==="dark"||q==="light")?q:localStorage.getItem("nc_theme");if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.setAttribute("data-theme",t)}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Why closures fail on the filling line | NEWCAP Closures</title>
 <meta name="description" id="mDesc" content="Most closure failures are not manufacturing defects. They are mismatches between three things that were specified separately.">
@@ -40,7 +41,7 @@
   <!-- ======================= HEADER ======================= -->
   <header class="hdr">
     <div class="wrap">
-      <a href="#/" aria-label="NEWCAP"><img class="logo logo-img" id="logoTop" alt="NEWCAP — Precision in Every Closure"></a>
+      <a href="#/" aria-label="NEWCAP"><img class="logo logo-img" src="/img/logo.webp?v=0fc668c3" id="logoTop" alt="NEWCAP — Precision in Every Closure"></a>
       <nav id="mainnav">
         <a href="#/" data-t="nav0">Home</a>
         <a href="#/products" data-t="nav1">Products</a>
@@ -78,7 +79,7 @@
   </header>
 
   <main id="main">
-  <div id="home">
+  <div id="home" hidden>
 
   <!-- ========================= HERO ========================= -->
   <section class="hero">
@@ -263,7 +264,27 @@
     </div>
   </section>
   </div><!-- /home -->
-  <div id="sub" hidden></div>
+  <div id="sub">
+<section class="psec phero"><div class="wrap">
+  <p class="eyebrow in" data-rv=""><span data-t="a1_cat">Engineering</span><i></i></p>
+  <h1 data-rv="" style="--d:90ms" data-t="a1_h1" class="in">Why closures fail on the filling line</h1>
+  <p class="lede in" data-rv="" style="--d:170ms" data-t="a1_lede">Most closure failures are not manufacturing defects. They are mismatches between three things that were specified separately.</p>
+  <div class="hr"></div>
+</div></section>
+<section class="psec"><div class="wrap">
+  <article class="art in" data-rv="">
+    <p class="kicker"><b data-t="a1_cat2">Engineering</b><span data-t="a1_rt">5 min read</span></p>
+    <p data-t="a1_p0">A closure rarely fails on its own. It fails in combination — with a neck finish that drifts, a capping head that applies more torque than the design assumed, or a product that behaves differently at forty degrees than it did in the laboratory.</p><h2 data-t="a1_s1">The neck finish is the usual suspect</h2><p data-t="a1_p1">Nominal sizes hide real variation. Two 28 mm finishes from different suppliers can differ in thread height, root diameter and the flatness of the sealing land. A closure designed against a drawing rather than a measured sample inherits that variation as a leak path.</p><h2 data-t="a1_s2">Torque is a window, not a number</h2><p data-t="a1_p2">Every closure has a torque range where it seals and still opens by hand. Set the capper below it and the pack leaks; above it and the liner distorts or the band shears. That window narrows as the closure ages, so it should be measured after conditioning, not only on fresh parts.</p><h2 data-t="a1_s3">The product is part of the seal</h2><p data-t="a1_p3">Surfactants creep along surfaces. Solvents swell polymers. Hot filling leaves a vacuum that pulls the panel inward as the contents cool. None of this shows up in a room-temperature water test, which is why compatibility trials have to run with the real formulation.</p><h2 data-t="a1_s4">What to specify instead</h2><p data-t="a1_p4">Give your supplier the measured neck finish, the capper settings, the fill temperature and the actual product. A closure specified against those four will survive the line. One specified against a catalogue number is a gamble that usually gets settled during a production run.</p>
+    <div class="end">
+      <a class="back" href="/en/resources">
+        <svg viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M0 5h13M9.6 1 14 5l-4.4 4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        <span data-t="ar_back">All insights</span></a>
+      <a class="btn-o" href="/en/contact" style="width:170rem;height:34rem">
+        <span data-t="ar_cta">Talk to us</span></a>
+    </div>
+  </article>
+</div></section></div>
 
   <!-- ========================== CTA ========================== -->
   <section class="cta" id="contact">
@@ -286,7 +307,7 @@
   <footer class="ftr" id="resources">
     <div class="wrap">
       <div class="ftop">
-        <a href="#/" aria-label="NEWCAP"><img class="logo logo-img" id="logoBot" alt="NEWCAP"></a>
+        <a href="#/" aria-label="NEWCAP"><img class="logo logo-img" src="/img/logo.webp?v=0fc668c3" id="logoBot" alt="NEWCAP"></a>
         <nav>
           <a href="#/" data-t="nav0">Home</a>
           <a href="#/products" data-t="nav1">Products</a>
@@ -323,6 +344,6 @@
   </div>
 </div>
 
-<script src="/assets/site.js?v=a5bbf97c"></script>
+<script src="/assets/site.js?v=88e9d542"></script>
 </body>
 </html>
