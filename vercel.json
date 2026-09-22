@@ -1,5 +1,11 @@
 {
   "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/vendor/three.min.js",
+      "destination": "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+    }
+  ],
   "redirects": [
     {
       "source": "/fa",
