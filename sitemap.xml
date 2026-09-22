@@ -1,327 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://newcap.ir/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/"/>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/fa/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/"/>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/tr/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/"/>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/products</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/products"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/products"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/products"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/products"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/fa/products</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/products"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/products"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/products"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/products"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/tr/products</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/products"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/products"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/products"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/products"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/industries</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/industries"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/industries"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/industries"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/industries"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/fa/industries</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/industries"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/industries"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/industries"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/industries"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/tr/industries</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/industries"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/industries"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/industries"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/industries"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/capabilities</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/capabilities"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/capabilities"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/capabilities"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/capabilities"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/fa/capabilities</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/capabilities"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/capabilities"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/capabilities"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/capabilities"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/tr/capabilities</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/capabilities"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/capabilities"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/capabilities"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/capabilities"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/quality</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/quality"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/quality"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/quality"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/quality"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/fa/quality</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/quality"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/quality"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/quality"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/quality"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/tr/quality</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/quality"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/quality"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/quality"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/quality"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/about</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/about"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/about"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/about"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/about"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/fa/about</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/about"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/about"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/about"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/about"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/tr/about</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/about"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/about"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/about"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/about"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/resources</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/resources"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/resources"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/resources"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/resources"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/fa/resources</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/resources"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/resources"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/resources"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/resources"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/tr/resources</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/resources"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/resources"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/resources"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/resources"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/contact</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/contact"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/contact"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/contact"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/contact"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/fa/contact</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/contact"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/contact"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/contact"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/contact"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/tr/contact</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/contact"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/contact"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/contact"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/contact"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/insights/filling-line</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/insights/filling-line"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/insights/filling-line"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/insights/filling-line"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/insights/filling-line"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/fa/insights/filling-line</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/insights/filling-line"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/insights/filling-line"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/insights/filling-line"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/insights/filling-line"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/tr/insights/filling-line</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/insights/filling-line"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/insights/filling-line"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/insights/filling-line"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/insights/filling-line"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/insights/sealing-systems</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/insights/sealing-systems"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/insights/sealing-systems"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/insights/sealing-systems"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/insights/sealing-systems"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/fa/insights/sealing-systems</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/insights/sealing-systems"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/insights/sealing-systems"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/insights/sealing-systems"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/insights/sealing-systems"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/tr/insights/sealing-systems</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/insights/sealing-systems"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/insights/sealing-systems"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/insights/sealing-systems"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/insights/sealing-systems"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/insights/tamper-evidence</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/insights/tamper-evidence"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/insights/tamper-evidence"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/insights/tamper-evidence"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/insights/tamper-evidence"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/fa/insights/tamper-evidence</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/insights/tamper-evidence"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/insights/tamper-evidence"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/insights/tamper-evidence"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/insights/tamper-evidence"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/tr/insights/tamper-evidence</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/insights/tamper-evidence"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/insights/tamper-evidence"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/insights/tamper-evidence"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/insights/tamper-evidence"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/insights/recyclability</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/insights/recyclability"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/insights/recyclability"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/insights/recyclability"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/insights/recyclability"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/fa/insights/recyclability</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/insights/recyclability"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/insights/recyclability"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/insights/recyclability"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/insights/recyclability"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://newcap.ir/tr/insights/recyclability</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/insights/recyclability"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/fa/insights/recyclability"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/insights/recyclability"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/insights/recyclability"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <url><loc>https://newcap.ir/</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/"/></url>
+  <url><loc>https://newcap.ir/products</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/products"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/products"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/products"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/products"/></url>
+  <url><loc>https://newcap.ir/industries</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/industries"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/industries"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/industries"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/industries"/></url>
+  <url><loc>https://newcap.ir/capabilities</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/capabilities"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/capabilities"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/capabilities"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/capabilities"/></url>
+  <url><loc>https://newcap.ir/quality</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/quality"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/quality"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/quality"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/quality"/></url>
+  <url><loc>https://newcap.ir/about</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/about"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/about"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/about"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/about"/></url>
+  <url><loc>https://newcap.ir/resources</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/resources"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/resources"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/resources"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/resources"/></url>
+  <url><loc>https://newcap.ir/contact</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/contact"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/contact"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/contact"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/contact"/></url>
+  <url><loc>https://newcap.ir/insights/filling-line</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/insights/filling-line"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/insights/filling-line"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/insights/filling-line"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/insights/filling-line"/></url>
+  <url><loc>https://newcap.ir/insights/sealing-systems</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/insights/sealing-systems"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/insights/sealing-systems"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/insights/sealing-systems"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/insights/sealing-systems"/></url>
+  <url><loc>https://newcap.ir/insights/tamper-evidence</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/insights/tamper-evidence"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/insights/tamper-evidence"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/insights/tamper-evidence"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/insights/tamper-evidence"/></url>
+  <url><loc>https://newcap.ir/insights/recyclability</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/insights/recyclability"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/insights/recyclability"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/insights/recyclability"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/insights/recyclability"/></url>
+  <url><loc>https://newcap.ir/en/</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/"/></url>
+  <url><loc>https://newcap.ir/en/products</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/products"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/products"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/products"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/products"/></url>
+  <url><loc>https://newcap.ir/en/industries</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/industries"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/industries"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/industries"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/industries"/></url>
+  <url><loc>https://newcap.ir/en/capabilities</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/capabilities"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/capabilities"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/capabilities"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/capabilities"/></url>
+  <url><loc>https://newcap.ir/en/quality</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/quality"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/quality"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/quality"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/quality"/></url>
+  <url><loc>https://newcap.ir/en/about</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/about"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/about"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/about"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/about"/></url>
+  <url><loc>https://newcap.ir/en/resources</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/resources"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/resources"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/resources"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/resources"/></url>
+  <url><loc>https://newcap.ir/en/contact</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/contact"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/contact"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/contact"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/contact"/></url>
+  <url><loc>https://newcap.ir/en/insights/filling-line</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/insights/filling-line"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/insights/filling-line"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/insights/filling-line"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/insights/filling-line"/></url>
+  <url><loc>https://newcap.ir/en/insights/sealing-systems</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/insights/sealing-systems"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/insights/sealing-systems"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/insights/sealing-systems"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/insights/sealing-systems"/></url>
+  <url><loc>https://newcap.ir/en/insights/tamper-evidence</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/insights/tamper-evidence"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/insights/tamper-evidence"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/insights/tamper-evidence"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/insights/tamper-evidence"/></url>
+  <url><loc>https://newcap.ir/en/insights/recyclability</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/insights/recyclability"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/insights/recyclability"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/insights/recyclability"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/insights/recyclability"/></url>
+  <url><loc>https://newcap.ir/tr/</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/"/></url>
+  <url><loc>https://newcap.ir/tr/products</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/products"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/products"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/products"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/products"/></url>
+  <url><loc>https://newcap.ir/tr/industries</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/industries"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/industries"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/industries"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/industries"/></url>
+  <url><loc>https://newcap.ir/tr/capabilities</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/capabilities"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/capabilities"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/capabilities"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/capabilities"/></url>
+  <url><loc>https://newcap.ir/tr/quality</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/quality"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/quality"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/quality"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/quality"/></url>
+  <url><loc>https://newcap.ir/tr/about</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/about"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/about"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/about"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/about"/></url>
+  <url><loc>https://newcap.ir/tr/resources</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/resources"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/resources"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/resources"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/resources"/></url>
+  <url><loc>https://newcap.ir/tr/contact</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/contact"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/contact"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/contact"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/contact"/></url>
+  <url><loc>https://newcap.ir/tr/insights/filling-line</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/insights/filling-line"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/insights/filling-line"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/insights/filling-line"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/insights/filling-line"/></url>
+  <url><loc>https://newcap.ir/tr/insights/sealing-systems</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/insights/sealing-systems"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/insights/sealing-systems"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/insights/sealing-systems"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/insights/sealing-systems"/></url>
+  <url><loc>https://newcap.ir/tr/insights/tamper-evidence</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/insights/tamper-evidence"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/insights/tamper-evidence"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/insights/tamper-evidence"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/insights/tamper-evidence"/></url>
+  <url><loc>https://newcap.ir/tr/insights/recyclability</loc><xhtml:link rel="alternate" hreflang="fa" href="https://newcap.ir/insights/recyclability"/><xhtml:link rel="alternate" hreflang="en" href="https://newcap.ir/en/insights/recyclability"/><xhtml:link rel="alternate" hreflang="tr" href="https://newcap.ir/tr/insights/recyclability"/><xhtml:link rel="alternate" hreflang="x-default" href="https://newcap.ir/insights/recyclability"/></url>
 </urlset>
