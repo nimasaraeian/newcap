@@ -1,11 +1,12 @@
 
-const IMG = {"hero": "/img/hero.webp?v=693b069d", "p1": "/img/p1.webp?v=45df4578", "p4": "/img/p4.webp?v=1af7f460", "indphoto": "/img/indphoto.webp?v=e04859e0", "blueprint": "/img/blueprint.webp?v=bd57a0dd", "quality": "/img/quality.webp?v=463d55ca", "cta": "/img/cta.webp?v=13d1a323", "logo": "/img/logo.webp?v=0fc668c3", "hi_navycap": "/img/hi_navycap.webp?v=0cf93cc4", "hi_whitecap": "/img/hi_whitecap.webp?v=e76284a2", "hi_colors": "/img/hi_colors.webp?v=e4ad5f8e", "hi_bottles": "/img/hi_bottles.webp?v=7ba517e8", "hi_mould": "/img/hi_mould.webp?v=37558f6b", "hi_capmacro": "/img/hi_capmacro.webp?v=b96ab2d5", "hi_capangle": "/img/hi_capangle.webp?v=e79cf0ff"};
+const IMG = {"hero": "/img/hero.webp?v=5911d8e0", "p1": "/img/p1.webp?v=f2900e27", "p4": "/img/p4.webp?v=d33c651f", "indphoto": "/img/indphoto.webp?v=9bb33e1e", "blueprint": "/img/blueprint.webp?v=bd57a0dd", "quality": "/img/quality.webp?v=463d55ca", "cta": "/img/cta.webp?v=ecefdf26", "logo": "/img/logo.webp?v=0fc668c3", "hi_navycap": "/img/hi_navycap.webp?v=3a6fb67d", "hi_whitecap": "/img/hi_whitecap.webp?v=e8a6f91f", "hi_colors": "/img/hi_colors.webp?v=2b615717", "hi_bottles": "/img/hi_bottles.webp?v=f8365039", "hi_mould": "/img/hi_mould.webp?v=37558f6b", "hi_capmacro": "/img/hi_capmacro.webp?v=d79ea5dc", "hi_capangle": "/img/hi_capangle.webp?v=e79cf0ff"};
+Object.assign(IMG, {"pst_1": "/img/pst_1.webp?v=b0f3909a", "pst_2": "/img/pst_2.webp?v=a8145df8", "pst_3": "/img/pst_3.webp?v=ed59027d", "pst_4": "/img/pst_4.webp?v=949d4cd0", "pst_5": "/img/pst_5.webp?v=a308ebac", "pst_6": "/img/pst_6.webp?v=bf93b341", "pst_7": "/img/pst_7.webp?v=6fc51445", "pst_8": "/img/pst_8.webp?v=9185f0d8", "pst_9": "/img/pst_9.webp?v=f430684f", "pst_10": "/img/pst_10.webp?v=676b432d"});
 Object.assign(IMG, {"tg_qr": "/img/tg_qr.webp?v=9966a5ff"});
-Object.assign(IMG, {"ps_9": "/img/ps_9.webp?v=3d76e96c", "ps_10": "/img/ps_10.webp?v=958a394a"});
-Object.assign(IMG, {"sc_yellow": "/img/sc_yellow.webp?v=2483fb00", "sc_teal": "/img/sc_teal.webp?v=020b52e5", "sc_blue": "/img/sc_blue.webp?v=4767610f", "sc_green": "/img/sc_green.webp?v=868763f1", "sc_orange": "/img/sc_orange.webp?v=a7e116a7", "sc_red": "/img/sc_red.webp?v=65b8b595", "ps_4": "/img/ps_4.webp?v=04e00db5", "ps_5": "/img/ps_5.webp?v=062f62e8", "ps_6": "/img/ps_6.webp?v=65262a48", "ps_7": "/img/ps_7.webp?v=5c38449d", "ps_8": "/img/ps_8.webp?v=7dfc4f4b"});
+Object.assign(IMG, {"ps_9": "/img/ps_9.webp?v=2ab22d03", "ps_10": "/img/ps_10.webp?v=14ba33e1"});
+Object.assign(IMG, {"sc_yellow": "/img/sc_yellow.webp?v=9c428056", "sc_teal": "/img/sc_teal.webp?v=b7b71c43", "sc_blue": "/img/sc_blue.webp?v=5c232c23", "sc_green": "/img/sc_green.webp?v=53cf6708", "sc_orange": "/img/sc_orange.webp?v=c4a1f05f", "sc_red": "/img/sc_red.webp?v=13ff4685", "ps_4": "/img/ps_4.webp?v=bfed6863", "ps_5": "/img/ps_5.webp?v=10047154", "ps_6": "/img/ps_6.webp?v=b9d26265", "ps_7": "/img/ps_7.webp?v=44a18b62", "ps_8": "/img/ps_8.webp?v=24f74f15"});
 Object.assign(IMG, {"cap_orange": "/img/cap_orange.webp?v=0a3834f9", "cap_red": "/img/cap_red.webp?v=8a2132c9", "cap_green": "/img/cap_green.webp?v=af22c0dd", "cap_teal": "/img/cap_teal.webp?v=555cad38", "cap_blue": "/img/cap_blue.webp?v=a1767729", "cap_yellow": "/img/cap_yellow.webp?v=4b5148b7"});
-Object.assign(IMG, {"ph_line": "/img/ph_line.webp?v=7bd10cb8", "ph_macro": "/img/ph_macro.webp?v=544fffdb", "ph_studio": "/img/ph_studio.webp?v=ac1d02b0", "ph_soft": "/img/ph_soft.webp?v=caee72f4", "ps_1": "/img/ps_1.webp?v=2f1aaf47", "ps_2": "/img/ps_2.webp?v=a6e99921", "ps_3": "/img/ps_3.webp?v=46c6d608"});
-for (const [id,key] of [['logoTop','logo'],['logoBot','logo'],['heroShot','hero'],
+Object.assign(IMG, {"ph_line": "/img/ph_line.webp?v=7bd10cb8", "ph_macro": "/img/ph_macro.webp?v=f87cd51d", "ph_studio": "/img/ph_studio.webp?v=e3a130f5", "ph_soft": "/img/ph_soft.webp?v=caee72f4", "ps_1": "/img/ps_1.webp?v=8790d2a7", "ps_2": "/img/ps_2.webp?v=7b18b161", "ps_3": "/img/ps_3.webp?v=27dab222"});
+for (const [id,key] of [['logoTop','logo'],['logoBot','logo'],
   ['p1','p1'],['p4','p4'],['indShot','indphoto'],
   ['bpShot','blueprint'],['qShot','quality'],['ctaShot','cta']]) {
   const el = document.getElementById(id); if (el) el.src = IMG[key];
@@ -79,6 +80,7 @@ if (mt && !reduce && innerWidth > 900) {
    speed up with scroll velocity, the two lights lean toward the pointer */
 (() => {
   const amb = document.querySelector('.ambient');
+  return;   /* performance: the background stays still (it was repainting the full screen every frame) */
   if (!amb || reduce) return;
   const rings = [...amb.querySelectorAll('.ring')], glows = [...amb.querySelectorAll('.glow')];
   const traces = () => [...amb.querySelectorAll('.tr')].flatMap(e => e.getAnimations ? e.getAnimations() : []);
@@ -1092,16 +1094,16 @@ resources: () => `
   <h2 class="label" data-rv><span data-t="pr_gL">Brand campaign</span><i></i></h2>
   <p class="t" data-rv style="--d:60ms" data-t="pr_gT">Campaign visuals for NEWCAP. Select an image to see it full size.</p>
   <div class="posters" data-rv style="--d:120ms">
-    <button type="button" data-zoom="ps_2" aria-label="Details make the difference"><img src="${IMG.ps_2}" alt="NEWCAP campaign poster: Details make the difference"></button>
-    <button type="button" data-zoom="ps_3" aria-label="Small detail. Big difference."><img src="${IMG.ps_3}" alt="NEWCAP campaign poster: Small detail. Big difference."></button>
-    <button type="button" data-zoom="ps_1" aria-label="Consistent quality at scale"><img src="${IMG.ps_1}" alt="NEWCAP campaign poster: Consistent quality at scale"></button>
-    <button type="button" data-zoom="ps_8" aria-label="Precision in every closure"><img src="${IMG.ps_8}" alt="NEWCAP campaign poster: Precision in every closure" loading="lazy"></button>
-    <button type="button" data-zoom="ps_4" aria-label="Small detail. Big difference."><img src="${IMG.ps_4}" alt="NEWCAP campaign poster in yellow: Small detail. Big difference." loading="lazy"></button>
-    <button type="button" data-zoom="ps_7" aria-label="Designed for accuracy"><img src="${IMG.ps_7}" alt="NEWCAP campaign poster: Designed for accuracy" loading="lazy"></button>
-    <button type="button" data-zoom="ps_5" aria-label="Reliable materials"><img src="${IMG.ps_5}" alt="NEWCAP campaign poster: Reliable materials" loading="lazy"></button>
-    <button type="button" data-zoom="ps_9" aria-label="From concept to reality"><img src="${IMG.ps_9}" alt="NEWCAP poster: half technical sketch, half finished navy closure" loading="lazy"></button>
-    <button type="button" data-zoom="ps_10" aria-label="From concept to reality, cream"><img src="${IMG.ps_10}" alt="NEWCAP poster: half technical sketch, half finished cream closure" loading="lazy"></button>
-    <button type="button" data-zoom="ps_6" aria-label="Engineered for modern packaging"><img src="${IMG.ps_6}" alt="NEWCAP campaign poster: Engineered for modern packaging" loading="lazy"></button>
+    <button type="button" data-zoom="ps_2" aria-label="Details make the difference"><img src="${IMG.pst_2}" alt="NEWCAP campaign poster: Details make the difference"></button>
+    <button type="button" data-zoom="ps_3" aria-label="Small detail. Big difference."><img src="${IMG.pst_3}" alt="NEWCAP campaign poster: Small detail. Big difference."></button>
+    <button type="button" data-zoom="ps_1" aria-label="Consistent quality at scale"><img src="${IMG.pst_1}" alt="NEWCAP campaign poster: Consistent quality at scale"></button>
+    <button type="button" data-zoom="ps_8" aria-label="Precision in every closure"><img src="${IMG.pst_8}" alt="NEWCAP campaign poster: Precision in every closure" loading="lazy"></button>
+    <button type="button" data-zoom="ps_4" aria-label="Small detail. Big difference."><img src="${IMG.pst_4}" alt="NEWCAP campaign poster in yellow: Small detail. Big difference." loading="lazy"></button>
+    <button type="button" data-zoom="ps_7" aria-label="Designed for accuracy"><img src="${IMG.pst_7}" alt="NEWCAP campaign poster: Designed for accuracy" loading="lazy"></button>
+    <button type="button" data-zoom="ps_5" aria-label="Reliable materials"><img src="${IMG.pst_5}" alt="NEWCAP campaign poster: Reliable materials" loading="lazy"></button>
+    <button type="button" data-zoom="ps_9" aria-label="From concept to reality"><img src="${IMG.pst_9}" alt="NEWCAP poster: half technical sketch, half finished navy closure" loading="lazy"></button>
+    <button type="button" data-zoom="ps_10" aria-label="From concept to reality, cream"><img src="${IMG.pst_10}" alt="NEWCAP poster: half technical sketch, half finished cream closure" loading="lazy"></button>
+    <button type="button" data-zoom="ps_6" aria-label="Engineered for modern packaging"><img src="${IMG.pst_6}" alt="NEWCAP campaign poster: Engineered for modern packaging" loading="lazy"></button>
   </div>
 </div></section>
 
@@ -1342,7 +1344,8 @@ function route(){
 /* ---------------- colour range (home) ---------------- */
 (document.getElementById('tgQr')||{}).src = IMG.tg_qr;
 document.querySelectorAll('img[data-cap]').forEach(el => { el.src = IMG['cap_' + el.dataset.cap]; });
-document.querySelectorAll('img[data-scene]').forEach(el => { el.src = IMG['sc_' + el.dataset.scene]; });
+const sceneSrc = el => { if (el && !el.src) el.src = IMG['sc_' + el.dataset.scene]; };
+document.querySelectorAll('img[data-scene]').forEach((el, i) => { if (i === 0) sceneSrc(el); });
 (() => {
   const sec = document.getElementById('colours'); if (!sec) return;
   const PAL = [
@@ -1369,7 +1372,8 @@ document.querySelectorAll('img[data-scene]').forEach(el => { el.src = IMG['sc_' 
   const label = () => { nameEl.textContent = L(PAL[cur].n); chipName.textContent = L(PAL[cur].n); chipLine.textContent = L(PAL[cur].s); };
   function show(i){
     if (i === cur) return;
-    scenes[cur].classList.remove('on'); cur = i; scenes[cur].classList.add('on');
+    scenes[cur].classList.remove('on'); cur = i; sceneSrc(scenes[cur]); scenes[cur].classList.add('on');
+    sceneSrc(scenes[(cur + 1) % scenes.length]);   /* the next one is fetched while this one shows */
     btns.forEach((b, k) => b.setAttribute('aria-selected', String(k === cur)));
     sec.style.setProperty('--pc', PAL[cur].c);
     chip.classList.remove('swap'); void chip.offsetWidth; chip.classList.add('swap');
@@ -1397,8 +1401,11 @@ document.querySelectorAll('img[data-scene]').forEach(el => { el.src = IMG['sc_' 
     stage.style.setProperty('--mx', (((e.clientX - r.left) / r.width - .5) * -16).toFixed(1) + 'px');
     stage.style.setProperty('--my', (((e.clientY - r.top) / r.height - .5) * -12).toFixed(1) + 'px');
   });
-  new IntersectionObserver(es => { visible = es[0].isIntersecting; if (visible) schedule(); else { clearTimeout(timer); bar.classList.remove('run'); } },
-    { threshold:.35 }).observe(stage);
+  new IntersectionObserver(es => {
+    visible = es[0].isIntersecting;
+    if (visible) { sceneSrc(scenes[cur]); sceneSrc(scenes[(cur + 1) % scenes.length]); schedule(); }
+    else { clearTimeout(timer); bar.classList.remove('run'); }
+  }, { threshold:.35 }).observe(stage);
   langMenu.addEventListener('click', () => setTimeout(label, 0));
   label();
 })();
@@ -1442,7 +1449,13 @@ function initHero3D(){
   const hero = document.querySelector('.hero'), stage = document.getElementById('stage');
   if (!hero || !stage) return;
   const shot = document.getElementById('heroShot');
-  const showShot = () => { if (!hero.classList.contains('has3d')) shot.classList.add('in'); };
+  const showShot = () => {
+    if (hero.classList.contains('has3d')) return;
+    if (!shot.src) shot.src = IMG.hero;                 /* fetched only when the photo is really needed */
+    shot.classList.add('in');
+  };
+  const conn = navigator.connection || {};
+  if (conn.saveData || /(^|-)2g$/.test(conn.effectiveType || '')) { showShot(); return; }   /* slow link: photo only */
   let probe; try { probe = document.createElement('canvas').getContext('webgl'); } catch(e){}
   if (!probe) { showShot(); return; }                   /* no WebGL: the photo is shown instead */
   initHero3D.done = true;
@@ -1453,8 +1466,11 @@ function initHero3D(){
     s.onerror = next;
     document.head.appendChild(s);
   };
-  /* served from our own domain first (proxied and cached by the host), then the public CDN */
-  load('/vendor/three.min.js', () => load('https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js', showShot));
+  /* served from our own domain first (proxied and cached by the host), then the public CDN.
+     It starts after the page has finished loading, so it never competes with the first paint. */
+  const begin = () => (window.requestIdleCallback || setTimeout)(() =>
+    load('/vendor/three.min.js', () => load('https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js', showShot)), { timeout:1500 });
+  if (document.readyState === 'complete') begin(); else addEventListener('load', begin);
 
   function build(){
     const T = THREE;
@@ -1464,7 +1480,8 @@ function initHero3D(){
     const lin = hex => new T.Color(hex).convertSRGBToLinear();
 
     const renderer = new T.WebGLRenderer({ antialias:true, alpha:true, powerPreference:'high-performance' });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));   /* sharp enough, and keeps every frame light */
+    renderer.shadowMap.enabled = true; renderer.shadowMap.type = T.PCFShadowMap; renderer.shadowMap.autoUpdate = false;
     renderer.outputEncoding = T.sRGBEncoding;
     renderer.toneMapping = T.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 0;                    /* the intro brings the lights up */
@@ -1496,42 +1513,51 @@ function initHero3D(){
     scene.environment = pmrem.fromScene(studio, .02).texture;
 
     const key     = new T.DirectionalLight(lin(0xfff1e2), 4.4);   key.position.set(-3.5, 6, 4.5);  scene.add(key);
+    /* the key light casts a real shadow: ribs shade each other, the tab and rim throw true shapes */
+    key.castShadow = true; key.shadow.mapSize.set(1024, 1024); key.shadow.radius = 3;
+    Object.assign(key.shadow.camera, { left:-3.2, right:3.2, top:3.2, bottom:-3.2, near:1, far:24 });
+    key.shadow.bias = -.0004; key.shadow.normalBias = .02;
     const rimCool = new T.DirectionalLight(lin(0x9cc6ff), 7);   rimCool.position.set(5, 2.2, -4.2); scene.add(rimCool);
     const rimWarm = new T.DirectionalLight(lin(0xffc89a), 2); rimWarm.position.set(-5, 1.6, -3.6); scene.add(rimWarm);
-    scene.add(new T.HemisphereLight(lin(0xc9d6e8), lin(0x0a1120), .5));
+    const hemi = new T.HemisphereLight(lin(0xc9d6e8), lin(0x0a1120), .5); scene.add(hemi);
     const topSoft = new T.DirectionalLight(lin(0xe6eefa), .9); topSoft.position.set(.6, 9, 3.2); scene.add(topSoft);
 
     /* ---- the fine stipple on the moulded surface ---- */
-    const noise = (size, amp) => {
+    /* the moulded surface: a seamless pebble grain (rounded bumps, like a textured mould finish)
+       rather than pixel noise, so it reads as texture on the white cap instead of dirt */
+    const pebble = size => {
       const c = document.createElement('canvas'); c.width = c.height = size;
-      const x = c.getContext('2d'), im = x.createImageData(size, size);
-      for (let i = 0; i < im.data.length; i += 4) {
-        const v = 128 + (Math.random() - .5) * amp; im.data[i] = im.data[i+1] = im.data[i+2] = v; im.data[i+3] = 255;
+      const x = c.getContext('2d'); x.fillStyle = '#808080'; x.fillRect(0, 0, size, size);
+      const dot = document.createElement('canvas'); dot.width = dot.height = 32;
+      const dx = dot.getContext('2d'), dg = dx.createRadialGradient(16,16,0,16,16,16);
+      dg.addColorStop(0,'rgba(255,255,255,1)'); dg.addColorStop(.55,'rgba(255,255,255,.45)'); dg.addColorStop(1,'rgba(255,255,255,0)');
+      dx.fillStyle = dg; dx.fillRect(0, 0, 32, 32);
+      let seed = 11; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+      for (let i = 0; i < size * size / 26; i++) {
+        const r = 2.2 + rnd() * 2.6, px0 = rnd() * size, py0 = rnd() * size;
+        x.globalAlpha = .18 + rnd() * .2;
+        for (const ox of [0, -size, size]) for (const oy of [0, -size, size]) {   /* wrap: the tile repeats seamlessly */
+          const X = px0 + ox, Y = py0 + oy;
+          if (X > -r && X < size + r && Y > -r && Y < size + r) x.drawImage(dot, X - r, Y - r, r * 2, r * 2);
+        }
       }
-      x.putImageData(im, 0, 0);
-      /* a softer, larger stipple over the fine grain: the matte "orange peel" of a moulded part */
-      const sm = document.createElement('canvas'); sm.width = sm.height = size / 8;
-      const sx2 = sm.getContext('2d'), si = sx2.createImageData(sm.width, sm.height);
-      for (let i = 0; i < si.data.length; i += 4) {
-        const v = 128 + (Math.random() - .5) * 150; si.data[i] = si.data[i+1] = si.data[i+2] = v; si.data[i+3] = 255;
-      }
-      sx2.putImageData(si, 0, 0);
-      x.globalAlpha = .45; x.imageSmoothingEnabled = true; x.drawImage(sm, 0, 0, size, size); x.globalAlpha = 1;
+      x.globalAlpha = 1;
       const t = new T.CanvasTexture(c); t.wrapS = t.wrapT = T.RepeatWrapping;
       t.anisotropy = renderer.capabilities.getMaxAnisotropy(); return t;
     };
-    const grain = noise(512, 90); grain.repeat.set(7, 4);
+    const grain = pebble(512); grain.repeat.set(38, 4);          /* crown: around x along the profile */
+    const grainRib = grain.clone(); grainRib.needsUpdate = true; grainRib.repeat.set(26, 5);   /* ribbed skirt */
 
-    const NAVY = lin(0x14284a);
-    const shell = new T.MeshPhysicalMaterial({ color:NAVY, roughness:1.2, roughnessMap:grain, metalness:0, side:T.DoubleSide,
-      clearcoat:.14, clearcoatRoughness:.45, bumpMap:grain, bumpScale:.0065, envMapIntensity:.85 });
+    const NAVY = lin(0x14284a), CAP_WHITE = lin(0xdde1e7);
+    const shell = new T.MeshStandardMaterial({ color:NAVY, roughness:1.1, roughnessMap:grain, metalness:0, side:T.DoubleSide,
+      bumpMap:grain, bumpScale:.0065, envMapIntensity:.9 });
     /* the ribbed skirt carries a little baked occlusion: groove floors sit in shadow */
-    const ribMat = shell.clone(); ribMat.vertexColors = true;
+    const ribMat = shell.clone(); ribMat.vertexColors = true; ribMat.bumpMap = ribMat.roughnessMap = grainRib;
 
     const cap = new T.Group();
     const R = 1, Y0 = .11, Y1 = 1.30, RIBS = 64, DEPTH = .055, H = 1.56;
 
-    const skirt = new T.CylinderGeometry(R, R, Y1 - Y0, RIBS * 8, 1, true);
+    const skirt = new T.CylinderGeometry(R, R, Y1 - Y0, RIBS * 8, 24, true);   /* height segments carry the occlusion gradient */
     const P = skirt.attributes.position;
     for (let i = 0; i < P.count; i++) {
       const a = Math.atan2(P.getZ(i), P.getX(i));
@@ -1542,7 +1568,10 @@ function initHero3D(){
     const col = new Float32Array(P.count * 3);
     for (let i = 0; i < P.count; i++) {
       const a = Math.atan2(P.getZ(i), P.getX(i));
-      const g = Math.pow(.5 - .5 * Math.cos(a * RIBS), 2.2), v = 1 - .55 * g;
+      const g = Math.pow(.5 - .5 * Math.cos(a * RIBS), 2.2);
+      const t = (P.getY(i) + (Y1 - Y0) / 2) / (Y1 - Y0);          /* 0 at the base band, 1 under the crown */
+      const top = .42 * Math.exp(-(1 - t) / .07), low = .16 * Math.exp(-t / .05);
+      const v = (1 - .55 * g) * (1 - top * (.55 + .45 * g)) * (1 - low);
       col[i*3] = col[i*3+1] = col[i*3+2] = v;
     }
     skirt.setAttribute('color', new T.BufferAttribute(col, 3));
@@ -1552,8 +1581,22 @@ function initHero3D(){
     const lathe = (pts, seg) => new T.LatheGeometry(pts.map(p => new T.Vector2(p[0], p[1])), seg);
     cap.add(new T.Mesh(lathe([[.94,0],[.975,.006],[.994,.022],[1,.05],[1,Y0]], 180), shell));
     cap.add(new T.Mesh(lathe([[1,1.3],[1,1.44],[0.9982,1.4608],[0.9928,1.481],[0.9839,1.5],[0.9719,1.5171],[0.9571,1.5319],[0.94,1.5439],[0.921,1.5528],[0.9008,1.5582],[0.88,1.56],[0.8400,1.5600],[0.8300,1.5594],[0.8200,1.5578],[0.8100,1.5551],[0.8000,1.5513],[0.7900,1.5466],[0.7800,1.5410],[0.7700,1.5346],[0.7600,1.5275],[0.7500,1.5199],[0.7400,1.5118],[0.7300,1.5035],[0.7200,1.4950],[0.7100,1.4865],[0.7000,1.4782],[0.6900,1.4701],[0.6800,1.4625],[0.6700,1.4554],[0.6600,1.4490],[0.6500,1.4434],[0.6400,1.4387],[0.6300,1.4349],[0.6200,1.4322],[0.6100,1.4306],[0.6000,1.4300],[0.598,1.43]], 220), shell));
-    const base = new T.Mesh(new T.CircleGeometry(.94, 96), shell);
-    base.rotation.x = Math.PI / 2; cap.add(base);
+    /* the underside, for when the cap is turned over: a hollow shell with an inner wall,
+       a moulded thread, a sealing ring and the inside of the top */
+    const IR = .86, CEIL = 1.24;
+    const inner = shell.clone(); inner.color = NAVY.clone().multiplyScalar(.72); inner.roughness = 1.35;
+    cap.add(new T.Mesh(lathe([[IR,0],[.9,-.001],[.94,0]], 180), shell));                    /* bottom lip */
+    cap.add(new T.Mesh(lathe([[IR,CEIL],[IR,.012],[IR+.004,0]], 180), inner));             /* inner wall */
+    const ceil = new T.Mesh(new T.CircleGeometry(IR, 120), inner);
+    ceil.rotation.x = Math.PI / 2; ceil.position.y = CEIL; cap.add(ceil);                    /* inside of the top */
+    cap.add(new T.Mesh(lathe([[.7,CEIL],[.702,CEIL-.035],[.715,CEIL-.055],[.74,CEIL-.062],[.765,CEIL-.055],[.778,CEIL-.035],[.78,CEIL]], 160), inner)); /* sealing ring */
+    class Helix extends T.Curve {
+      getPoint(u, v = new T.Vector3()) {
+        const a = u * 3.4 * Math.PI * 2, r = IR - .018;
+        return v.set(Math.cos(a) * r, .16 + u * .86, Math.sin(a) * r);
+      }
+    }
+    cap.add(new T.Mesh(new T.TubeGeometry(new Helix(), 300, .024, 8, false), inner));  /* thread */
 
     /* the NEWCAP mark, debossed into the dish */
     const tc = document.createElement('canvas'); tc.width = tc.height = 1024;
@@ -1564,6 +1607,9 @@ function initHero3D(){
     const paintMark = () => {
       const cx = tc.getContext('2d'), bx = bc.getContext('2d');
       cx.fillStyle = '#ffffff'; cx.fillRect(0,0,1024,1024);
+      const ao = cx.createRadialGradient(512,512,300,512,512,512);
+      ao.addColorStop(0,'#ffffff'); ao.addColorStop(.7,'#eef0f3'); ao.addColorStop(1,'#c9cdd4');
+      cx.fillStyle = ao; cx.fillRect(0,0,1024,1024);
       bx.fillStyle = '#9a9a9a'; bx.fillRect(0,0,1024,1024);
       /* the moulded top: a soft pebble grain, like a textured (VDI) mould finish. Instead of
          per-pixel noise, thousands of small rounded bumps overlap into a leathery surface. */
@@ -1615,8 +1661,8 @@ function initHero3D(){
     const logoImg = new Image(); logoImg.onload = paintMark; logoImg.src = IMG.logo;
     paintMark();
     if (document.fonts && document.fonts.load) document.fonts.load('800 96px Manrope').then(paintMark).catch(() => {});
-    const dish = new T.Mesh(new T.CircleGeometry(.605, 128), new T.MeshPhysicalMaterial({
-      color:NAVY, map:colorTex, roughness:.74, clearcoat:.08, clearcoatRoughness:.5,
+    const dish = new T.Mesh(new T.CircleGeometry(.605, 128), new T.MeshStandardMaterial({
+      color:NAVY, map:colorTex, roughness:.76,
       bumpMap:bumpTex, bumpScale:.022, envMapIntensity:.8 }));
     dish.rotation.x = -Math.PI / 2; dish.position.y = 1.4302; cap.add(dish);
 
@@ -1660,7 +1706,8 @@ function initHero3D(){
     cap.add(new T.Mesh(sweepTab([[1,1.325],[1,1.36],[1,1.4],[1,1.44],[0.9994,1.4518],[0.9977,1.4634],[0.9948,1.4748],[0.9909,1.4859],[0.9858,1.4966],[0.9798,1.5067],[0.9728,1.5161],[0.9649,1.5249],[0.9561,1.5328],[0.9467,1.5398],[0.9366,1.5458],[0.9259,1.5509],[0.9148,1.5548],[0.9034,1.5577],[0.8918,1.5594],[0.88,1.56],[0.865,1.56],[0.842,1.56]], -.55, .042, .024, .004), orange));
 
     cap.position.y = -H / 2;
-    scene.add(cap);
+    const spin = new T.Group(); spin.add(cap); scene.add(spin);
+    cap.traverse(o => { if (o.isMesh) o.castShadow = true; });   /* only the pedestal receives: much cheaper per frame */
 
     const sc = document.createElement('canvas'); sc.width = sc.height = 256;
     const sx = sc.getContext('2d'), sr = sx.createRadialGradient(128,128,4,128,128,128);
@@ -1669,6 +1716,11 @@ function initHero3D(){
     const shadow = new T.Mesh(new T.PlaneGeometry(3.2, 3.2),
       new T.MeshBasicMaterial({ map:new T.CanvasTexture(sc), transparent:true, depthWrite:false }));
     shadow.rotation.x = -Math.PI / 2; shadow.position.y = -H / 2 - .006; scene.add(shadow);
+    /* no visible floor: only the cap's real shadow on an invisible floor; a soft shade behind the
+       cap (in CSS, costs nothing per frame) gives the space its depth */
+    const catcher = new T.Mesh(new T.PlaneGeometry(8, 8), new T.ShadowMaterial({ opacity:.26 }));
+    catcher.rotation.x = -Math.PI / 2; catcher.position.y = -H / 2 - .002; catcher.receiveShadow = true; scene.add(catcher);
+
     const cc = document.createElement('canvas'); cc.width = cc.height = 256;
     const cx2 = cc.getContext('2d'), cr = cx2.createRadialGradient(128,128,70,128,128,128);
     cr.addColorStop(0,'rgba(2,6,16,.9)'); cr.addColorStop(.55,'rgba(2,6,16,.35)'); cr.addColorStop(1,'rgba(2,6,16,0)');
@@ -1677,11 +1729,24 @@ function initHero3D(){
       new T.MeshBasicMaterial({ map:new T.CanvasTexture(cc), transparent:true, depthWrite:false }));
     contact.rotation.x = -Math.PI / 2; contact.position.y = -H / 2 - .004; scene.add(contact);
 
-    let EXPO = 1.02, SHO = .85;
+    let EXPO = 1.02, SHO = .85, CATCH = .26;
     const applyTheme = () => {
       const dark = document.documentElement.getAttribute('data-theme') === 'dark';
-      EXPO = dark ? 1.08 : 1.02;
-      rimCool.intensity = dark ? 6 : 4.5;
+      /* dark page: a white cap; light page: the navy one. White needs far less light */
+      const body = dark ? CAP_WHITE : NAVY;
+      shell.color.copy(body); ribMat.color.copy(body); dish.material.color.copy(body);
+      inner.color.copy(body).multiplyScalar(dark ? .8 : .72);
+      EXPO = dark ? .6 : 1.02;
+      rimCool.intensity = dark ? 2 : 4.5;
+      rimWarm.intensity = dark ? 1 : 2;
+      /* white: less fill, so the key light models the form; a finer grain so it doesn't read as dirt */
+      hemi.intensity = dark ? .08 : .5;
+      topSoft.intensity = dark ? .45 : .9;
+      shell.bumpScale = dark ? .006 : .0075; ribMat.bumpScale = shell.bumpScale; inner.bumpScale = shell.bumpScale;
+      shell.envMapIntensity = ribMat.envMapIntensity = dark ? .38 : .9;
+      dish.material.bumpScale = dark ? .014 : .022;
+      /* shadows: a little stronger on the dark page so they still read */
+      CATCH = dark ? .42 : .26;
       SHO = dark ? 1 : .85; shadow.material.opacity = SHO;
     };
     applyTheme();
@@ -1690,7 +1755,7 @@ function initHero3D(){
     const fit = () => {
       const w = stage.clientWidth, h = stage.clientHeight; if (!w || !h) return;
       renderer.setSize(w, h, false); camera.aspect = w / h;
-      camera.fov = w / h < 1.15 ? 26 : 22;
+      camera.fov = w / h < 1.3 ? 27 : 22;
       camera.updateProjectionMatrix();
     };
     fit(); new ResizeObserver(fit).observe(stage);
@@ -1713,23 +1778,41 @@ function initHero3D(){
     let rot = .2, vel = still ? 0 : AUTO, dragging = false, lastX = 0, lastT = 0, running = true, first = true;
     let tilt = 0, tiltV = 0, lastY = 0, relT = -99, tt = 0, landT = 0, px = 0, py = 0, tx = 0, ty = 0, sp = 0, spS = 0;
     const cv = renderer.domElement;
-    cv.addEventListener('pointerdown', e => { dragging = true; lastX = e.clientX; lastY = e.clientY; lastT = performance.now(); cv.setPointerCapture(e.pointerId); });
+    /* touch screens on laptops and tablets with a trackpad or mouse turn the cap freely with a finger;
+       on phones a vertical swipe still scrolls the page, so there the finger turns it sideways */
+    const FREE_TOUCH = true;                            /* a finger turns the cap in any direction, on phones as well */
+    cv.style.touchAction = 'none';                      /* the page still scrolls from anywhere outside the cap */
+    cv.addEventListener('pointerdown', e => {
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      e.preventDefault();                                /* no text selection or drag-image stealing the gesture */
+      dragging = true; wx = wy = 0; lastX = e.clientX; lastY = e.clientY; lastT = performance.now();
+      try { cv.setPointerCapture(e.pointerId); } catch(_) {}
+    });
+    const qUser = new T.Quaternion(), qTmp = new T.Quaternion(), qYaw = new T.Quaternion();
+    const UP = new T.Vector3(0, 1, 0), RIGHT = new T.Vector3(), vUp = new T.Vector3();
+    let wx = 0, wy = 0;                                  /* spin velocity about the screen axes */
+    const turn = (ay, ax) => {                           /* ay: about the vertical, ax: about the screen's horizontal */
+      RIGHT.set(1, 0, 0).applyQuaternion(camera.quaternion);
+      qUser.premultiply(qTmp.setFromAxisAngle(UP, ay));
+      qUser.premultiply(qTmp.setFromAxisAngle(RIGHT, ax)); qUser.normalize();
+    };
     cv.addEventListener('pointermove', e => {
       if (!dragging) return;
-      const now = performance.now(), dx = (e.clientX - lastX) / cv.clientWidth * 4.2;
-      rot += dx; vel = dx / Math.max(.016, (now - lastT) / 1000); lastX = e.clientX; lastT = now;
-      if (e.pointerType !== 'touch') {                   /* on touch, vertical swipes stay with the page */
-        tilt = Math.max(-.72, Math.min(1.08, tilt + (e.clientY - lastY) / cv.clientHeight * 2.6));
-        lastY = e.clientY;
-      }
+      const now = performance.now(), k = Math.max(.016, (now - lastT) / 1000);
+      const ay = (e.clientX - lastX) / cv.clientWidth * 4.2;
+      const ax = (e.clientY - lastY) / cv.clientHeight * 4.2;
+      turn(ay, ax); wy = ay / k; wx = ax / k;
+      lastX = e.clientX; lastY = e.clientY; lastT = now;
     });
     const release = () => { if (dragging) relT = tt; dragging = false; };
     cv.addEventListener('wheel', e => {                  /* two-finger sideways swipe on a touchpad */
       if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
-      e.preventDefault(); rot -= e.deltaX * .006; vel = -e.deltaX * .35; relT = tt;
+      e.preventDefault(); turn(-e.deltaX * .006, 0); wy = -e.deltaX * .35; wx = 0; relT = tt;
     }, { passive:false });
-    cv.addEventListener('pointerup', release); cv.addEventListener('pointercancel', release);
+    cv.addEventListener('pointerup', release); cv.addEventListener('pointercancel', release); cv.addEventListener('lostpointercapture', release);
+    cv.addEventListener('dragstart', e => e.preventDefault());
     hero.addEventListener('pointermove', e => {
+      if (dragging) return;
       const r = hero.getBoundingClientRect();
       tx = (e.clientX - r.left) / r.width - .5; ty = (e.clientY - r.top) / r.height - .5;
     });
@@ -1740,12 +1823,22 @@ function initHero3D(){
     document.addEventListener('visibilitychange', () => { running = !document.hidden; if (running) loop(); });
 
     const clock = new T.Clock();
+    let lite = false, perfN = 0, perfT = 0, shadowTick = 0;
     let ticking = false;
     function loop(){ if (ticking) return; ticking = true; requestAnimationFrame(frame); }
     function frame(){
       ticking = false;
       if (!running) return;
-      const dt = Math.min(clock.getDelta(), .05); tt += dt;
+      const rawDt = clock.getDelta(), dt = Math.min(rawDt, .05); tt += dt;
+      if (!lite) {                                       /* measure ~2 s of frames; slow device -> lighter mode */
+        perfN++; perfT += rawDt;
+        if (perfN === 120) {
+          if (perfT / perfN > 1 / 50) {
+            lite = true; renderer.setPixelRatio(1); key.castShadow = false; catcher.visible = false; fit();
+          }
+          perfN = 0; perfT = 0;
+        }
+      }
       const t = still ? 99 : tt + 30;   /* opening sequence skipped: start in the resting shot */
 
       /* the fall: accelerating, so the landing has weight */
@@ -1768,27 +1861,30 @@ function initHero3D(){
       /* spin: fast on entry, easing into the idle turn; the scroll winds it on */
       /* idle turn lingers as the wordmark faces the viewer; scrolling (or tilting over the
          top) brings the lettering round to read straight */
-      const face = Math.min(1, spS * 4 + Math.max(0, tilt) * 1.3);
       if (!dragging) {
-        const slow = .35 + .65 * (1 - Math.cos(rot)) / 2;
-        vel += (AUTO * slow * (1 - face) - vel) * Math.min(1, dt * .95); rot += vel * dt;
-        if (face > .01) { const tgt = Math.round(rot / (2 * Math.PI)) * 2 * Math.PI; rot += (tgt - rot) * Math.min(1, dt * 2.4 * face); }
-        if (tt - relT > 3.2) tilt += (0 - tilt) * Math.min(1, dt * 1.2);   /* the view settles back after a while */
+        /* the fling carries on and fades; the cap keeps turning slowly on its own axis */
+        if (Math.abs(wx) + Math.abs(wy) > .001) { turn(wy * dt, wx * dt); const f = Math.exp(-dt * 2.2); wx *= f; wy *= f; }
+        rot += (still ? 0 : AUTO) * dt;
+        if (tt - relT > 8) qUser.slerp(qTmp.identity(), Math.min(1, dt * .7));   /* after a while it settles upright again */
       }
-      cap.rotation.y = rot;
+      spin.quaternion.copy(qUser).multiply(qYaw.setFromAxisAngle(UP, rot));
+      /* the floor and its shadows belong to an upright cap: they fade while it is turned over */
+      const upright = vUp.set(0, 1, 0).applyQuaternion(qUser).y;
+      const floorK = Math.min(1, Math.max(0, (upright - .88) / .1));
+      catcher.material.opacity = CATCH * floorK;
 
       /* pointer lean */
       px += (tx - px) * Math.min(1, dt * 2.6); py += (ty - py) * Math.min(1, dt * 2.6);
-      const lift = still ? 0 : Math.sin(t * 1.05) * .018 * Math.min(1, Math.max(0, since) / 1.2);
+      const lift = 0;
       cap.position.y = -H / 2 + lift + drop;
-      cap.rotation.z = (still ? 0 : Math.sin(t * .6) * .016) - px * .14;
-      cap.rotation.x = py * .16;
+      cap.rotation.z = 0;
+      cap.rotation.x = 0;
 
       /* shadow grows and darkens as the cap comes down */
       const hgt = drop + lift;
       shadow.scale.setScalar(Math.max(.4, 1 - hgt * .32));
-      shadow.material.opacity = SHO * Math.max(0, 1 - hgt * .5);
-      contact.material.opacity = SHO * .7 * Math.max(0, 1 - hgt * 3);   /* only when it is down */
+      shadow.material.opacity = SHO * Math.max(0, 1 - hgt * .5) * floorK;
+      contact.material.opacity = SHO * .7 * Math.max(0, 1 - hgt * 3) * floorK;   /* only when it is down */
 
       /* landing waves */
       if (since >= 0 && since < 2.2) {
@@ -1808,7 +1904,7 @@ function initHero3D(){
       /* camera: starts low and close, pulls back and rises to the resting shot */
       const ck = easeIO(Math.min(1, t / INTRO));
       const az0 = -.62 * (1 - ck), el0 = EL - .2 * (1 - ck), d0 = DIST - 2.1 * (1 - ck);
-      const az = az0 + (still ? 0 : Math.sin(t * .17) * .11 * ck) + px * .1;
+      const az = az0 + (still ? 0 : Math.sin(t * .17) * .11 * ck) + px * .15;
       /* elevation: user tilt plus the scroll, which carries the camera up over the top */
       const el = Math.max(-.62, Math.min(1.42, el0 + (still ? 0 : Math.sin(t * .13) * .025 * ck) - py * .03 + tilt + spS * .95));
       const d = d0 + (still ? 0 : Math.sin(t * .09) * .18 * ck) + spS * .6;
@@ -1817,8 +1913,16 @@ function initHero3D(){
       camera.lookAt(0, .12 + .25 * (1 - ck), 0);
 
       rimCool.position.x = 5 + (still ? 0 : Math.sin(t * .3) * 1.6);   /* a rim highlight that travels */
+      if (key.castShadow && ((++shadowTick % 6) === 0 || dragging || Math.abs(wx) > .05)) renderer.shadowMap.needsUpdate = true;
       renderer.render(scene, camera);
-      if (first) { first = false; stage.classList.add('on'); hero.classList.add('has3d'); }
+      if (first) {
+        first = false; stage.classList.add('on'); hero.classList.add('has3d');
+        const hint = document.createElement('span'); hint.className = 'drag-hint';
+        hint.textContent = ({ fa:'بکشید تا از همهٔ جهات بچرخد', en:'Drag to turn it any way', tr:'Her yöne çevirmek için sürükleyin' })[lang] || 'Drag to turn it any way';
+        stage.appendChild(hint);
+        cv.addEventListener('pointerdown', () => hint.classList.add('gone'), { once:true });
+        cv.addEventListener('wheel', () => hint.classList.add('gone'), { once:true });
+      }
       loop();
     }
     loop();
