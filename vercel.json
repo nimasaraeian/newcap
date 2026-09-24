@@ -1,32 +1,430 @@
 {
-  "cleanUrls": true,
-  "rewrites": [
-    {
-      "source": "/vendor/three.min.js",
-      "destination": "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/fa",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/fa/:path*",
-      "destination": "/:path*",
-      "permanent": true
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(img|assets)/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    }
-  ]
+ "routes": [
+  {
+   "src": "/fa",
+   "status": 308,
+   "headers": {
+    "Location": "/"
+   }
+  },
+  {
+   "src": "/fa/(.*)",
+   "status": 308,
+   "headers": {
+    "Location": "/$1"
+   }
+  },
+  {
+   "src": "/vendor/three.min.js",
+   "dest": "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+  },
+  {
+   "src": "/",
+   "dest": "/index.html"
+  },
+  {
+   "src": "/products",
+   "dest": "/products.html"
+  },
+  {
+   "src": "/products/",
+   "status": 308,
+   "headers": {
+    "Location": "/products"
+   }
+  },
+  {
+   "src": "/industries",
+   "dest": "/industries.html"
+  },
+  {
+   "src": "/industries/",
+   "status": 308,
+   "headers": {
+    "Location": "/industries"
+   }
+  },
+  {
+   "src": "/capabilities",
+   "dest": "/capabilities.html"
+  },
+  {
+   "src": "/capabilities/",
+   "status": 308,
+   "headers": {
+    "Location": "/capabilities"
+   }
+  },
+  {
+   "src": "/quality",
+   "dest": "/quality.html"
+  },
+  {
+   "src": "/quality/",
+   "status": 308,
+   "headers": {
+    "Location": "/quality"
+   }
+  },
+  {
+   "src": "/about",
+   "dest": "/about.html"
+  },
+  {
+   "src": "/about/",
+   "status": 308,
+   "headers": {
+    "Location": "/about"
+   }
+  },
+  {
+   "src": "/resources",
+   "dest": "/resources.html"
+  },
+  {
+   "src": "/resources/",
+   "status": 308,
+   "headers": {
+    "Location": "/resources"
+   }
+  },
+  {
+   "src": "/contact",
+   "dest": "/contact.html"
+  },
+  {
+   "src": "/contact/",
+   "status": 308,
+   "headers": {
+    "Location": "/contact"
+   }
+  },
+  {
+   "src": "/insights/filling-line",
+   "dest": "/insights-filling-line.html"
+  },
+  {
+   "src": "/insights/filling-line/",
+   "status": 308,
+   "headers": {
+    "Location": "/insights/filling-line"
+   }
+  },
+  {
+   "src": "/insights/sealing-systems",
+   "dest": "/insights-sealing-systems.html"
+  },
+  {
+   "src": "/insights/sealing-systems/",
+   "status": 308,
+   "headers": {
+    "Location": "/insights/sealing-systems"
+   }
+  },
+  {
+   "src": "/insights/tamper-evidence",
+   "dest": "/insights-tamper-evidence.html"
+  },
+  {
+   "src": "/insights/tamper-evidence/",
+   "status": 308,
+   "headers": {
+    "Location": "/insights/tamper-evidence"
+   }
+  },
+  {
+   "src": "/insights/recyclability",
+   "dest": "/insights-recyclability.html"
+  },
+  {
+   "src": "/insights/recyclability/",
+   "status": 308,
+   "headers": {
+    "Location": "/insights/recyclability"
+   }
+  },
+  {
+   "src": "/en",
+   "dest": "/en.html"
+  },
+  {
+   "src": "/en/",
+   "status": 308,
+   "headers": {
+    "Location": "/en"
+   }
+  },
+  {
+   "src": "/en/products",
+   "dest": "/en-products.html"
+  },
+  {
+   "src": "/en/products/",
+   "status": 308,
+   "headers": {
+    "Location": "/en/products"
+   }
+  },
+  {
+   "src": "/en/industries",
+   "dest": "/en-industries.html"
+  },
+  {
+   "src": "/en/industries/",
+   "status": 308,
+   "headers": {
+    "Location": "/en/industries"
+   }
+  },
+  {
+   "src": "/en/capabilities",
+   "dest": "/en-capabilities.html"
+  },
+  {
+   "src": "/en/capabilities/",
+   "status": 308,
+   "headers": {
+    "Location": "/en/capabilities"
+   }
+  },
+  {
+   "src": "/en/quality",
+   "dest": "/en-quality.html"
+  },
+  {
+   "src": "/en/quality/",
+   "status": 308,
+   "headers": {
+    "Location": "/en/quality"
+   }
+  },
+  {
+   "src": "/en/about",
+   "dest": "/en-about.html"
+  },
+  {
+   "src": "/en/about/",
+   "status": 308,
+   "headers": {
+    "Location": "/en/about"
+   }
+  },
+  {
+   "src": "/en/resources",
+   "dest": "/en-resources.html"
+  },
+  {
+   "src": "/en/resources/",
+   "status": 308,
+   "headers": {
+    "Location": "/en/resources"
+   }
+  },
+  {
+   "src": "/en/contact",
+   "dest": "/en-contact.html"
+  },
+  {
+   "src": "/en/contact/",
+   "status": 308,
+   "headers": {
+    "Location": "/en/contact"
+   }
+  },
+  {
+   "src": "/en/insights/filling-line",
+   "dest": "/en-insights-filling-line.html"
+  },
+  {
+   "src": "/en/insights/filling-line/",
+   "status": 308,
+   "headers": {
+    "Location": "/en/insights/filling-line"
+   }
+  },
+  {
+   "src": "/en/insights/sealing-systems",
+   "dest": "/en-insights-sealing-systems.html"
+  },
+  {
+   "src": "/en/insights/sealing-systems/",
+   "status": 308,
+   "headers": {
+    "Location": "/en/insights/sealing-systems"
+   }
+  },
+  {
+   "src": "/en/insights/tamper-evidence",
+   "dest": "/en-insights-tamper-evidence.html"
+  },
+  {
+   "src": "/en/insights/tamper-evidence/",
+   "status": 308,
+   "headers": {
+    "Location": "/en/insights/tamper-evidence"
+   }
+  },
+  {
+   "src": "/en/insights/recyclability",
+   "dest": "/en-insights-recyclability.html"
+  },
+  {
+   "src": "/en/insights/recyclability/",
+   "status": 308,
+   "headers": {
+    "Location": "/en/insights/recyclability"
+   }
+  },
+  {
+   "src": "/tr",
+   "dest": "/tr.html"
+  },
+  {
+   "src": "/tr/",
+   "status": 308,
+   "headers": {
+    "Location": "/tr"
+   }
+  },
+  {
+   "src": "/tr/products",
+   "dest": "/tr-products.html"
+  },
+  {
+   "src": "/tr/products/",
+   "status": 308,
+   "headers": {
+    "Location": "/tr/products"
+   }
+  },
+  {
+   "src": "/tr/industries",
+   "dest": "/tr-industries.html"
+  },
+  {
+   "src": "/tr/industries/",
+   "status": 308,
+   "headers": {
+    "Location": "/tr/industries"
+   }
+  },
+  {
+   "src": "/tr/capabilities",
+   "dest": "/tr-capabilities.html"
+  },
+  {
+   "src": "/tr/capabilities/",
+   "status": 308,
+   "headers": {
+    "Location": "/tr/capabilities"
+   }
+  },
+  {
+   "src": "/tr/quality",
+   "dest": "/tr-quality.html"
+  },
+  {
+   "src": "/tr/quality/",
+   "status": 308,
+   "headers": {
+    "Location": "/tr/quality"
+   }
+  },
+  {
+   "src": "/tr/about",
+   "dest": "/tr-about.html"
+  },
+  {
+   "src": "/tr/about/",
+   "status": 308,
+   "headers": {
+    "Location": "/tr/about"
+   }
+  },
+  {
+   "src": "/tr/resources",
+   "dest": "/tr-resources.html"
+  },
+  {
+   "src": "/tr/resources/",
+   "status": 308,
+   "headers": {
+    "Location": "/tr/resources"
+   }
+  },
+  {
+   "src": "/tr/contact",
+   "dest": "/tr-contact.html"
+  },
+  {
+   "src": "/tr/contact/",
+   "status": 308,
+   "headers": {
+    "Location": "/tr/contact"
+   }
+  },
+  {
+   "src": "/tr/insights/filling-line",
+   "dest": "/tr-insights-filling-line.html"
+  },
+  {
+   "src": "/tr/insights/filling-line/",
+   "status": 308,
+   "headers": {
+    "Location": "/tr/insights/filling-line"
+   }
+  },
+  {
+   "src": "/tr/insights/sealing-systems",
+   "dest": "/tr-insights-sealing-systems.html"
+  },
+  {
+   "src": "/tr/insights/sealing-systems/",
+   "status": 308,
+   "headers": {
+    "Location": "/tr/insights/sealing-systems"
+   }
+  },
+  {
+   "src": "/tr/insights/tamper-evidence",
+   "dest": "/tr-insights-tamper-evidence.html"
+  },
+  {
+   "src": "/tr/insights/tamper-evidence/",
+   "status": 308,
+   "headers": {
+    "Location": "/tr/insights/tamper-evidence"
+   }
+  },
+  {
+   "src": "/tr/insights/recyclability",
+   "dest": "/tr-insights-recyclability.html"
+  },
+  {
+   "src": "/tr/insights/recyclability/",
+   "status": 308,
+   "headers": {
+    "Location": "/tr/insights/recyclability"
+   }
+  },
+  {
+   "src": "/panel",
+   "dest": "/panel.html"
+  },
+  {
+   "src": "/(.*)\\.(webp|png|jpg|svg|css|js|xml|txt|ico)",
+   "headers": {
+    "Cache-Control": "public, max-age=31536000, immutable"
+   },
+   "continue": true
+  },
+  {
+   "handle": "filesystem"
+  },
+  {
+   "src": "/(.*)",
+   "status": 404,
+   "dest": "/index.html"
+  }
+ ]
 }
