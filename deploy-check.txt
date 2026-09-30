@@ -1,3 +1,0 @@
-deploy marker
-commit: 2026-09-30T16:07:34Z
-built-from: canonical=newcapgroup.com
