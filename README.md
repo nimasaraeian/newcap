@@ -47,7 +47,7 @@ build settings empty.
 ## Before going live
 
 1. Set the real domain: change `SITE` at the top of the build script and
-   regenerate, or find-and-replace `https://newcap.ir` across the HTML,
+   regenerate, or find-and-replace `https://newcapgroup.com` across the HTML,
    `sitemap.xml` and `robots.txt`. Canonicals and hreflang depend on it.
 2. Replace the product imagery with the original high-resolution renders.
 3. Replace the placeholder phone number, email and address on the contact page.

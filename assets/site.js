@@ -1150,7 +1150,7 @@ contact: () => `
       <div class="it"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2.1 12.2 2.9 9.6A5.6 5.6 0 1 1 5 11.5Z" stroke-linejoin="round"/><path d="M5 4.9c0 2 1.9 4 4 4.1l.8-1-1.3-.7-.6.6c-.8-.3-1.5-1-1.8-1.8l.6-.6-.7-1.3Z" fill="currentColor" stroke="none"/></svg>
         <div><b data-t="pn_i5">WhatsApp</b><a href="https://wa.me/989032620344" target="_blank" rel="noopener"><span data-t="pn_wa">Message us on WhatsApp</span></a></div></div>
       <div class="it"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="7" r="5.6"/><path d="M1.4 7h11.2M7 1.4a11 11 0 0 1 0 11.2A11 11 0 0 1 7 1.4Z"/></svg>
-        <div><b data-t="pn_i3">Web</b><span dir="ltr">www.newcap.ir</span></div></div>
+        <div><b data-t="pn_i3">Web</b><span dir="ltr">www.newcapgroup.com</span></div></div>
       <div class="it"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 12.6s4.4-3.9 4.4-7a4.4 4.4 0 0 0-8.8 0c0 3.1 4.4 7 4.4 7Z" stroke-linejoin="round"/><circle cx="7" cy="5.5" r="1.6"/></svg>
         <div><b data-t="pn_i4">Address</b><span data-t="pn_i4v">Plot 79, corner of Qanun 5, Qanun 2, Qanun 1,<br>East Ibn Sina St., Eshtehard Industrial Estate,<br>Eshtehard, Iran</span></div></div>
     </aside>
@@ -1207,7 +1207,7 @@ const insightsCards = () => ART_LIST.map(([slug,id]) => `
    titles and descriptions are derived from the page content itself, so a
    copy change never leaves a stale meta tag behind                        */
 const BOOT   = window.__BOOT__ || null;          /* set by the static build */
-const SITE   = window.__SITE__ || '';            /* absolute origin, e.g. https://newcap.ir */
+const SITE   = window.__SITE__ || '';            /* absolute origin, e.g. https://newcapgroup.com */
 const ROUTE_META = {
   '':             ['heroTitle','heroLede'],
   'products':     ['pp_h1','pp_lede'],
@@ -1254,8 +1254,8 @@ function updateSEO(key, l){
     set('hrTr','href', absUrl('tr',key)); set('hrX','href', absUrl('fa',key));
   }
   const org = {
-    "@type":"Organization", "@id": (SITE || 'https://newcap.ir') + '/#org',
-    name:"NEWCAP", url: SITE || 'https://newcap.ir',
+    "@type":"Organization", "@id": (SITE || 'https://newcapgroup.com') + '/#org',
+    name:"NEWCAP", url: SITE || 'https://newcapgroup.com',
     logo: SITE ? SITE + '/favicon-512.png' : undefined,
     description: plain(d.heroLede),
     telephone:"+98 903 262 0344",
@@ -1268,14 +1268,14 @@ function updateSEO(key, l){
   };
   const graph = [org, {
     "@type":"WebPage", url: absUrl(l,key), name: title, description: desc,
-    inLanguage: l, isPartOf:{ "@type":"WebSite", url: SITE || 'https://newcap.ir', name:"NEWCAP" },
-    publisher:{ "@id": (SITE || 'https://newcap.ir') + '/#org' }
+    inLanguage: l, isPartOf:{ "@type":"WebSite", url: SITE || 'https://newcapgroup.com', name:"NEWCAP" },
+    publisher:{ "@id": (SITE || 'https://newcapgroup.com') + '/#org' }
   }];
   if (key.startsWith('insights/')) {
     graph.push({ "@type":"Article", headline: name, description: desc,
       inLanguage: l, mainEntityOfPage: absUrl(l,key),
-      author:{ "@id": (SITE || 'https://newcap.ir') + '/#org' },
-      publisher:{ "@id": (SITE || 'https://newcap.ir') + '/#org' } });
+      author:{ "@id": (SITE || 'https://newcapgroup.com') + '/#org' },
+      publisher:{ "@id": (SITE || 'https://newcapgroup.com') + '/#org' } });
   }
   if (key) {
     graph.push({ "@type":"BreadcrumbList", itemListElement:[

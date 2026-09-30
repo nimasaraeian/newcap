@@ -1011,9 +1011,9 @@ contact: () => `
       <div class="it"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1.8 3.2a1.4 1.4 0 0 1 1.4-1.4h1.9l1.1 2.8-1.4 1a8 8 0 0 0 3.6 3.6l1-1.4 2.8 1.1v1.9a1.4 1.4 0 0 1-1.4 1.4A10.6 10.6 0 0 1 1.8 3.2Z" stroke-linejoin="round"/></svg>
         <div><b data-t="pn_i1">Telephone</b><span dir="ltr">+98 21 0000 0000</span></div></div>
       <div class="it"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1.4" y="2.8" width="11.2" height="8.4" rx="1.2"/><path d="m1.8 3.6 5.2 3.6 5.2-3.6"/></svg>
-        <div><b data-t="pn_i2">Email</b><span dir="ltr">info@newcap.ir</span></div></div>
+        <div><b data-t="pn_i2">Email</b><span dir="ltr">info@newcapgroup.com</span></div></div>
       <div class="it"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="7" r="5.6"/><path d="M1.4 7h11.2M7 1.4a11 11 0 0 1 0 11.2A11 11 0 0 1 7 1.4Z"/></svg>
-        <div><b data-t="pn_i3">Web</b><span dir="ltr">www.newcap.ir</span></div></div>
+        <div><b data-t="pn_i3">Web</b><span dir="ltr">www.newcapgroup.com</span></div></div>
       <div class="it"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 12.6s4.4-3.9 4.4-7a4.4 4.4 0 0 0-8.8 0c0 3.1 4.4 7 4.4 7Z" stroke-linejoin="round"/><circle cx="7" cy="5.5" r="1.6"/></svg>
         <div><b data-t="pn_i4">Address</b><span data-t="pn_i4v">Your address line here<br>City, Country</span></div></div>
     </aside>
@@ -1070,7 +1070,7 @@ const insightsCards = () => ART_LIST.map(([slug,id]) => `
    titles and descriptions are derived from the page content itself, so a
    copy change never leaves a stale meta tag behind                        */
 const BOOT   = window.__BOOT__ || null;          /* set by the static build */
-const SITE   = window.__SITE__ || '';            /* absolute origin, e.g. https://newcap.ir */
+const SITE   = window.__SITE__ || '';            /* absolute origin, e.g. https://newcapgroup.com */
 const ROUTE_META = {
   '':             ['heroTitle','heroLede'],
   'products':     ['pp_h1','pp_lede'],
@@ -1108,23 +1108,23 @@ function updateSEO(key, l){
     set('hrTr','href', absUrl('tr',key)); set('hrX','href', absUrl('en',key));
   }
   const org = {
-    "@type":"Organization", "@id": (SITE || 'https://newcap.ir') + '/#org',
-    name:"NEWCAP", url: SITE || 'https://newcap.ir',
+    "@type":"Organization", "@id": (SITE || 'https://newcapgroup.com') + '/#org',
+    name:"NEWCAP", url: SITE || 'https://newcapgroup.com',
     logo: SITE ? SITE + '/favicon-512.png' : undefined,
     description: plain(d.heroLede),
-    email:"info@newcap.ir", telephone:"+98 21 0000 0000",
+    email:"info@newcapgroup.com", telephone:"+98 21 0000 0000",
     industry:"Plastic closure manufacturing"
   };
   const graph = [org, {
     "@type":"WebPage", url: absUrl(l,key), name: title, description: desc,
-    inLanguage: l, isPartOf:{ "@type":"WebSite", url: SITE || 'https://newcap.ir', name:"NEWCAP" },
-    publisher:{ "@id": (SITE || 'https://newcap.ir') + '/#org' }
+    inLanguage: l, isPartOf:{ "@type":"WebSite", url: SITE || 'https://newcapgroup.com', name:"NEWCAP" },
+    publisher:{ "@id": (SITE || 'https://newcapgroup.com') + '/#org' }
   }];
   if (key.startsWith('insights/')) {
     graph.push({ "@type":"Article", headline: name, description: desc,
       inLanguage: l, mainEntityOfPage: absUrl(l,key),
-      author:{ "@id": (SITE || 'https://newcap.ir') + '/#org' },
-      publisher:{ "@id": (SITE || 'https://newcap.ir') + '/#org' } });
+      author:{ "@id": (SITE || 'https://newcapgroup.com') + '/#org' },
+      publisher:{ "@id": (SITE || 'https://newcapgroup.com') + '/#org' } });
   }
   if (key) {
     graph.push({ "@type":"BreadcrumbList", itemListElement:[
@@ -1161,7 +1161,7 @@ function initForm(scope){
       'Email: ' + v('f_mail'), 'Phone: ' + v('f_tel'),
       'Enquiry: ' + v('f_sub'), '', v('f_msg')
     ].join('\n');
-    location.href = 'mailto:info@newcap.ir?subject=' +
+    location.href = 'mailto:info@newcapgroup.com?subject=' +
       encodeURIComponent('NEWCAP enquiry — ' + v('f_sub')) +
       '&body=' + encodeURIComponent(body);
     msg.textContent = { fa:'ایمیل شما با همین اطلاعات آمادهٔ ارسال شد.',
