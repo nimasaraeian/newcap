@@ -412,9 +412,16 @@
    "dest": "/panel.html"
   },
   {
-   "src": "/(.*)\\.(webp|png|jpg|svg|css|js|xml|txt|ico)",
+   "src": "/(.*)\\.(webp|png|jpg|svg|ico)",
    "headers": {
     "Cache-Control": "public, max-age=31536000, immutable"
+   },
+   "continue": true
+  },
+  {
+   "src": "/(.*)\\.(css|js|xml|txt)",
+   "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate"
    },
    "continue": true
   },
