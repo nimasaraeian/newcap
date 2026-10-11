@@ -422,6 +422,24 @@
    "continue": true
   },
   {
+   "src": "/brand/(.*)",
+   "headers": {
+    "X-Robots-Tag": "noindex, nofollow"
+   },
+   "continue": true
+  },
+  {
+   "src": "/brand/instagram",
+   "dest": "/brand/instagram.html"
+  },
+  {
+   "src": "/brand/instagram/",
+   "status": 308,
+   "headers": {
+    "Location": "/brand/instagram"
+   }
+  },
+  {
    "handle": "filesystem"
   },
   {
