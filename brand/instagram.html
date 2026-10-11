@@ -75,9 +75,13 @@ kbd{font-family:Manrope,sans-serif;font-size:11px;border:1px solid #C6CBD4;borde
         <button class="btn primary" type="button" id="pick">انتخاب عکس</button>
         <button class="btn" type="button" id="clearPhoto">حذف عکس</button>
       </div>
-      <label for="zoom" class="lbl">بزرگنمایی عکس</label>
-      <input type="range" id="zoom" min="1" max="3" step="0.01" value="1">
-      <p class="hint">برای جابه‌جا کردن عکس، روی بخش خالی تصویر بکشید.</p>
+      <label for="zoom" class="lbl">اندازه‌ی عکس</label>
+      <input type="range" id="zoom" min="0.2" max="4" step="0.01" value="1">
+      <div class="row">
+        <button class="btn sm" type="button" id="fitCover">پر کردن کادر</button>
+        <button class="btn sm" type="button" id="fitContain">نمایش کامل عکس</button>
+      </div>
+      <p class="hint">روی عکس بزنید تا انتخاب شود؛ بعد بکشید تا جابه‌جا شود و گوشه‌ی نارنجی را بکشید تا کوچک یا بزرگ شود.</p>
     </div>
     <div class="group">
       <span class="lbl">۳. افزودن به تصویر</span>
@@ -158,11 +162,23 @@ kbd{font-family:Manrope,sans-serif;font-size:11px;border:1px solid #C6CBD4;borde
           <button type="button" data-v="navy">سرمه‌ای</button><button type="button" data-v="white">سفید</button>
         </div>
       </div>
-      <div class="group">
+      <div class="group" id="g-photo">
+        <label for="p-zoom">اندازه‌ی عکس</label>
+        <input type="range" id="p-zoom" min="0.2" max="4" step="0.01">
+        <div class="row">
+          <button class="btn sm" type="button" id="p-cover">پر کردن کادر</button>
+          <button class="btn sm" type="button" id="p-contain">نمایش کامل عکس</button>
+          <button class="btn sm" type="button" id="p-center">وسط‌چین</button>
+          <button class="btn sm" type="button" id="p-change">عوض کردن عکس</button>
+          <button class="btn sm danger" type="button" id="p-del">حذف عکس</button>
+        </div>
+        <p class="hint">عکس فقط داخل کادر عکسِ همین قالب دیده می‌شود. اگر کوچک‌ترش کنید، دورش رنگ زمینه می‌آید.</p>
+      </div>
+      <div class="group" id="g-opacity">
         <label for="i-opacity">شفافیت</label>
         <input type="range" id="i-opacity" min="0.1" max="1" step="0.05">
       </div>
-      <div class="row">
+      <div class="row" id="g-actions">
         <button class="btn sm" type="button" id="i-up">بیار جلو</button>
         <button class="btn sm" type="button" id="i-down">ببر عقب</button>
         <button class="btn sm" type="button" id="i-center">وسط‌چین افقی</button>
@@ -239,7 +255,7 @@ const TEMPLATES={
 /* ---------- state ---------- */
 const state={tpl:'postNavy',accent:ACCENTS[0],photo:null,crop:{},docs:{},sel:null,hist:{},fut:{}};
 const IMGS={}; // id -> HTMLImageElement for user images
-for(const k in TEMPLATES){state.crop[k]={zoom:1,ox:0,oy:0};state.hist[k]=[];state.fut[k]=[];}
+for(const k in TEMPLATES){state.crop[k]={zoom:null,ox:0,oy:0};state.hist[k]=[];state.fut[k]=[];}
 function fresh(k){return TEMPLATES[k].els().map(e=>Object.assign({id:nid(),opacity:1},e));}
 function els(){return state.docs[state.tpl];}
 function load(k){
@@ -269,12 +285,28 @@ const LOGO={};
 function loadLogo(k,src){const im=new Image();im.onload=()=>{LOGO[k]=im;render();};im.src=src;}
 loadLogo('navy','/logo.webp');loadLogo('white','/brand/logo-white.webp');
 
-function drawPhoto(ctx,r,c){
-  const img=state.photo;if(!img)return false;const[rx,ry,rw,rh]=r;
-  const s=Math.max(rw/img.width,rh/img.height)*c.zoom,dw=img.width*s,dh=img.height*s;
-  const mx=(dw-rw)/2,my=(dh-rh)/2;c.ox=Math.max(-mx,Math.min(mx,c.ox));c.oy=Math.max(-my,Math.min(my,c.oy));
-  ctx.drawImage(img,rx+(rw-dw)/2+c.ox,ry+(rh-dh)/2+c.oy,dw,dh);return true;
+// zoom is a multiple of the "whole photo visible" scale; null = fill the frame
+function geo(k){
+  const img=state.photo;if(!img)return null;const t=TEMPLATES[k],c=state.crop[k],[rx,ry,rw,rh]=t.photo;
+  const contain=Math.min(rw/img.width,rh/img.height),coverZ=Math.max(rw/img.width,rh/img.height)/contain;
+  if(c.zoom==null)c.zoom=coverZ;
+  const s=contain*c.zoom,dw=img.width*s,dh=img.height*s;
+  // keep at least part of the photo inside the frame
+  const mx=Math.abs(dw-rw)/2+Math.min(dw,rw)*.4,my=Math.abs(dh-rh)/2+Math.min(dh,rh)*.4;
+  c.ox=Math.max(-mx,Math.min(mx,c.ox));c.oy=Math.max(-my,Math.min(my,c.oy));
+  return{rx,ry,rw,rh,dw,dh,x:rx+(rw-dw)/2+c.ox,y:ry+(rh-dh)/2+c.oy,coverZ};
 }
+function drawPhoto(ctx,r,c){
+  const g=geo(state.tpl);delete BOX.__photo;if(!g)return false;
+  ctx.save();ctx.beginPath();ctx.rect(g.rx,g.ry,g.rw,g.rh);ctx.clip();ctx.drawImage(state.photo,g.x,g.y,g.dw,g.dh);ctx.restore();
+  BOX.__photo={l:Math.max(g.x,g.rx),t:Math.max(g.y,g.ry),r:Math.min(g.x+g.dw,g.rx+g.rw),b:Math.min(g.y+g.dh,g.ry+g.rh)};
+  return true;
+}
+function setZoom(z,keep){const c=state.crop[state.tpl];c.zoom=Math.max(.2,Math.min(4,z));if(!keep){}syncZoom();save();render();}
+function syncZoom(){const c=state.crop[state.tpl];if(state.photo&&c.zoom==null)geo(state.tpl);const z=c.zoom==null?1:c.zoom;$('zoom').value=z;$('p-zoom').value=z;}
+function fitCover(){const c=state.crop[state.tpl];c.zoom=null;c.ox=0;c.oy=0;syncZoom();save();render();}
+function fitContain(){const c=state.crop[state.tpl];c.zoom=1;c.ox=0;c.oy=0;syncZoom();save();render();}
+function clearPhoto(){state.photo=null;if(state.sel==='__photo')state.sel=null;syncIns();render();}
 function placeholder(ctx,r,dark){
   const[x,y,w,h]=r;ctx.save();ctx.setLineDash([12,10]);ctx.lineWidth=2;ctx.strokeStyle=dark?'rgba(237,243,250,.35)':'rgba(11,45,88,.3)';
   rr(ctx,x,y,w,h,8);ctx.stroke();ctx.setLineDash([]);ctx.fillStyle=dark?'rgba(237,243,250,.75)':BODY;ctx.textAlign='center';ctx.textBaseline='middle';ctx.direction='rtl';
@@ -345,27 +377,40 @@ function render(){
   guides.forEach(g=>{v.save();v.strokeStyle='#E63A2E';v.lineWidth=1.5*px;v.beginPath();if(g.x!=null){v.moveTo(g.x,0);v.lineTo(g.x,t.h);}else{v.moveTo(0,g.y);v.lineTo(t.w,g.y);}v.stroke();v.restore();});
   const s=state.sel&&BOX[state.sel];
   if(s){v.save();v.strokeStyle='#FF7A00';v.lineWidth=2*px;v.setLineDash([8*px,6*px]);const p=6*px;v.strokeRect(s.l-p,s.t-p,s.r-s.l+2*p,s.b-s.t+2*p);v.setLineDash([]);
-    const hs=16*px;v.fillStyle='#FF7A00';v.strokeStyle='#fff';v.lineWidth=2*px;v.fillRect(s.r+p-hs/2,s.b+p-hs/2,hs,hs);v.strokeRect(s.r+p-hs/2,s.b+p-hs/2,hs,hs);v.restore();}
+    const hs=18*px,h=handlePos(s,px);v.fillStyle='#FF7A00';v.strokeStyle='#fff';v.lineWidth=2*px;v.fillRect(h.x-hs/2,h.y-hs/2,hs,hs);v.strokeRect(h.x-hs/2,h.y-hs/2,hs,hs);v.restore();}
 }
 
 /* ---------- interaction ---------- */
 function pt(ev){const r=view.getBoundingClientRect();const k=view.width/r.width;return{x:(ev.clientX-r.left)*k,y:(ev.clientY-r.top)*k,k};}
-function hitHandle(p){const s=state.sel&&BOX[state.sel];if(!s)return false;const hs=22*p.k,pad=6*p.k;return Math.abs(p.x-(s.r+pad))<hs&&Math.abs(p.y-(s.b+pad))<hs;}
+// resize handle sits at the bottom-right corner, kept inside the canvas so it can always be grabbed
+function handlePos(s,k){const t=TEMPLATES[state.tpl],pad=6*k,m=14*k;return{x:Math.min(s.r+pad,t.w-m),y:Math.min(s.b+pad,t.h-m)};}
+function hitHandle(p){const s=state.sel&&BOX[state.sel];if(!s)return false;const h=handlePos(s,p.k),hs=22*p.k;return Math.abs(p.x-h.x)<hs&&Math.abs(p.y-h.y)<hs;}
+function inPhoto(p){const b=BOX.__photo;return !!(state.photo&&b&&p.x>=b.l&&p.x<=b.r&&p.y>=b.t&&p.y<=b.b);}
 function hitEl(p){const L=els();for(let i=L.length-1;i>=0;i--){const b=BOX[L[i].id];if(!b)continue;const pad=8*p.k;if(p.x>=b.l-pad&&p.x<=b.r+pad&&p.y>=b.t-pad&&p.y<=b.b+pad)return L[i];}return null;}
 let drag=null;
 view.addEventListener('pointerdown',ev=>{
   view.focus();const p=pt(ev);
-  if(hitHandle(p)){const e=byId(state.sel),b=BOX[e.id];drag={mode:'resize',e,p0:p,b0:Object.assign({},b),s0:JSON.parse(JSON.stringify(e)),prev:snap()};}
+  if(hitHandle(p)){
+    if(state.sel==='__photo'){const g=geo(state.tpl);drag={mode:'presize',p0:p,c0:Object.assign({},state.crop[state.tpl]),g0:g,b0:Object.assign({},BOX.__photo)};}
+    else{const e=byId(state.sel),b=BOX[e.id];drag={mode:'resize',e,p0:p,b0:Object.assign({},b),s0:JSON.parse(JSON.stringify(e)),prev:snap()};}}
   else{const e=hitEl(p);
     if(e){state.sel=e.id;drag={mode:'move',e,p0:p,s0:{x:e.x,y:e.y},b0:Object.assign({},BOX[e.id]),prev:snap()};syncIns();}
-    else{state.sel=null;syncIns();if(state.photo)drag={mode:'photo',p0:p,c0:Object.assign({},state.crop[state.tpl])};}}
+    else if(inPhoto(p)){state.sel='__photo';syncIns();drag={mode:'photo',p0:p,c0:Object.assign({},state.crop[state.tpl])};}
+    else{state.sel=null;syncIns();}}
   view.setPointerCapture(ev.pointerId);render();
 });
 view.addEventListener('pointermove',ev=>{
   const p=pt(ev);
-  if(!drag){view.style.cursor=hitHandle(p)?'nwse-resize':hitEl(p)?'move':(state.photo?'grab':'default');return;}
+  if(!drag){view.style.cursor=hitHandle(p)?'nwse-resize':(hitEl(p)||inPhoto(p))?'move':'default';return;}
   const dx=p.x-drag.p0.x,dy=p.y-drag.p0.y,t=TEMPLATES[state.tpl],e=drag.e;guides=[];
   if(drag.mode==='photo'){const c=state.crop[state.tpl];c.ox=drag.c0.ox+dx;c.oy=drag.c0.oy+dy;}
+  else if(drag.mode==='presize'){
+    // scale from the photo's visible top-left corner
+    const c=state.crop[state.tpl],g=drag.g0,b=drag.b0,bw=b.r-b.l,r=Math.max(.05,(bw+dx)/bw);
+    const nz=Math.max(.2,Math.min(4,drag.c0.zoom*r)),k=nz/drag.c0.zoom,ndw=g.dw*k,ndh=g.dh*k;
+    const ax=b.l,ay=b.t,nx=ax-(ax-g.x)*k,ny=ay-(ay-g.y)*k;
+    c.zoom=nz;c.ox=nx-(g.rx+(g.rw-ndw)/2);c.oy=ny-(g.ry+(g.rh-ndh)/2);syncZoom();
+  }
   else if(drag.mode==='move'){
     let nx=drag.s0.x+dx,ny=drag.s0.y+dy;const b=drag.b0,bw=b.r-b.l,bh=b.b-b.t,offL=b.l-drag.s0.x,offT=b.t-drag.s0.y;
     const L=nx+offL,cx=L+bw/2,R=L+bw,T0=ny+offT,cy=T0+bh/2,th=8*p.k,m=t.w===1080&&t.h===1080?80:90;
@@ -382,14 +427,20 @@ view.addEventListener('pointermove',ev=>{
   }
   render();
 });
-function endDrag(){if(drag&&(drag.mode==='move'||drag.mode==='resize')){const now=snap();if(now!==drag.prev)commit(drag.prev);syncIns();}else if(drag&&drag.mode==='photo')save();drag=null;guides=[];render();}
+function endDrag(){if(drag&&(drag.mode==='move'||drag.mode==='resize')){const now=snap();if(now!==drag.prev)commit(drag.prev);syncIns();}else if(drag&&(drag.mode==='photo'||drag.mode==='presize'))save();drag=null;guides=[];render();}
 view.addEventListener('pointerup',endDrag);view.addEventListener('pointercancel',endDrag);
 view.addEventListener('dblclick',ev=>{const e=hitEl(pt(ev));if(e&&(e.type==='text'||e.type==='pill')){state.sel=e.id;syncIns();const ta=$('i-text');ta.focus();ta.select();}});
-view.addEventListener('wheel',ev=>{if(!state.photo||state.sel)return;ev.preventDefault();const c=state.crop[state.tpl];c.zoom=Math.max(1,Math.min(3,c.zoom*(ev.deltaY<0?1.05:.95)));$('zoom').value=c.zoom;render();},{passive:false});
+view.addEventListener('wheel',ev=>{if(state.sel!=='__photo'||!state.photo)return;ev.preventDefault();const c=state.crop[state.tpl];setZoom(c.zoom*(ev.deltaY<0?1.05:.95));},{passive:false});
 document.addEventListener('keydown',ev=>{
   const tag=(document.activeElement&&document.activeElement.tagName)||'';const typing=tag==='TEXTAREA'||tag==='INPUT';
   if((ev.ctrlKey||ev.metaKey)&&ev.key.toLowerCase()==='z'&&!typing){ev.preventDefault();ev.shiftKey?redo():undo();return;}
-  if(typing||!state.sel)return;const e=byId(state.sel);if(!e)return;
+  if(typing||!state.sel)return;
+  if(state.sel==='__photo'){const c=state.crop[state.tpl],st=ev.shiftKey?10:1,mv={ArrowLeft:[-st,0],ArrowRight:[st,0],ArrowUp:[0,-st],ArrowDown:[0,st]}[ev.key];
+    if(ev.key==='Delete'||ev.key==='Backspace'){ev.preventDefault();clearPhoto();}
+    else if(mv){ev.preventDefault();c.ox+=mv[0];c.oy+=mv[1];save();render();}
+    else if(ev.key==='Escape'){state.sel=null;syncIns();render();}
+    return;}
+  const e=byId(state.sel);if(!e)return;
   if(ev.key==='Delete'||ev.key==='Backspace'){ev.preventDefault();delSel();return;}
   const st=ev.shiftKey?10:1,mv={ArrowLeft:[-st,0],ArrowRight:[st,0],ArrowUp:[0,-st],ArrowDown:[0,st]}[ev.key];
   if(mv){ev.preventDefault();const prev=snap();e.x+=mv[0];e.y+=mv[1];commit(prev);render();}
@@ -448,9 +499,15 @@ $('i-del').addEventListener('click',delSel);
 const NAMES={text:'متن',logo:'لوگو',rect:'مستطیل / خط',ellipse:'دایره',cross:'علامت +',pill:'دکمه',image:'تصویر'};
 function swatchRow(host,cur,onPick){host.innerHTML='';PALETTE.forEach(c=>{const b=document.createElement('button');b.type='button';b.className='sw';b.style.background=col(c);b.setAttribute('aria-label',c==='accent'?'رنگ تأکیدی':c);b.setAttribute('aria-pressed',String(c===cur));b.addEventListener('click',()=>{onPick(c);syncIns();});host.appendChild(b);});}
 function show(id,on){$(id).classList.toggle('hide',!on);}
+const GROUPS=['g-text','g-size','g-weight','g-align','g-track','g-upper','g-dot','g-color','g-color2','g-variant','g-photo','g-opacity','g-actions'];
 function syncIns(){
+  if(state.sel==='__photo'&&state.photo){
+    show('ins',true);show('insEmpty',false);$('insTitle').textContent='عکس اصلی';
+    GROUPS.forEach(g=>show(g,g==='g-photo'));syncZoom();return;}
+  if(state.sel==='__photo')state.sel=null;
   const e=state.sel&&byId(state.sel);show('ins',!!e);show('insEmpty',!e);
   $('insTitle').textContent=e?NAMES[e.type]:'جزء انتخاب‌شده';if(!e)return;
+  show('g-photo',false);show('g-size',true);show('g-opacity',true);show('g-actions',true);
   const isText=e.type==='text',hasText=isText||e.type==='pill';
   show('g-text',hasText);show('g-weight',isText);show('g-align',isText);show('g-track',isText&&e.font!=='fa');show('g-upper',isText&&e.font!=='fa');show('g-dot',isText&&e.font!=='fa');
   show('g-color',e.type!=='logo'&&e.type!=='image');show('g-color2',e.type==='pill');show('g-variant',e.type==='logo');
@@ -474,16 +531,22 @@ for(const k in TEMPLATES){const t=TEMPLATES[k],b=document.createElement('button'
   b.appendChild(ic);b.appendChild(document.createTextNode(t.name));b.addEventListener('click',()=>switchTpl(k));tp.appendChild(b);}
 function switchTpl(k){state.tpl=k;if(!state.docs[k])state.docs[k]=load(k);state.sel=null;
   tp.querySelectorAll('.tpl').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.k===k)));
-  $('zoom').value=state.crop[k].zoom;$('safeWrap').classList.toggle('hide',!TEMPLATES[k].story);syncAccents();syncIns();syncHistBtns();render();}
+  syncZoom();$('safeWrap').classList.toggle('hide',!TEMPLATES[k].story);syncAccents();syncIns();syncHistBtns();render();}
 function syncAccents(){const h=$('accents');h.innerHTML='';ACCENTS.forEach(c=>{const b=document.createElement('button');b.type='button';b.className='sw';b.style.background=c;b.setAttribute('aria-label','رنگ تأکیدی '+c);b.setAttribute('aria-pressed',String(c===state.accent));
   b.addEventListener('click',()=>{state.accent=c;save();syncAccents();syncIns();render();});h.appendChild(b);});}
 document.querySelectorAll('[data-add]').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.add;if(k==='image')$('fileEl').click();else addEl(k);}));
 $('fileEl').addEventListener('change',ev=>{const f=ev.target.files&&ev.target.files[0];if(f)addImageFile(f);ev.target.value='';});
 $('pick').addEventListener('click',()=>$('file').click());
 $('file').addEventListener('change',ev=>{const f=ev.target.files&&ev.target.files[0];if(!f)return;const im=new Image();
-  im.onload=()=>{state.photo=im;for(const k in state.crop)state.crop[k]={zoom:1,ox:0,oy:0};$('zoom').value=1;render();};im.src=URL.createObjectURL(f);ev.target.value='';});
-$('clearPhoto').addEventListener('click',()=>{state.photo=null;render();});
-$('zoom').addEventListener('input',ev=>{state.crop[state.tpl].zoom=parseFloat(ev.target.value);render();});
+  im.onload=()=>{state.photo=im;for(const k in state.crop)state.crop[k]={zoom:null,ox:0,oy:0};state.sel='__photo';syncZoom();syncIns();render();};im.src=URL.createObjectURL(f);ev.target.value='';});
+$('clearPhoto').addEventListener('click',clearPhoto);
+$('zoom').addEventListener('input',ev=>setZoom(parseFloat(ev.target.value)));
+$('p-zoom').addEventListener('input',ev=>setZoom(parseFloat(ev.target.value)));
+$('fitCover').addEventListener('click',fitCover);$('p-cover').addEventListener('click',fitCover);
+$('fitContain').addEventListener('click',fitContain);$('p-contain').addEventListener('click',fitContain);
+$('p-center').addEventListener('click',()=>{const c=state.crop[state.tpl];c.ox=0;c.oy=0;save();render();});
+$('p-change').addEventListener('click',()=>$('file').click());
+$('p-del').addEventListener('click',clearPhoto);
 $('safe').addEventListener('change',render);
 $('undo').addEventListener('click',undo);$('redo').addEventListener('click',redo);
 $('reset').addEventListener('click',()=>{if(!confirm('همه‌ی تغییرات این قالب پاک شود و به حالت اولیه برگردد؟'))return;const prev=snap();state.docs[state.tpl]=fresh(state.tpl);state.sel=null;commit(prev);syncIns();render();});
