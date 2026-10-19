@@ -930,6 +930,11 @@ Object.assign(TR, {
   palP:"Her kapak, ürününüzün gerektirdiği renkte üretilir — markanıza uyması ya da ürün hatlarınızın bir bakışta ayırt edilmesi için.",
   palCta:"Renginizi sorun", palNote:"Pek çok renkten altısı — her renk siparişe göre."
 });
+
+
+/* journey copy */
+Object.assign(FA, {jy_eb:'مزیت نیوکپ', jy_t:'<span class="l">از اولین طرح،</span><span class="l"><em>تا آخرین درپوش.</em></span>', jy_p:'طراحی، قالب و تولید در یک مسیر — بدون اینکه پروژهٔ شما میان چند پیمانکار دست\u200cبه\u200cدست شود. یک تیم، از ابتدا تا انتها پاسخ\u200cگوی درپوش شماست.', jy_cta:'مسیر کار ما', jy_hint:'اسکرول کنید', jy_s1:'طراحی', jy_s1p:'طرح فنی درپوش، بر اساس ظرف و محصول شما', jy_s2:'قالب', jy_s2p:'قالبی که همان طرح را با دقت تکرار می\u200cکند', jy_s3:'تولید', jy_s3p:'تزریق و تولید یکنواخت، به رنگ برند شما', jy_s4:'تأمین', jy_s4p:'تأمین عمده و پیوسته برای خط تولید شما'});
+Object.assign(TR, {jy_eb:'NEWCAP farkı', jy_t:'<span class="l">İlk çizimden</span><span class="l"><em>son kapağa.</em></span>', jy_p:'Tasarım, kalıp ve üretim tek bir yolda — projeniz yükleniciler arasında el değiştirmez. Kapağınızdan baştan sona tek bir ekip sorumludur.', jy_cta:'Çalışma şeklimiz', jy_hint:'Kaydırın', jy_s1:'Tasarım', jy_s1p:'Kabınıza ve ürününüze göre hazırlanan teknik çizim', jy_s2:'Kalıp', jy_s2p:'O çizimi hassasiyetle tekrarlayan bir kalıp', jy_s3:'Üretim', jy_s3p:'Markanızın renginde tutarlı enjeksiyon üretimi', jy_s4:'Tedarik', jy_s4p:'Hattınıza toplu ve sürekli tedarik'});
 const DICTS = { en: EN, fa: FA, tr: TR };
 const LANG_META = {
   en: { code:'EN', dir:'ltr', title:'NEWCAP Closures — Plastic Closures & Caps Manufacturer', search:'Search NEWCAP' },
@@ -1808,6 +1813,37 @@ document.querySelectorAll('img[data-scene]').forEach((el, i) => { if (i === 0) s
   }, { threshold:.35 }).observe(stage);
   langMenu.addEventListener('click', () => setTimeout(label, 0));
   label();
+})();
+
+/* ---------------- journey (home): scroll moves one cap from drawing to supply ---------------- */
+(() => {
+  const sec = document.getElementById('journey'); if (!sec) return;
+  const steps = [...sec.querySelectorAll('.jy-step')];
+  const set = n => {
+    if (sec.dataset.s === String(n)) return;
+    sec.dataset.s = n;
+    steps.forEach((el, k) => { el.classList.toggle('on', k === n - 1); el.classList.toggle('done', k < n - 1); });
+  };
+  new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) sec.classList.add('seen'); }),
+    { threshold: .2 }).observe(sec.querySelector('.jy-pin'));
+  if (reduce) { sec.classList.add('seen'); set(4); return; }
+  let tick = false;
+  const update = () => {
+    tick = false;
+    const r = sec.getBoundingClientRect(), run = r.height - innerHeight;
+    if (r.top > innerHeight || r.bottom < 0) return;
+    const p = Math.min(1, Math.max(0, -r.top / run));
+    sec.style.setProperty('--p', p.toFixed(3));
+    set(r.top > innerHeight * .35 ? 0 : Math.min(4, 1 + Math.floor(p * 4.0001)));
+  };
+  addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(update); } }, { passive: true });
+  addEventListener('resize', update);
+  update();
+  /* a step label jumps to its part of the scroll */
+  steps.forEach((el, k) => el.querySelector('button').addEventListener('click', () => {
+    const top = sec.getBoundingClientRect().top + scrollY, run = sec.offsetHeight - innerHeight;
+    scrollTo({ top: top + run * (k + .5) / 4, behavior: 'smooth' });
+  }));
 })();
 
 /* poster lightbox */
