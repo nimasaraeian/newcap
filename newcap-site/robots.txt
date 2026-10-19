@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://newcapgroup.com/sitemap.xml

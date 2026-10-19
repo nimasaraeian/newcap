@@ -34,6 +34,21 @@ favicon-*.png, apple-touch-icon.png
 sitemap.xml, robots.txt, vercel.json
 ```
 
+## Editing content
+
+All copy lives in `site.js` (page templates plus the FA/EN/TR dictionaries).
+After changing it, regenerate the static pages, `vercel.json` routes and
+`sitemap.xml`, then run the checks:
+
+```
+pip install playwright && python3 -m playwright install chromium
+python3 tools/build.py     # renders all 54 pages from site.js
+python3 tools/check.py     # one <h1> per page, no #/ links, no JS errors, no broken links
+```
+
+To add a page: add its key to `KEYS` in `tools/build.py`, its template to
+`PAGES` (or `ARTICLES` / `PROD_LIST`) and `ROUTE_META` in `site.js`, then build.
+
 ## Deploy
 
 **Drag and drop** — open `vercel.com/new` and drop this folder in. Vercel

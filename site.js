@@ -626,9 +626,284 @@ const TR_ART = {
   a4_p4:"Koyu pigmentler yakın kızılötesi ayrıştırmayı boşa çıkarabilir; yani teknik olarak geri dönüştürülebilir bir kapak tesiste reddedilir. Kapak mutlaka koyu olacaksa, algılanabilir bir pigment sistemi tanımlayın ve geçeceğini varsaymak yerine bir geri dönüşümcüyle doğrulayın."
 };
 
+/* ---------------- product pages + new insights, three languages ---------------- */
+const EN_PROD = {
+  seo_industries:"Closures for detergent, oil, chemical and food packaging", seo_capabilities:"Custom closure development and production", seo_quality:"Closure quality: dimensional precision and leak-free sealing", seo_about:"About NEWCAP — plastic closure manufacturer in Eshtehard, Iran", seo_resources:"Closure catalogue, specifications and FAQ", seo_contact:"Contact NEWCAP — request a closure quote",
+  pp_more:"View details",
+  pd_ovL:"About this product", pd_uL:"Where it is used", pd_spL:"Specification", pd_oL:"Before you order",
+  pd_o:"Send us the container or its drawing, a short description of your product and the quantity you need. We measure the neck finish ourselves rather than relying on the nominal size, because that is where most sealing problems begin.",
+  pd_cta:"Request a quote", pd_relL:"Further reading", ar_rel:"Related product",
+  pd_s1:"Materials", pd_s2:"Sizes", pd_s3:"Sealing", pd_s4:"Colour", pd_s5:"Supply",
+
+  m1_h1:"Measuring caps for liquid detergents",
+  m1_lede:"Dosing caps that close the bottle and measure the dose — produced in PE or PP, in a range of sizes and in the colour of your brand.",
+  m1_alt:"NEWCAP measuring cap for liquid detergent bottles",
+  m1_p1:"A measuring cap does two jobs. It closes the bottle, and it gives the consumer a reliable way to pour the right amount of detergent — no more than the wash needs, no less than it takes to clean. That makes it one of the few parts of the pack the consumer handles every single time the product is used.",
+  m1_p2:"NEWCAP produces measuring caps for liquid detergents in a range of sizes, in polyethylene or polypropylene, and in the colour that matches your brand or tells your product lines apart.",
+  m1_u1:"Laundry liquids", m1_u1p:"Caps sized to the dose of one wash, so the consumer measures instead of guessing.",
+  m1_u2:"Household cleaners", m1_u2p:"Dosing caps for concentrated cleaners and dishwashing liquids, where overdosing simply wastes product.",
+  m1_u3:"Brand ranges", m1_u3p:"One cap shape in several colours, so variants on the same shelf can be told apart at a glance.",
+  m1_s1v:"Polyethylene (PE) or polypropylene (PP), chosen to suit the formulation.",
+  m1_s2v:"A range of sizes, matched to your bottle and to the dose your product needs.",
+  m1_s3v:"Designed to close the bottle securely between uses.",
+  m1_s4v:"Any colour, to match your brand.",
+  m1_s5v:"Bulk and continuous supply for detergent producers.",
+
+  m2_h1:"Caps for engine oil, brake fluid and lubricants",
+  m2_lede:"Closures for oil and brake-fluid bottles, built for a leak-free seal — including our 62 mm, 5-gram brake-fluid cap in PE or PP.",
+  m2_alt:"NEWCAP cap for oil and brake-fluid bottles",
+  m2_p1:"In an oil or brake-fluid pack, the closure carries more responsibility than its size suggests. Oil creeps through any gap and leaves a film on the bottle, the shelf and the carton. Brake fluid draws moisture from the air, which degrades it, and damages painted surfaces it touches. A cap that does not seal consistently becomes a returned product, a dirty workshop or a safety problem.",
+  m2_p2:"NEWCAP produces caps for engine oil, brake fluid and lubricant bottles in PE or PP. Our brake-fluid cap is a 62 mm, 5-gram part made for a leak-free seal, and is available in custom colours.",
+  m2_u1:"Brake fluid", m2_u1p:"Caps that keep the bottle tightly closed, because brake fluid absorbs moisture from the air it is exposed to.",
+  m2_u2:"Engine oil", m2_u2p:"Closures for engine-oil bottles, where leaks on the shelf and in the carton are the most common complaint.",
+  m2_u3:"Lubricants and automotive fluids", m2_u3p:"Caps for lubricants and other workshop fluids, produced in the colours of your range.",
+  m2_s1v:"Polyethylene (PE) or polypropylene (PP).",
+  m2_s2v:"Including a 62 mm brake-fluid cap weighing 5 g; other sizes on request.",
+  m2_s3v:"Leak-free sealing for oil and brake-fluid packs.",
+  m2_s4v:"Custom colours to match your brand or grade.",
+  m2_s5v:"Bulk and continuous supply for oil and lubricant producers.",
+
+  m3_h1:"Gallon caps and tamper-evident caps for 20-litre gallons",
+  m3_lede:"Caps for gallons and jerrycans, including a tamper-evident cap for 20-litre gallons that shows at a glance whether a container has been opened.",
+  m3_alt:"NEWCAP tamper-evident gallon caps in several colours",
+  m3_p1:"A gallon usually travels further and is handled more roughly than a bottle: stacked on pallets, loaded and unloaded, and often opened far from where it was filled. The cap has to stay sealed through all of that, and the buyer has to be able to see that nobody opened the container on the way.",
+  m3_p2:"NEWCAP produces caps for gallons and jerrycans, including a 20-litre tamper-evident cap with a band that breaks on first opening. Caps are produced in the colour you specify and supplied in bulk.",
+  m3_u1:"Industrial chemicals and lubricants", m3_u1p:"20-litre gallons that are filled in one place and opened in another.",
+  m3_u2:"Detergents and cleaning products", m3_u2p:"Bulk packs for professional and institutional cleaning.",
+  m3_u3:"Food and industrial packaging", m3_u3p:"Gallons where the buyer needs to know the container has not been opened since filling.",
+  m3_s1v:"Polyethylene (PE) or polypropylene (PP).",
+  m3_s2v:"Caps for gallons and jerrycans, including 20-litre gallons.",
+  m3_s3v:"A tamper-evident band that shows first opening.",
+  m3_s4v:"Any colour, to order.",
+  m3_s5v:"Bulk and continuous supply for factories.",
+
+  m4_h1:"Spray closures, child-resistant caps and custom closures",
+  m4_lede:"Spray closures, child-resistant caps, bases and caps for adhesive containers — and closures produced to your specification when nothing standard fits.",
+  m4_alt:"NEWCAP closures on spray and detergent bottles",
+  m4_p1:"Some products need a closure that does more than close. A spray product needs a closure that works with its dispensing system. A household chemical within reach of children needs a cap an adult can open and a small child cannot. An adhesive needs a container that keeps air out, or it cures before it is used.",
+  m4_p2:"NEWCAP produces spray closures, child-resistant caps, and bases and caps for adhesive containers. When no standard part fits your container or your contents, we review your product’s specifications and produce a closure to your requirement.",
+  m4_u1:"Household chemicals", m4_u1p:"Child-resistant caps for products that must stay out of children’s hands.",
+  m4_u2:"Adhesives and glues", m4_u2p:"Bases and caps that keep air out of the container so the adhesive does not harden.",
+  m4_u3:"Your own container", m4_u3p:"Custom closures for a neck finish or a product that no standard part fits.",
+  m4_s1v:"Polyethylene (PE) or polypropylene (PP).",
+  m4_s2v:"Made to the container — a standard part or to your specification.",
+  m4_s3v:"Designed around the contents: airtight for adhesives, child-resistant where required.",
+  m4_s4v:"Any colour, to order.",
+  m4_s5v:"Bulk and continuous supply.",
+
+  a5_cat:"Automotive", a5_cat2:"Automotive", a5_rt:"4 min read",
+  a5_h1:"Choosing caps for engine oil and brake fluid bottles",
+  a5_lede:"Oil and brake fluid ask different things of the same small part. Knowing the difference is most of the specification.",
+  a5_p0:"Automotive fluids are sold in packs that are opened, closed, stored in workshops and carried in car boots. The closure is what keeps the product usable and the shelf clean through all of that — and the two most common fluids, engine oil and brake fluid, test a closure in different ways.",
+  a5_s1:"Brake fluid is a moisture problem",
+  a5_p1:"Most brake fluids — DOT 3, DOT 4 and DOT 5.1 — are glycol-based and hygroscopic: they absorb water from the air. Water lowers the fluid’s boiling point, which is exactly the property a braking system depends on. For the closure, that turns sealing from a cosmetic question into a functional one: a cap that lets air in shortens the life of the product inside.",
+  a5_s2:"Brake fluid also attacks surfaces",
+  a5_p2:"Glycol-based brake fluid damages paint and some plastics. A leak is not just a stain on the carton; it can mark the vehicle or the workshop. Closure material and seal geometry both need to be chosen with the fluid in mind, not with water.",
+  a5_s3:"Engine oil is a creep problem",
+  a5_p3:"Oil is less aggressive, but it finds every gap. A small leak path that would never show with water leaves an oily film on the bottle shoulder, the label and the carton — and buyers notice it before they read anything on the pack. Consistent dimensions and a well-controlled seal against the neck matter more than any extra feature.",
+  a5_s4:"What to send your closure supplier",
+  a5_p4:"The container or its drawing, the exact fluid, the capping method and the colour you need. For brake fluid, say whether the pack must stay sealed through long storage. With those four answers the closure can be specified properly instead of chosen from a catalogue.",
+
+  a6_cat:"Design", a6_cat2:"Design", a6_rt:"4 min read",
+  a6_h1:"Measuring caps for liquid detergent: what to specify",
+  a6_lede:"A measuring cap is the part of the pack the consumer handles at every wash. Getting it right is mostly about the dose, the bottle and the hand.",
+  a6_p0:"A detergent measuring cap closes the bottle and doubles as the measure for each wash. Because it is used every time, it shapes how the product is perceived more than almost any other component — and it decides whether consumers dose correctly or simply pour.",
+  a6_s1:"Start from the dose",
+  a6_p1:"The volume of the cap and the position of any fill marks follow from the dose the formulation needs. A concentrated detergent needs a smaller, clearly marked dose. A cap that is too large invites overdosing, which wastes product and is the most common reason a bottle runs out sooner than the consumer expects.",
+  a6_s2:"Match the bottle, not just the size",
+  a6_p2:"The cap has to fit the bottle finish exactly and seal between uses, because liquid detergents creep along surfaces. Two bottles with the same nominal neck size can still differ enough to leak, which is why a measured sample of the bottle is a better basis than a catalogue dimension.",
+  a6_s3:"Design for a wet hand",
+  a6_p3:"Caps are removed and replaced with wet or soapy hands. Grip, edge finish and how easily the cap seats back on the bottle all decide whether the consumer closes it properly after use.",
+  a6_s4:"Use colour deliberately",
+  a6_p4:"The cap is often the most visible coloured element on the shelf. Matching it to the brand, or giving each variant its own cap colour, helps consumers find the product they bought last time."
+};
+
+const FA_PROD = {
+  seo_industries:"درپوش برای صنایع شوینده، روغن، شیمیایی و غذایی", seo_capabilities:"طراحی و تولید درپوش سفارشی", seo_quality:"کیفیت درپوش: دقت ابعادی و آب‌بندی بدون نشتی", seo_about:"دربارهٔ نیوکپ — تولیدکننده درپوش پلاستیکی در اشتهارد", seo_resources:"کاتالوگ، مشخصات فنی و پرسش‌های متداول درپوش", seo_contact:"تماس با نیوکپ — استعلام قیمت درپوش",
+  pp_more:"مشاهدهٔ جزئیات",
+  pd_ovL:"معرفی محصول", pd_uL:"کاربردها", pd_spL:"مشخصات", pd_oL:"پیش از سفارش",
+  pd_o:"ظرف یا نقشهٔ آن، توضیح کوتاهی از محصولتان و تیراژ مورد نیاز را برایمان بفرستید. دهانهٔ ظرف را خودمان اندازه می‌گیریم و به اندازهٔ اسمی بسنده نمی‌کنیم، چون بیشتر مشکلات آب‌بندی از همین‌جا شروع می‌شود.",
+  pd_cta:"استعلام قیمت", pd_relL:"بیشتر بخوانید", ar_rel:"محصول مرتبط",
+  pd_s1:"مواد", pd_s2:"ابعاد", pd_s3:"آب‌بندی", pd_s4:"رنگ", pd_s5:"تأمین",
+
+  m1_h1:"کپ و درپوش پیمانه‌ای شوینده مایع",
+  m1_lede:"درپوش‌هایی که هم بطری را می‌بندند و هم پیمانه‌اند — از جنس PE یا PP، در اندازه‌های مختلف و به رنگ برند شما.",
+  m1_alt:"کپ پیمانه‌ای نیوکپ برای بطری شوینده مایع",
+  m1_p1:"کپ پیمانه‌ای دو کار انجام می‌دهد: بطری را می‌بندد، و به مصرف‌کننده راهی مطمئن می‌دهد تا مقدار درست شوینده را بریزد — نه بیشتر از نیاز شست‌وشو، نه کمتر از آنچه برای تمیز شدن لازم است. به همین دلیل، این کپ از معدود اجزای بسته‌بندی است که مصرف‌کننده در هر بار استفاده آن را در دست می‌گیرد.",
+  m1_p2:"نیوکپ کپ پیمانه‌ای شوینده‌های مایع را در اندازه‌های مختلف، از جنس پلی‌اتیلن یا پلی‌پروپیلن و به رنگی تولید می‌کند که با برند شما هماهنگ باشد یا خطوط محصولتان را از هم متمایز کند.",
+  m1_u1:"مایع لباسشویی", m1_u1p:"کپ‌هایی به اندازهٔ دوز یک بار شست‌وشو، تا مصرف‌کننده به‌جای حدس زدن، پیمانه کند.",
+  m1_u2:"شوینده‌های خانگی", m1_u2p:"کپ پیمانه‌ای برای شوینده‌های غلیظ و مایع ظرفشویی، جایی که مصرف بیش از اندازه یعنی هدر رفتن محصول.",
+  m1_u3:"خانوادهٔ محصولات یک برند", m1_u3p:"یک فرم کپ در چند رنگ، تا محصولات مختلف یک قفسه در یک نگاه از هم تشخیص داده شوند.",
+  m1_s1v:"پلی‌اتیلن (PE) یا پلی‌پروپیلن (PP)، متناسب با فرمولاسیون محصول.",
+  m1_s2v:"اندازه‌های مختلف، متناسب با بطری شما و دوزی که محصولتان لازم دارد.",
+  m1_s3v:"طراحی‌شده برای بستن مطمئن بطری بین دفعات مصرف.",
+  m1_s4v:"هر رنگی، هماهنگ با برند شما.",
+  m1_s5v:"تأمین عمده و مستمر برای تولیدکنندگان شوینده.",
+
+  m2_h1:"کپ و درپوش روغن موتور، روغن ترمز و روانکار",
+  m2_lede:"درپوش بطری‌های روغن و روغن ترمز، ساخته‌شده برای آب‌بندی بدون نشتی — از جمله کپ ۶۲ میلی‌متری و ۵ گرمی روغن ترمز از جنس PE یا PP.",
+  m2_alt:"درپوش نیوکپ برای بطری روغن و روغن ترمز",
+  m2_p1:"در بسته‌بندی روغن یا روغن ترمز، درپوش مسئولیتی بیش از اندازهٔ کوچکش دارد. روغن از هر درزی راه پیدا می‌کند و لایه‌ای چرب روی بطری، قفسه و کارتن به جا می‌گذارد. روغن ترمز رطوبت هوا را جذب می‌کند که کیفیتش را پایین می‌آورد، و به سطوح رنگ‌شده‌ای که با آن تماس پیدا کنند آسیب می‌زند. درپوشی که یکنواخت آب‌بندی نکند، به محصول مرجوعی، تعمیرگاه کثیف یا یک مسئلهٔ ایمنی تبدیل می‌شود.",
+  m2_p2:"نیوکپ درپوش بطری‌های روغن موتور، روغن ترمز و روانکار را از جنس PE یا PP تولید می‌کند. کپ روغن ترمز ما قطعه‌ای ۶۲ میلی‌متری و ۵ گرمی است که برای آب‌بندی بدون نشتی ساخته شده و در رنگ‌بندی دلخواه عرضه می‌شود.",
+  m2_u1:"روغن ترمز", m2_u1p:"درپوشی که بطری را محکم بسته نگه می‌دارد، چون روغن ترمز در تماس با هوا رطوبت جذب می‌کند.",
+  m2_u2:"روغن موتور", m2_u2p:"درپوش بطری روغن موتور، جایی که نشتی روی قفسه و داخل کارتن رایج‌ترین شکایت است.",
+  m2_u3:"روانکارها و سیالات خودرو", m2_u3p:"درپوش روانکارها و دیگر سیالات تعمیرگاهی، به رنگ‌های خط محصول شما.",
+  m2_s1v:"پلی‌اتیلن (PE) یا پلی‌پروپیلن (PP).",
+  m2_s2v:"از جمله کپ ۶۲ میلی‌متری روغن ترمز با وزن ۵ گرم؛ ابعاد دیگر بر اساس سفارش.",
+  m2_s3v:"آب‌بندی بدون نشتی برای بسته‌بندی روغن و روغن ترمز.",
+  m2_s4v:"رنگ‌بندی دلخواه، هماهنگ با برند یا گرید محصول.",
+  m2_s5v:"تأمین عمده و مستمر برای تولیدکنندگان روغن و روانکار.",
+
+  m3_h1:"درب گالن و درب پلمپ‌دار گالن ۲۰ لیتری",
+  m3_lede:"درب انواع گالن، از جمله درب پلمپ‌دار گالن ۲۰ لیتری که در یک نگاه نشان می‌دهد ظرف باز شده یا نه.",
+  m3_alt:"درب گالن پلمپ‌دار نیوکپ در رنگ‌های مختلف",
+  m3_p1:"گالن معمولاً مسیر طولانی‌تری از بطری طی می‌کند و با آن سخت‌تر رفتار می‌شود: روی پالت چیده می‌شود، بارگیری و تخلیه می‌شود و اغلب جایی دور از محل پر شدن باز می‌شود. درب باید در تمام این مسیر بسته بماند، و خریدار باید بتواند ببیند که کسی در این میان ظرف را باز نکرده است.",
+  m3_p2:"نیوکپ درب انواع گالن را تولید می‌کند، از جمله درب پلمپ‌دار گالن ۲۰ لیتری با نوار پلمپی که در اولین باز شدن پاره می‌شود. درب‌ها به رنگ دلخواه شما تولید و به‌صورت عمده تأمین می‌شوند.",
+  m3_u1:"مواد شیمیایی صنعتی و روانکارها", m3_u1p:"گالن‌های ۲۰ لیتری که در یک جا پر و در جای دیگری باز می‌شوند.",
+  m3_u2:"شوینده‌ها و مواد نظافتی", m3_u2p:"بسته‌بندی‌های حجیم برای مصرف صنفی و سازمانی.",
+  m3_u3:"بسته‌بندی غذایی و صنعتی", m3_u3p:"گالن‌هایی که خریدار باید مطمئن باشد از زمان پر شدن باز نشده‌اند.",
+  m3_s1v:"پلی‌اتیلن (PE) یا پلی‌پروپیلن (PP).",
+  m3_s2v:"درب انواع گالن، از جمله گالن ۲۰ لیتری.",
+  m3_s3v:"نوار پلمپی که اولین باز شدن را نشان می‌دهد.",
+  m3_s4v:"هر رنگی، به سفارش شما.",
+  m3_s5v:"تأمین عمده و مستمر برای کارخانه‌ها.",
+
+  m4_h1:"درپوش اسپری، درپوش قفل کودک و درپوش سفارشی",
+  m4_lede:"درپوش اسپری، درپوش قفل کودک، پایه و درپوش ظروف چسب — و درپوشی که وقتی هیچ قطعهٔ استانداردی جواب نمی‌دهد، مطابق مشخصات شما تولید می‌شود.",
+  m4_alt:"درپوش‌های نیوکپ روی بطری‌های اسپری و شوینده",
+  m4_p1:"برخی محصولات به درپوشی نیاز دارند که کاری بیش از بستن انجام دهد. محصول اسپری به درپوشی نیاز دارد که با سامانهٔ پخش آن هماهنگ باشد. یک مادهٔ شیمیایی خانگی که در دسترس کودکان است، به درپوشی نیاز دارد که بزرگسال بتواند بازش کند و کودک خردسال نتواند. چسب به ظرفی نیاز دارد که هوا را بیرون نگه دارد، وگرنه پیش از مصرف سفت می‌شود.",
+  m4_p2:"نیوکپ درپوش اسپری، درپوش قفل کودک و پایه و درپوش ظروف چسب تولید می‌کند. وقتی هیچ قطعهٔ استانداردی به ظرف یا محتوای شما نمی‌خورد، مشخصات محصولتان را بررسی می‌کنیم و درپوشی مطابق نیازتان تولید می‌کنیم.",
+  m4_u1:"مواد شیمیایی خانگی", m4_u1p:"درپوش قفل کودک برای محصولاتی که باید از دسترس کودکان دور بمانند.",
+  m4_u2:"چسب‌ها", m4_u2p:"پایه و درپوشی که هوا را از ظرف دور نگه می‌دارد تا چسب سفت نشود.",
+  m4_u3:"ظرف اختصاصی شما", m4_u3p:"درپوش سفارشی برای دهانه یا محصولی که هیچ قطعهٔ استانداردی به آن نمی‌خورد.",
+  m4_s1v:"پلی‌اتیلن (PE) یا پلی‌پروپیلن (PP).",
+  m4_s2v:"متناسب با ظرف — قطعهٔ استاندارد یا مطابق مشخصات شما.",
+  m4_s3v:"طراحی‌شده بر اساس محتوا: هوابند برای چسب، با قفل کودک هر جا لازم باشد.",
+  m4_s4v:"هر رنگی، به سفارش شما.",
+  m4_s5v:"تأمین عمده و مستمر.",
+
+  a5_cat:"خودرو", a5_cat2:"خودرو", a5_rt:"۴ دقیقه مطالعه",
+  a5_h1:"انتخاب درپوش برای بطری روغن موتور و روغن ترمز",
+  a5_lede:"روغن و روغن ترمز از یک قطعهٔ کوچک انتظارهای متفاوتی دارند. شناختن این تفاوت، بیشترِ کارِ تعیین مشخصات است.",
+  a5_p0:"سیالات خودرو در بسته‌هایی فروخته می‌شوند که باز و بسته می‌شوند، در تعمیرگاه انبار می‌شوند و در صندوق عقب خودرو جابه‌جا می‌شوند. درپوش است که در تمام این مسیر محصول را قابل استفاده و قفسه را تمیز نگه می‌دارد — و دو سیال رایج، یعنی روغن موتور و روغن ترمز، هر کدام به شکلی متفاوت درپوش را محک می‌زنند.",
+  a5_s1:"مشکل روغن ترمز، رطوبت است",
+  a5_p1:"بیشتر روغن‌های ترمز — DOT 3، DOT 4 و DOT 5.1 — پایه‌گلیکولی و جاذب رطوبت‌اند؛ یعنی آب را از هوا جذب می‌کنند. آب نقطهٔ جوش روغن ترمز را پایین می‌آورد، و این دقیقاً همان ویژگی‌ای است که سامانهٔ ترمز به آن وابسته است. پس برای درپوش، آب‌بندی دیگر یک موضوع ظاهری نیست: درپوشی که هوا را راه بدهد، عمر محصول داخل بطری را کوتاه می‌کند.",
+  a5_s2:"روغن ترمز به سطوح هم آسیب می‌زند",
+  a5_p2:"روغن ترمز پایه‌گلیکولی به رنگ و برخی پلاستیک‌ها آسیب می‌زند. نشتی فقط لکه‌ای روی کارتن نیست؛ می‌تواند روی خودرو یا تعمیرگاه اثر بگذارد. جنس درپوش و هندسهٔ آب‌بندی هر دو باید با در نظر گرفتن خود سیال انتخاب شوند، نه آب.",
+  a5_s3:"مشکل روغن موتور، نشت تدریجی است",
+  a5_p3:"روغن کمتر خورنده است، اما هر درزی را پیدا می‌کند. مسیر نشتی کوچکی که در آزمون با آب هرگز دیده نمی‌شود، لایه‌ای چرب روی شانهٔ بطری، برچسب و کارتن به جا می‌گذارد — و خریدار پیش از آنکه چیزی روی بسته بخواند، همین را می‌بیند. ابعاد یکنواخت و آب‌بندی کنترل‌شده روی دهانه، از هر ویژگی اضافه‌ای مهم‌تر است.",
+  a5_s4:"چه چیزی برای تأمین‌کنندهٔ درپوش بفرستید",
+  a5_p4:"ظرف یا نقشهٔ آن، نوع دقیق سیال، روش درب‌بندی و رنگ مورد نیاز. برای روغن ترمز بگویید که آیا بسته باید در انبارداری طولانی هم آب‌بند بماند یا نه. با این چهار پاسخ، درپوش درست مشخص می‌شود، نه اینکه از روی کاتالوگ انتخاب شود.",
+
+  a6_cat:"طراحی", a6_cat2:"طراحی", a6_rt:"۴ دقیقه مطالعه",
+  a6_h1:"کپ پیمانه‌ای شوینده مایع: چه چیزهایی را باید مشخص کرد",
+  a6_lede:"کپ پیمانه‌ای همان بخشی از بسته است که مصرف‌کننده در هر شست‌وشو در دست می‌گیرد. درست طراحی کردنش بیشتر به دوز، بطری و دستِ مصرف‌کننده برمی‌گردد.",
+  a6_p0:"کپ پیمانه‌ای شوینده هم بطری را می‌بندد و هم پیمانهٔ هر بار شست‌وشوست. چون هر بار استفاده می‌شود، بیش از تقریباً هر جزء دیگری بر برداشت مصرف‌کننده از محصول اثر می‌گذارد — و تعیین می‌کند که مصرف‌کننده درست پیمانه کند یا فقط بریزد.",
+  a6_s1:"از دوز شروع کنید",
+  a6_p1:"حجم کپ و جای خطوط پیمانه، از دوزی که فرمولاسیون لازم دارد به دست می‌آید. شویندهٔ غلیظ به دوز کوچک‌تر و خط پیمانهٔ واضح نیاز دارد. کپی که بیش از حد بزرگ باشد مصرف بیش از اندازه را تشویق می‌کند؛ این هم محصول را هدر می‌دهد و هم رایج‌ترین دلیل تمام شدن زودتر از انتظار بطری است.",
+  a6_s2:"با بطری هماهنگ کنید، نه فقط با اندازه",
+  a6_p2:"کپ باید دقیقاً روی دهانهٔ بطری بنشیند و بین دفعات مصرف آب‌بندی کند، چون شوینده‌های مایع روی سطوح می‌خزند. دو بطری با اندازهٔ اسمی یکسان هم می‌توانند آن‌قدر با هم فرق داشته باشند که نشتی ایجاد شود؛ به همین دلیل نمونهٔ اندازه‌گیری‌شدهٔ بطری مبنای بهتری از ابعاد کاتالوگ است.",
+  a6_s3:"برای دست خیس طراحی کنید",
+  a6_p3:"کپ با دست خیس یا کفی برداشته و دوباره بسته می‌شود. گیرش، پرداخت لبه و اینکه کپ چقدر راحت دوباره روی بطری می‌نشیند، همه در این اثر دارند که مصرف‌کننده بعد از استفاده آن را درست ببندد یا نه.",
+  a6_s4:"رنگ را آگاهانه انتخاب کنید",
+  a6_p4:"کپ اغلب پررنگ‌ترین جزء بسته روی قفسه است. هم‌رنگ کردن آن با برند، یا دادن رنگ کپ جداگانه به هر نوع محصول، به مصرف‌کننده کمک می‌کند محصولی را که دفعهٔ قبل خریده دوباره پیدا کند."
+};
+
+const TR_PROD = {
+  seo_industries:"Deterjan, yağ, kimya ve gıda ambalajı için kapaklar", seo_capabilities:"Özel kapak geliştirme ve üretimi", seo_quality:"Kapak kalitesi: ölçü hassasiyeti ve sızdırmazlık", seo_about:"NEWCAP hakkında — İran, Eştehard'da plastik kapak üreticisi", seo_resources:"Kapak kataloğu, teknik özellikler ve SSS", seo_contact:"NEWCAP iletişim — kapak fiyat teklifi isteyin",
+  pp_more:"Ayrıntıları görün",
+  pd_ovL:"Ürün hakkında", pd_uL:"Kullanım alanları", pd_spL:"Teknik özellikler", pd_oL:"Sipariş öncesi",
+  pd_o:"Bize kabı ya da teknik çizimini, ürününüzün kısa bir tanımını ve ihtiyaç duyduğunuz miktarı gönderin. Ağız ölçüsünü nominal değere güvenmek yerine kendimiz ölçeriz; çünkü sızdırmazlık sorunlarının çoğu orada başlar.",
+  pd_cta:"Fiyat teklifi isteyin", pd_relL:"Devamını okuyun", ar_rel:"İlgili ürün",
+  pd_s1:"Malzeme", pd_s2:"Ölçüler", pd_s3:"Sızdırmazlık", pd_s4:"Renk", pd_s5:"Tedarik",
+
+  m1_h1:"Sıvı deterjanlar için ölçekli kapaklar",
+  m1_lede:"Şişeyi kapatan ve dozu ölçen kapaklar — PE veya PP'den, farklı ölçülerde ve markanızın renginde.",
+  m1_alt:"Sıvı deterjan şişeleri için NEWCAP ölçekli kapak",
+  m1_p1:"Ölçekli kapak iki iş yapar: şişeyi kapatır ve tüketiciye doğru miktarda deterjan dökmesi için güvenilir bir yol sunar — yıkamanın ihtiyacından fazla değil, temizlik için gerekenden az değil. Bu yüzden, tüketicinin ürünü her kullanışında eline aldığı ender ambalaj parçalarından biridir.",
+  m1_p2:"NEWCAP, sıvı deterjanlar için ölçekli kapakları farklı ölçülerde, polietilen veya polipropilenden ve markanızla uyumlu ya da ürün hatlarınızı birbirinden ayıran renklerde üretir.",
+  m1_u1:"Çamaşır deterjanları", m1_u1p:"Bir yıkamalık doza göre boyutlandırılmış kapaklar; tüketici tahmin etmek yerine ölçer.",
+  m1_u2:"Ev temizlik ürünleri", m1_u2p:"Konsantre temizleyiciler ve bulaşık deterjanları için dozaj kapakları; fazla kullanım ürün israfı demektir.",
+  m1_u3:"Marka serileri", m1_u3p:"Aynı kapak formu birkaç renkte; raftaki çeşitler bir bakışta ayırt edilir.",
+  m1_s1v:"Formülasyona uygun olarak polietilen (PE) veya polipropilen (PP).",
+  m1_s2v:"Şişenize ve ürününüzün gerektirdiği doza uygun farklı ölçüler.",
+  m1_s3v:"Kullanımlar arasında şişeyi güvenle kapatacak şekilde tasarlanır.",
+  m1_s4v:"Markanıza uygun her renk.",
+  m1_s5v:"Deterjan üreticileri için toplu ve sürekli tedarik.",
+
+  m2_h1:"Motor yağı, fren hidroliği ve madeni yağ kapakları",
+  m2_lede:"Yağ ve fren hidroliği şişeleri için sızdırmaz kapatma sağlayan kapaklar — 62 mm, 5 gramlık PE veya PP fren hidroliği kapağımız dahil.",
+  m2_alt:"Yağ ve fren hidroliği şişeleri için NEWCAP kapak",
+  m2_p1:"Bir yağ ya da fren hidroliği ambalajında kapak, boyutundan çok daha fazla sorumluluk taşır. Yağ her boşluktan sızar ve şişede, rafta ve kolide yağlı bir tabaka bırakır. Fren hidroliği havadaki nemi çeker, bu da onu bozar; temas ettiği boyalı yüzeylere de zarar verir. Tutarlı şekilde sızdırmazlık sağlamayan bir kapak; iade edilen bir ürüne, kirli bir atölyeye ya da bir güvenlik sorununa dönüşür.",
+  m2_p2:"NEWCAP, motor yağı, fren hidroliği ve madeni yağ şişeleri için PE veya PP kapaklar üretir. Fren hidroliği kapağımız, sızdırmaz kapatma için tasarlanmış 62 mm, 5 gramlık bir parçadır ve istenen renklerde üretilir.",
+  m2_u1:"Fren hidroliği", m2_u1p:"Şişeyi sıkıca kapalı tutan kapaklar; çünkü fren hidroliği temas ettiği havadan nem çeker.",
+  m2_u2:"Motor yağı", m2_u2p:"Rafta ve kolide sızıntının en sık şikâyet olduğu motor yağı şişeleri için kapaklar.",
+  m2_u3:"Madeni yağlar ve otomotiv sıvıları", m2_u3p:"Madeni yağlar ve diğer atölye sıvıları için, ürün serinizin renklerinde kapaklar.",
+  m2_s1v:"Polietilen (PE) veya polipropilen (PP).",
+  m2_s2v:"5 gram ağırlığında 62 mm fren hidroliği kapağı dahil; diğer ölçüler talep üzerine.",
+  m2_s3v:"Yağ ve fren hidroliği ambalajları için sızdırmaz kapatma.",
+  m2_s4v:"Markanıza ya da ürün sınıfına uygun özel renkler.",
+  m2_s5v:"Yağ ve madeni yağ üreticileri için toplu ve sürekli tedarik.",
+
+  m3_h1:"Bidon kapakları ve 20 litrelik bidonlar için güvenlik bantlı kapaklar",
+  m3_lede:"Bidonlar için kapaklar; kabın açılıp açılmadığını bir bakışta gösteren 20 litrelik bidon güvenlik bantlı kapağı da dahil.",
+  m3_alt:"Farklı renklerde NEWCAP güvenlik bantlı bidon kapakları",
+  m3_p1:"Bir bidon genellikle bir şişeden daha uzun yol kat eder ve daha sert muamele görür: paletlere istiflenir, yüklenir, boşaltılır ve çoğu zaman dolumun yapıldığı yerden çok uzakta açılır. Kapak bu yolun tamamında kapalı kalmalı, alıcı da yolda kimsenin kabı açmadığını görebilmelidir.",
+  m3_p2:"NEWCAP, bidonlar için kapaklar üretir; buna ilk açılışta kopan güvenlik bantlı 20 litrelik bidon kapağı da dahildir. Kapaklar belirttiğiniz renkte üretilir ve toplu olarak tedarik edilir.",
+  m3_u1:"Endüstriyel kimyasallar ve madeni yağlar", m3_u1p:"Bir yerde doldurulup başka bir yerde açılan 20 litrelik bidonlar.",
+  m3_u2:"Deterjanlar ve temizlik ürünleri", m3_u2p:"Profesyonel ve kurumsal temizlik için büyük ambalajlar.",
+  m3_u3:"Gıda ve endüstriyel ambalaj", m3_u3p:"Alıcının, dolumdan beri açılmadığından emin olması gereken bidonlar.",
+  m3_s1v:"Polietilen (PE) veya polipropilen (PP).",
+  m3_s2v:"20 litrelik bidonlar dahil, çeşitli bidonlar için kapaklar.",
+  m3_s3v:"İlk açılışı gösteren güvenlik bandı.",
+  m3_s4v:"Siparişe göre her renk.",
+  m3_s5v:"Fabrikalar için toplu ve sürekli tedarik.",
+
+  m4_h1:"Sprey kapaklar, çocuk emniyetli kapaklar ve özel kapaklar",
+  m4_lede:"Sprey kapaklar, çocuk emniyetli kapaklar, yapıştırıcı kapları için taban ve kapaklar — ve hiçbir standart parça uymadığında şartnamenize göre üretilen kapaklar.",
+  m4_alt:"Sprey ve deterjan şişeleri üzerinde NEWCAP kapaklar",
+  m4_p1:"Bazı ürünler, kapatmaktan fazlasını yapan bir kapağa ihtiyaç duyar. Sprey bir ürün, dağıtım sistemiyle uyumlu bir kapak ister. Çocukların ulaşabileceği bir ev kimyasalı, bir yetişkinin açabileceği ama küçük bir çocuğun açamayacağı bir kapak ister. Yapıştırıcı ise havayı dışarıda tutan bir kaba ihtiyaç duyar; yoksa kullanılmadan sertleşir.",
+  m4_p2:"NEWCAP sprey kapaklar, çocuk emniyetli kapaklar ve yapıştırıcı kapları için taban ve kapaklar üretir. Kabınıza ya da ürününüze hiçbir standart parça uymadığında, ürününüzün özelliklerini inceler ve ihtiyacınıza uygun bir kapak üretiriz.",
+  m4_u1:"Ev kimyasalları", m4_u1p:"Çocukların elinden uzak tutulması gereken ürünler için çocuk emniyetli kapaklar.",
+  m4_u2:"Yapıştırıcılar", m4_u2p:"Yapıştırıcının sertleşmemesi için havayı kabın dışında tutan taban ve kapaklar.",
+  m4_u3:"Size özel kap", m4_u3p:"Hiçbir standart parçanın uymadığı bir ağız ya da ürün için özel kapak.",
+  m4_s1v:"Polietilen (PE) veya polipropilen (PP).",
+  m4_s2v:"Kaba göre — standart parça ya da şartnamenize göre.",
+  m4_s3v:"İçeriğe göre tasarlanır: yapıştırıcılar için hava geçirmez, gereken yerde çocuk emniyetli.",
+  m4_s4v:"Siparişe göre her renk.",
+  m4_s5v:"Toplu ve sürekli tedarik.",
+
+  a5_cat:"Otomotiv", a5_cat2:"Otomotiv", a5_rt:"4 dakikalık okuma",
+  a5_h1:"Motor yağı ve fren hidroliği şişeleri için kapak seçimi",
+  a5_lede:"Yağ ve fren hidroliği aynı küçük parçadan farklı şeyler bekler. Farkı bilmek, şartnamenin büyük kısmıdır.",
+  a5_p0:"Otomotiv sıvıları açılıp kapanan, atölyelerde saklanan ve araç bagajlarında taşınan ambalajlarda satılır. Tüm bu süreçte ürünü kullanılabilir ve rafı temiz tutan şey kapaktır — ve en yaygın iki sıvı, motor yağı ile fren hidroliği, bir kapağı farklı şekillerde sınar.",
+  a5_s1:"Fren hidroliğinin sorunu nemdir",
+  a5_p1:"Çoğu fren hidroliği — DOT 3, DOT 4 ve DOT 5.1 — glikol bazlıdır ve higroskopiktir: havadaki suyu emer. Su, hidroliğin kaynama noktasını düşürür; fren sisteminin dayandığı özellik de tam olarak budur. Bu nedenle kapak için sızdırmazlık görsel bir konu olmaktan çıkar: havayı içeri alan bir kapak, şişedeki ürünün ömrünü kısaltır.",
+  a5_s2:"Fren hidroliği yüzeylere de zarar verir",
+  a5_p2:"Glikol bazlı fren hidroliği boyaya ve bazı plastiklere zarar verir. Bir sızıntı yalnızca kolide bir leke değildir; araçta ya da atölyede iz bırakabilir. Kapak malzemesi de sızdırmazlık geometrisi de suya göre değil, sıvının kendisine göre seçilmelidir.",
+  a5_s3:"Motor yağının sorunu sızmadır",
+  a5_p3:"Yağ daha az aşındırıcıdır ama her boşluğu bulur. Su ile yapılan bir testte asla görünmeyecek küçük bir sızıntı yolu; şişe omzunda, etikette ve kolide yağlı bir tabaka bırakır — ve alıcı bunu ambalajda herhangi bir şey okumadan önce fark eder. Tutarlı ölçüler ve ağız üzerinde iyi kontrol edilen bir sızdırmazlık, her ek özellikten daha önemlidir.",
+  a5_s4:"Kapak tedarikçinize ne göndermelisiniz",
+  a5_p4:"Kabı ya da çizimini, sıvının tam türünü, kapaklama yöntemini ve istediğiniz rengi. Fren hidroliği için ambalajın uzun depolama boyunca da sızdırmaz kalması gerekip gerekmediğini belirtin. Bu dört yanıtla kapak, katalogdan seçilmek yerine doğru şekilde tanımlanabilir.",
+
+  a6_cat:"Tasarım", a6_cat2:"Tasarım", a6_rt:"4 dakikalık okuma",
+  a6_h1:"Sıvı deterjan ölçekli kapakları: neler belirtilmeli",
+  a6_lede:"Ölçekli kapak, tüketicinin her yıkamada eline aldığı ambalaj parçasıdır. Doğru tasarlamak çoğunlukla doz, şişe ve elle ilgilidir.",
+  a6_p0:"Deterjan ölçekli kapağı şişeyi kapatır ve her yıkama için ölçü kabı görevi görür. Her seferinde kullanıldığı için ürünün nasıl algılandığını neredeyse tüm diğer bileşenlerden daha fazla etkiler — ve tüketicinin doğru dozlama mı yapacağını yoksa gelişigüzel mi dökeceğini belirler.",
+  a6_s1:"Dozdan başlayın",
+  a6_p1:"Kapağın hacmi ve varsa ölçü çizgilerinin yeri, formülasyonun gerektirdiği dozdan çıkar. Konsantre bir deterjan daha küçük ve net işaretlenmiş bir doz ister. Gereğinden büyük bir kapak fazla kullanıma yol açar; bu hem ürünü israf eder hem de şişenin tüketicinin beklediğinden erken bitmesinin en yaygın nedenidir.",
+  a6_s2:"Yalnızca ölçüye değil, şişeye uydurun",
+  a6_p2:"Kapak şişe ağzına tam oturmalı ve kullanımlar arasında sızdırmazlık sağlamalıdır; çünkü sıvı deterjanlar yüzeyler boyunca yayılır. Aynı nominal ağız ölçüsüne sahip iki şişe bile sızıntıya yol açacak kadar farklı olabilir. Bu yüzden şişenin ölçülmüş bir numunesi, katalog ölçüsünden daha iyi bir temeldir.",
+  a6_s3:"Islak el için tasarlayın",
+  a6_p3:"Kapaklar ıslak ya da köpüklü ellerle çıkarılıp takılır. Kavrama, kenar bitişi ve kapağın şişeye ne kadar kolay geri oturduğu; tüketicinin kullanımdan sonra kapağı düzgün kapatıp kapatmayacağını belirler.",
+  a6_s4:"Rengi bilinçli kullanın",
+  a6_p4:"Kapak çoğu zaman raftaki en görünür renkli öğedir. Onu markayla eşleştirmek ya da her çeşide kendi kapak rengini vermek, tüketicinin geçen sefer aldığı ürünü yeniden bulmasına yardım eder."
+};
+
 const EN = {};
 document.querySelectorAll('[data-t]').forEach(el => EN[el.dataset.t] = el.innerHTML);
 Object.assign(EN, EN_ART); Object.assign(FA, FA_ART); Object.assign(TR, TR_ART);
+Object.assign(EN, EN_PROD); Object.assign(FA, FA_PROD); Object.assign(TR, TR_PROD);
 
 Object.assign(FA, {
   pc_vn:"در مقیاس تولید", pc_vt:"هر درپوش، درست مثل قبلی",
@@ -738,7 +1013,7 @@ products: () => `
 
 <section class="psec"><div class="wrap">
   <div class="split" data-rv>
-    <div class="sh"><img src="${IMG.hi_navycap}" alt=""></div>
+    <div class="sh"><img src="${IMG.hi_navycap}" alt="${tx('m1_alt')}"></div>
     <div>
       <div class="n" data-t="pp_n1">01</div>
       <h3 data-t="pp_t1">Measuring caps</h3>
@@ -749,10 +1024,12 @@ products: () => `
         <li><span data-t="pp_b1c">Any colour</span></li>
         <li><span data-t="pp_b1d">PE or PP</span></li>
       </ul>
+      <a class="link-all" href="${HREF('products/measuring-caps')}"><span data-t="pp_more">View details</span>
+        <svg class="ar" viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 5h13M9.6 1 14 5l-4.4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
   <div class="split rev" data-rv>
-    <div class="sh"><img src="${IMG.hi_whitecap}" alt=""></div>
+    <div class="sh"><img src="${IMG.hi_whitecap}" alt="${tx('m2_alt')}"></div>
     <div>
       <div class="n" data-t="pp_n2">02</div>
       <h3 data-t="pp_t2">Oil &amp; lubricant caps</h3>
@@ -763,10 +1040,12 @@ products: () => `
         <li><span data-t="pp_b2c">Leak-free sealing</span></li>
         <li><span data-t="pp_b2d">Custom colours</span></li>
       </ul>
+      <a class="link-all" href="${HREF('products/oil-lubricant-caps')}"><span data-t="pp_more">View details</span>
+        <svg class="ar" viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 5h13M9.6 1 14 5l-4.4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
   <div class="split" data-rv>
-    <div class="sh"><img src="${IMG.hi_colors}" alt=""></div>
+    <div class="sh"><img src="${IMG.hi_colors}" alt="${tx('m3_alt')}"></div>
     <div>
       <div class="n" data-t="pp_n3">03</div>
       <h3 data-t="pp_t3">Gallon caps</h3>
@@ -777,10 +1056,12 @@ products: () => `
         <li><span data-t="pp_b3c">Any colour</span></li>
         <li><span data-t="pp_b3d">Bulk supply</span></li>
       </ul>
+      <a class="link-all" href="${HREF('products/gallon-caps')}"><span data-t="pp_more">View details</span>
+        <svg class="ar" viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 5h13M9.6 1 14 5l-4.4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
   <div class="split rev" data-rv>
-    <div class="sh"><img src="${IMG.hi_bottles}" alt=""></div>
+    <div class="sh"><img src="${IMG.hi_bottles}" alt="${tx('m4_alt')}"></div>
     <div>
       <div class="n" data-t="pp_n4">04</div>
       <h3 data-t="pp_t4">Spray, child-resistant &amp; custom</h3>
@@ -791,6 +1072,8 @@ products: () => `
         <li><span data-t="pp_b4c">Adhesive container bases</span></li>
         <li><span data-t="pp_b4d">Custom closures</span></li>
       </ul>
+      <a class="link-all" href="${HREF('products/spray-child-resistant-caps')}"><span data-t="pp_more">View details</span>
+        <svg class="ar" viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 5h13M9.6 1 14 5l-4.4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
 </div></section>
@@ -1159,6 +1442,76 @@ contact: () => `
 };
 
 
+/* --------------------------- PRODUCT DETAIL PAGES --------------------------- */
+const tx = k => String((DICTS[lang] || EN)[k] || EN[k] || '').replace(/<[^>]+>/g, '').replace(/"/g, '&quot;');
+/* slug, copy prefix, image, related insight */
+const PROD_LIST = [
+  ['measuring-caps',             'm1', 'hi_navycap',  'detergent-measuring-caps', 'a6'],
+  ['oil-lubricant-caps',         'm2', 'hi_whitecap', 'oil-brake-fluid-caps',     'a5'],
+  ['gallon-caps',                'm3', 'hi_colors',   'tamper-evidence',          'a3'],
+  ['spray-child-resistant-caps', 'm4', 'hi_bottles',  'sealing-systems',          'a2']
+];
+const prodPage = (id, img, art, aid) => { const n = id.slice(1); return `
+<section class="psec phero"><div class="wrap">
+  <p class="eyebrow" data-rv><a href="${HREF('products')}"><span data-t="pp_eb">Our products</span></a><i></i></p>
+  <h1 data-rv style="--d:90ms" data-t="${id}_h1"></h1>
+  <p class="lede" data-rv style="--d:170ms" data-t="${id}_lede"></p>
+  <div class="hr"></div>
+</div></section>
+
+<section class="psec"><div class="wrap">
+  <h2 class="label" data-rv><span data-t="pd_ovL"></span><i></i></h2>
+  <div class="split pdsplit" data-rv>
+    <div class="sh"><img src="${IMG[img]}" alt="${tx(id + '_alt')}"></div>
+    <div>
+      <p data-t="${id}_p1"></p>
+      <p data-t="${id}_p2"></p>
+      <ul>
+        <li><span data-t="pp_b${n}a"></span></li>
+        <li><span data-t="pp_b${n}b"></span></li>
+        <li><span data-t="pp_b${n}c"></span></li>
+        <li><span data-t="pp_b${n}d"></span></li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="psec"><div class="wrap">
+  <h2 class="label" data-rv><span data-t="pd_uL"></span><i></i></h2>
+  <div class="steps" data-rv>
+    <div class="stp"><div class="k">01</div><h3 data-t="${id}_u1"></h3><p data-t="${id}_u1p"></p></div>
+    <div class="stp"><div class="k">02</div><h3 data-t="${id}_u2"></h3><p data-t="${id}_u2p"></p></div>
+    <div class="stp"><div class="k">03</div><h3 data-t="${id}_u3"></h3><p data-t="${id}_u3p"></p></div>
+  </div>
+</div></section>
+
+<section class="psec"><div class="wrap">
+  <h2 class="label" data-rv><span data-t="pd_spL"></span><i></i></h2>
+  <dl class="spec" data-rv>
+    ${[1,2,3,4,5].map(i => `<div class="row"><dt data-t="pd_s${i}"></dt><dd data-t="${id}_s${i}v"></dd></div>`).join('')}
+  </dl>
+</div></section>
+
+<section class="psec"><div class="wrap">
+  <h2 class="label" data-rv><span data-t="pd_oL"></span><i></i></h2>
+  <p class="t" data-rv data-t="pd_o"></p>
+  <a class="btn-o pdcta" href="${HREF('contact')}" data-rv><span data-t="pd_cta"></span>
+    <svg class="ar" viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 5h13M9.6 1 14 5l-4.4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div></section>
+
+<section class="psec"><div class="wrap">
+  <h2 class="label" data-rv><span data-t="pd_relL"></span><i></i></h2>
+  <div class="arts" data-rv>
+    <a class="acard" href="${HREF('insights/' + art)}">
+      <div class="k" data-t="${aid}_cat"></div>
+      <h3 data-t="${aid}_h1"></h3>
+      <p data-t="${aid}_lede"></p>
+      <div class="rt" data-t="${aid}_rt"></div>
+    </a>
+  </div>
+</div></section>`; };
+PROD_LIST.forEach(([slug, id, img, art, aid]) => { PAGES['products/' + slug] = () => prodPage(id, img, art, aid); });
+
 /* ------------------------------- ARTICLES ------------------------------- */
 const artShell = (id, cat, body) => `
 <section class="psec phero"><div class="wrap">
@@ -1171,6 +1524,7 @@ const artShell = (id, cat, body) => `
   <article class="art" data-rv>
     <p class="kicker"><b data-t="${id}_cat2">${cat}</b><span data-t="${id}_rt"></span></p>
     ${body}
+    ${ART_REL[id] ? `<p class="rel"><b data-t="ar_rel">Related product</b> — <a href="${HREF(ART_REL[id][0])}"><span data-t="${ART_REL[id][1]}"></span></a></p>` : ''}
     <div class="end">
       <a class="back" href="${HREF('resources')}">
         <svg viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.6">
@@ -1182,6 +1536,15 @@ const artShell = (id, cat, body) => `
   </article>
 </div></section>`;
 
+/* the product page each insight leads to */
+const ART_REL = {
+  a1: ['products', 'pp_h1'],
+  a2: ['products/spray-child-resistant-caps', 'pp_t4'],
+  a3: ['products/gallon-caps', 'pp_t3'],
+  a4: ['products', 'pp_h1'],
+  a5: ['products/oil-lubricant-caps', 'pp_t2'],
+  a6: ['products/measuring-caps', 'pp_t1']
+};
 const artBody = (id, n) => Array.from({length:n}, (_, i) =>
   `<h2 data-t="${id}_s${i+1}"></h2><p data-t="${id}_p${i+1}"></p>`).join('');
 
@@ -1189,10 +1552,13 @@ const ARTICLES = {
   'filling-line':   () => artShell('a1','Engineering',   `<p data-t="a1_p0"></p>` + artBody('a1',4)),
   'sealing-systems':() => artShell('a2','Materials',     `<p data-t="a2_p0"></p>` + artBody('a2',4)),
   'tamper-evidence':() => artShell('a3','Compliance',    `<p data-t="a3_p0"></p>` + artBody('a3',3)),
-  'recyclability':  () => artShell('a4','Sustainability',`<p data-t="a4_p0"></p>` + artBody('a4',4))
+  'recyclability':  () => artShell('a4','Sustainability',`<p data-t="a4_p0"></p>` + artBody('a4',4)),
+  'oil-brake-fluid-caps':     () => artShell('a5','Automotive',`<p data-t="a5_p0"></p>` + artBody('a5',4)),
+  'detergent-measuring-caps': () => artShell('a6','Design',    `<p data-t="a6_p0"></p>` + artBody('a6',4))
 };
 
 const ART_LIST = [
+  ['oil-brake-fluid-caps','a5'], ['detergent-measuring-caps','a6'],
   ['filling-line','a1'], ['sealing-systems','a2'], ['tamper-evidence','a3'], ['recyclability','a4']
 ];
 const insightsCards = () => ART_LIST.map(([slug,id]) => `
@@ -1211,18 +1577,24 @@ const SITE   = window.__SITE__ || '';            /* absolute origin, e.g. https:
 const ROUTE_META = {
   '':             ['heroTitle','heroLede'],
   'products':     ['pp_h1','pp_lede'],
-  'industries':   ['pi_h1','pi_lede'],
-  'capabilities': ['pc_h1','pc_lede'],
-  'quality':      ['pq_h1','pq_lede'],
-  'about':        ['pa_h1','pa_lede'],
-  'resources':    ['pr_h1','pr_lede'],
-  'contact':      ['pn_h1','pn_lede'],
+  'industries':   ['pi_h1','pi_lede','seo_industries'],
+  'capabilities': ['pc_h1','pc_lede','seo_capabilities'],
+  'quality':      ['pq_h1','pq_lede','seo_quality'],
+  'about':        ['pa_h1','pa_lede','seo_about'],
+  'resources':    ['pr_h1','pr_lede','seo_resources'],
+  'contact':      ['pn_h1','pn_lede','seo_contact'],
   'insights/filling-line':    ['a1_h1','a1_lede'],
   'insights/sealing-systems': ['a2_h1','a2_lede'],
   'insights/tamper-evidence': ['a3_h1','a3_lede'],
-  'insights/recyclability':   ['a4_h1','a4_lede']
+  'insights/recyclability':   ['a4_h1','a4_lede'],
+  'insights/oil-brake-fluid-caps':     ['a5_h1','a5_lede'],
+  'insights/detergent-measuring-caps': ['a6_h1','a6_lede'],
+  'products/measuring-caps':             ['m1_h1','m1_lede'],
+  'products/oil-lubricant-caps':         ['m2_h1','m2_lede'],
+  'products/gallon-caps':                ['m3_h1','m3_lede'],
+  'products/spray-child-resistant-caps': ['m4_h1','m4_lede']
 };
-const HREF = k => (window.__BOOT__ ? ((window.__BOOT__.lang==='fa'?'':'/'+window.__BOOT__.lang) + (k ? '/'+k : '/')) : '#/'+k);
+const HREF = k => (window.__BOOT__ ? langPath(window.__BOOT__.lang, k) : '#/'+k);
 const plain = h => String(h || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 
 /* static build: turn hash links into real page URLs, and keep the nav highlight working */
@@ -1233,7 +1605,7 @@ function fixLinks(root){
   });
 }
 
-const langPath = (l, key) => (l === 'fa' ? '' : '/' + l) + (key ? '/' + key : '/');
+function langPath(l, key){ return ((l === 'fa' ? '' : '/' + l) + (key ? '/' + key : '')) || '/'; }
 const absUrl   = (l, key) => SITE + langPath(l, key);
 const set = (id, attr, val) => { const e = document.getElementById(id); if (e) e.setAttribute(attr, val); };
 
@@ -1242,7 +1614,8 @@ function updateSEO(key, l){
   const m = ROUTE_META[key] || ROUTE_META[''];
   const isHome = !key;
   const name = plain(d[m[0]]);
-  const title = isHome ? meta.title : name + (l === 'fa' ? ' | نیوکپ' : ' | NEWCAP Closures');
+  const seoName = (m[2] && plain(d[m[2]] || EN[m[2]])) || name;      /* keyword title where the H1 is a slogan */
+  const title = isHome ? meta.title : seoName + (l === 'fa' ? ' | نیوکپ' : ' | NEWCAP');
   const desc = plain(d[m[1]]).slice(0, 300);
   document.title = title;
   set('mDesc','content',desc);
@@ -1272,20 +1645,47 @@ function updateSEO(key, l){
     publisher:{ "@id": (SITE || 'https://newcapgroup.com') + '/#org' }
   }];
   if (key.startsWith('insights/')) {
-    graph.push({ "@type":"Article", headline: name, description: desc,
+    graph.push({ "@type":"Article", headline: name, description: desc, image: (SITE || 'https://newcapgroup.com') + '/og.png',
       inLanguage: l, mainEntityOfPage: absUrl(l,key),
       author:{ "@id": (SITE || 'https://newcapgroup.com') + '/#org' },
       publisher:{ "@id": (SITE || 'https://newcapgroup.com') + '/#org' } });
   }
+  const prod = key.startsWith('products/') ? PROD_LIST.find(p => 'products/' + p[0] === key) : null;
+  if (prod) {
+    graph.push({ "@type":"Product", name: name, description: desc,
+      image: (SITE || 'https://newcapgroup.com') + String(IMG[prod[2]]).split('?')[0],
+      url: absUrl(l,key), category: "Plastic closures",
+      material: "Polyethylene (PE), Polypropylene (PP)",
+      brand: { "@type":"Brand", name:"NEWCAP" },
+      manufacturer: { "@id": (SITE || 'https://newcapgroup.com') + '/#org' } });
+  }
+  if (key === 'resources') {
+    const qa = [1,2,3,4,5,6].filter(i => d['pr_q'+i] && d['pr_a'+i]);
+    if (qa.length) graph.push({ "@type":"FAQPage", mainEntity: qa.map(i => ({ "@type":"Question",
+      name: plain(d['pr_q'+i]), acceptedAnswer: { "@type":"Answer", text: plain(d['pr_a'+i]) } })) });
+  }
   if (key) {
-    graph.push({ "@type":"BreadcrumbList", itemListElement:[
-      { "@type":"ListItem", position:1, name:"NEWCAP", item: absUrl(l,'') },
-      { "@type":"ListItem", position:2, name: name, item: absUrl(l,key) }
-    ]});
+    const crumbs = [{ "@type":"ListItem", position:1, name:"NEWCAP", item: absUrl(l,'') }];
+    if (prod) crumbs.push({ "@type":"ListItem", position:2, name: plain(d.pp_h1 || EN.pp_h1), item: absUrl(l,'products') });
+    if (key.startsWith('insights/')) crumbs.push({ "@type":"ListItem", position:2, name: plain(d.pr_h1 || EN.pr_h1), item: absUrl(l,'resources') });
+    crumbs.push({ "@type":"ListItem", position: crumbs.length + 1, name: name, item: absUrl(l,key) });
+    graph.push({ "@type":"BreadcrumbList", itemListElement: crumbs });
   }
   const ld = document.getElementById('ld');
   if (ld) ld.textContent = JSON.stringify({ "@context":"https://schema.org", "@graph": graph });
 }
+
+/* English copy lives in the page templates; collect it once so any page can use
+   any key (a product page reuses the bullets written on the products page)   */
+(() => {
+  const tpl = document.createElement('template');
+  Object.values(PAGES).forEach(f => {
+    try { tpl.innerHTML = f(); } catch(e) { return; }
+    tpl.content.querySelectorAll('[data-t]').forEach(el => {
+      if (!(el.dataset.t in EN) && el.innerHTML.trim()) EN[el.dataset.t] = el.innerHTML;
+    });
+  });
+})();
 
 /* ------------------------------- router ------------------------------- */
 const home = document.getElementById('home'), sub = document.getElementById('sub');
@@ -1334,7 +1734,7 @@ function route(){
   } else {
     sub.hidden = true; sub.innerHTML = ''; home.hidden = false;
   }
-  markNav(art ? 'resources' : key);
+  markNav(art ? 'resources' : key.split('/')[0]);
   nav.classList.remove('open');
   updateSEO(key, lang);
   if (!BOOT) window.scrollTo(0, 0);
@@ -1931,6 +2331,10 @@ function initHero3D(){
 
 /* ------------------------ search ------------------------ */
 const INDEX = [
+  {k:'m1_h1', s:'m1_lede', href:'#/products/measuring-caps'},
+  {k:'m2_h1', s:'m2_lede', href:'#/products/oil-lubricant-caps'},
+  {k:'m3_h1', s:'m3_lede', href:'#/products/gallon-caps'},
+  {k:'m4_h1', s:'m4_lede', href:'#/products/spray-child-resistant-caps'},
   {k:'pt1', s:'ps1', href:'#/products'},
   {k:'pt4', s:'ps4', href:'#/products'},
   {k:'it1', s:'is1', href:'#/industries'}, {k:'it2', s:'is2', href:'#/industries'},
@@ -1947,7 +2351,7 @@ function closeSheet(){ sheet.removeAttribute('open'); }
 function render(v){
   const d = DICTS[lang] || EN;
   const q = v.trim().toLowerCase();
-  const hits = INDEX.filter(i => !q || strip(d[i.k]||'').toLowerCase().includes(q) || strip(d[i.s]||'').toLowerCase().includes(q));
+  const hits = INDEX.filter(i => d[i.k]).filter(i => !q || strip(d[i.k]||'').toLowerCase().includes(q) || strip(d[i.s]||'').toLowerCase().includes(q));
   res.innerHTML = hits.length
     ? hits.map(i => `<li><a href="${i.href}">${strip(d[i.k]||'')}<small>${strip(d[i.s]||'')}</small></a></li>`).join('')
     : `<div class="empty">${ {fa:'نتیجه‌ای یافت نشد. عبارت دیگری را امتحان کنید.',

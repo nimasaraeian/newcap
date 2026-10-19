@@ -455,9 +455,9 @@ html[lang="fa"] .split ul li{font-size:11.5rem;line-height:20rem}
   transition:transform .25s var(--ease),border-color .25s}
 .stp:hover{transform:translateY(-3rem);border-color:rgba(255,122,0,.35);box-shadow:var(--shadow-lg)}
 .stp .k{font-size:22rem;font-weight:800;color:var(--orange);line-height:1}
-.stp h4{margin:12rem 0 0;font-size:12.5rem;line-height:16rem;font-weight:800;
+.stp h4,.stp h3{margin:12rem 0 0;font-size:12.5rem;line-height:16rem;font-weight:800;
   text-transform:uppercase;letter-spacing:.05em;color:var(--navy)}
-html[lang="fa"] .stp h4{text-transform:none;letter-spacing:0;font-size:13.5rem}
+html[lang="fa"] .stp h4,html[lang="fa"] .stp h3{text-transform:none;letter-spacing:0;font-size:13.5rem}
 .stp p{margin:9rem 0 0;font-size:11rem;line-height:16.5rem;color:var(--body)}
 html[lang="fa"] .stp p{font-size:11.5rem;line-height:20rem}
 
@@ -522,8 +522,8 @@ html[dir="ltr"] .back svg{transform:scaleX(-1)}
 .acard:hover{transform:translateY(-3rem);box-shadow:var(--shadow-lg)}
 .acard .k{font-size:9rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--orange)}
 html[lang="fa"] .acard .k{letter-spacing:0;text-transform:none;font-size:10.5rem}
-.acard h4{margin:11rem 0 0;font-size:15rem;line-height:20rem;font-weight:800;color:var(--navy)}
-html[lang="fa"] .acard h4{font-size:15.5rem;line-height:25rem}
+.acard h4,.acard h3{margin:11rem 0 0;font-size:15rem;line-height:20rem;font-weight:800;color:var(--navy)}
+html[lang="fa"] .acard h4,html[lang="fa"] .acard h3{font-size:15.5rem;line-height:25rem}
 .acard p{margin:10rem 0 0;font-size:11.5rem;line-height:17rem;color:var(--body)}
 html[lang="fa"] .acard p{font-size:12rem;line-height:21rem}
 .acard .rt{margin-top:14rem;font-size:9.5rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sub)}
@@ -533,7 +533,7 @@ html[lang="fa"] .acard .rt{letter-spacing:0;text-transform:none;font-size:11rem}
   .art{max-width:none}
   .art p{font-size:14px;line-height:23px}
   .art h2{font-size:17px;line-height:23px;margin:24px 0 10px}
-  .acard h4{font-size:17px;line-height:23px}
+  .acard h4,.acard h3{font-size:17px;line-height:23px}
   .acard p{font-size:13px;line-height:20px}
 }
 
@@ -586,7 +586,7 @@ html[lang="fa"] .info .it span{font-size:12.5rem;line-height:21rem}
   .split p,.psec p.t{font-size:14px;line-height:23px}
   .split ul li{font-size:13px;line-height:20px}
   .steps,.tiles{grid-template-columns:1fr;gap:10px}
-  .stp h4{font-size:14px}.stp p{font-size:13px;line-height:20px}
+  .stp h4,.stp h3{font-size:14px}.stp p{font-size:13px;line-height:20px}
   .tile h4{font-size:15px}.tile p{font-size:13px;line-height:20px}
   .spec .row{grid-template-columns:1fr;gap:6px}
   .spec dt{font-size:13px}.spec dd{font-size:13px;line-height:21px}
@@ -1202,3 +1202,15 @@ html.js [data-rv]{filter:none!important}
   .hero .stage .drag-hint{bottom:10px;font-size:11.5px;padding:7px 14px 7px 30px}
   html[dir="rtl"] .hero .stage .drag-hint{padding:7px 30px 7px 14px}
 }
+
+/* product detail pages, related links */
+.split .link-all{margin-top:18rem}
+.pdsplit p + p{margin-top:10rem}
+.pdcta{width:170rem;height:34rem;margin-top:18rem}
+.eyebrow a{color:inherit}
+.eyebrow a:hover{text-decoration:underline;text-underline-offset:3rem}
+.art .rel{margin:26rem 0 0;padding-top:16rem;border-top:1rem solid var(--hair)}
+.art .rel b{color:var(--navy)}
+.art .rel a{color:var(--orange);font-weight:700}
+.art .rel a:hover{text-decoration:underline;text-underline-offset:3rem}
+@media (max-width:900px){.pdcta{width:auto;padding:0 22px;height:44px}}

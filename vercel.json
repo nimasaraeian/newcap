@@ -34,6 +34,50 @@
    }
   },
   {
+   "src": "/products/measuring-caps",
+   "dest": "/products-measuring-caps.html"
+  },
+  {
+   "src": "/products/measuring-caps/",
+   "status": 308,
+   "headers": {
+    "Location": "/products/measuring-caps"
+   }
+  },
+  {
+   "src": "/products/oil-lubricant-caps",
+   "dest": "/products-oil-lubricant-caps.html"
+  },
+  {
+   "src": "/products/oil-lubricant-caps/",
+   "status": 308,
+   "headers": {
+    "Location": "/products/oil-lubricant-caps"
+   }
+  },
+  {
+   "src": "/products/gallon-caps",
+   "dest": "/products-gallon-caps.html"
+  },
+  {
+   "src": "/products/gallon-caps/",
+   "status": 308,
+   "headers": {
+    "Location": "/products/gallon-caps"
+   }
+  },
+  {
+   "src": "/products/spray-child-resistant-caps",
+   "dest": "/products-spray-child-resistant-caps.html"
+  },
+  {
+   "src": "/products/spray-child-resistant-caps/",
+   "status": 308,
+   "headers": {
+    "Location": "/products/spray-child-resistant-caps"
+   }
+  },
+  {
    "src": "/industries",
    "dest": "/industries.html"
   },
@@ -144,6 +188,28 @@
    }
   },
   {
+   "src": "/insights/oil-brake-fluid-caps",
+   "dest": "/insights-oil-brake-fluid-caps.html"
+  },
+  {
+   "src": "/insights/oil-brake-fluid-caps/",
+   "status": 308,
+   "headers": {
+    "Location": "/insights/oil-brake-fluid-caps"
+   }
+  },
+  {
+   "src": "/insights/detergent-measuring-caps",
+   "dest": "/insights-detergent-measuring-caps.html"
+  },
+  {
+   "src": "/insights/detergent-measuring-caps/",
+   "status": 308,
+   "headers": {
+    "Location": "/insights/detergent-measuring-caps"
+   }
+  },
+  {
    "src": "/en",
    "dest": "/en.html"
   },
@@ -163,6 +229,50 @@
    "status": 308,
    "headers": {
     "Location": "/en/products"
+   }
+  },
+  {
+   "src": "/en/products/measuring-caps",
+   "dest": "/en-products-measuring-caps.html"
+  },
+  {
+   "src": "/en/products/measuring-caps/",
+   "status": 308,
+   "headers": {
+    "Location": "/en/products/measuring-caps"
+   }
+  },
+  {
+   "src": "/en/products/oil-lubricant-caps",
+   "dest": "/en-products-oil-lubricant-caps.html"
+  },
+  {
+   "src": "/en/products/oil-lubricant-caps/",
+   "status": 308,
+   "headers": {
+    "Location": "/en/products/oil-lubricant-caps"
+   }
+  },
+  {
+   "src": "/en/products/gallon-caps",
+   "dest": "/en-products-gallon-caps.html"
+  },
+  {
+   "src": "/en/products/gallon-caps/",
+   "status": 308,
+   "headers": {
+    "Location": "/en/products/gallon-caps"
+   }
+  },
+  {
+   "src": "/en/products/spray-child-resistant-caps",
+   "dest": "/en-products-spray-child-resistant-caps.html"
+  },
+  {
+   "src": "/en/products/spray-child-resistant-caps/",
+   "status": 308,
+   "headers": {
+    "Location": "/en/products/spray-child-resistant-caps"
    }
   },
   {
@@ -276,6 +386,28 @@
    }
   },
   {
+   "src": "/en/insights/oil-brake-fluid-caps",
+   "dest": "/en-insights-oil-brake-fluid-caps.html"
+  },
+  {
+   "src": "/en/insights/oil-brake-fluid-caps/",
+   "status": 308,
+   "headers": {
+    "Location": "/en/insights/oil-brake-fluid-caps"
+   }
+  },
+  {
+   "src": "/en/insights/detergent-measuring-caps",
+   "dest": "/en-insights-detergent-measuring-caps.html"
+  },
+  {
+   "src": "/en/insights/detergent-measuring-caps/",
+   "status": 308,
+   "headers": {
+    "Location": "/en/insights/detergent-measuring-caps"
+   }
+  },
+  {
    "src": "/tr",
    "dest": "/tr.html"
   },
@@ -295,6 +427,50 @@
    "status": 308,
    "headers": {
     "Location": "/tr/products"
+   }
+  },
+  {
+   "src": "/tr/products/measuring-caps",
+   "dest": "/tr-products-measuring-caps.html"
+  },
+  {
+   "src": "/tr/products/measuring-caps/",
+   "status": 308,
+   "headers": {
+    "Location": "/tr/products/measuring-caps"
+   }
+  },
+  {
+   "src": "/tr/products/oil-lubricant-caps",
+   "dest": "/tr-products-oil-lubricant-caps.html"
+  },
+  {
+   "src": "/tr/products/oil-lubricant-caps/",
+   "status": 308,
+   "headers": {
+    "Location": "/tr/products/oil-lubricant-caps"
+   }
+  },
+  {
+   "src": "/tr/products/gallon-caps",
+   "dest": "/tr-products-gallon-caps.html"
+  },
+  {
+   "src": "/tr/products/gallon-caps/",
+   "status": 308,
+   "headers": {
+    "Location": "/tr/products/gallon-caps"
+   }
+  },
+  {
+   "src": "/tr/products/spray-child-resistant-caps",
+   "dest": "/tr-products-spray-child-resistant-caps.html"
+  },
+  {
+   "src": "/tr/products/spray-child-resistant-caps/",
+   "status": 308,
+   "headers": {
+    "Location": "/tr/products/spray-child-resistant-caps"
    }
   },
   {
@@ -405,6 +581,28 @@
    "status": 308,
    "headers": {
     "Location": "/tr/insights/recyclability"
+   }
+  },
+  {
+   "src": "/tr/insights/oil-brake-fluid-caps",
+   "dest": "/tr-insights-oil-brake-fluid-caps.html"
+  },
+  {
+   "src": "/tr/insights/oil-brake-fluid-caps/",
+   "status": 308,
+   "headers": {
+    "Location": "/tr/insights/oil-brake-fluid-caps"
+   }
+  },
+  {
+   "src": "/tr/insights/detergent-measuring-caps",
+   "dest": "/tr-insights-detergent-measuring-caps.html"
+  },
+  {
+   "src": "/tr/insights/detergent-measuring-caps/",
+   "status": 308,
+   "headers": {
+    "Location": "/tr/insights/detergent-measuring-caps"
    }
   },
   {
