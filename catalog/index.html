@@ -84,7 +84,7 @@ main{margin-right:var(--rail)}
 /* hero */
 .hero{min-height:min(860px,100svh);display:flex;align-items:center;padding-top:110px;overflow:hidden;background:radial-gradient(ellipse 60% 70% at 30% 50%,rgba(18,58,110,.9),transparent 70%),var(--ink)}
 #lattice{position:absolute;inset:0;width:100%;height:100%;display:block}
-.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:28px;align-items:center;width:100%}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:center;width:100%}
 .chip{display:inline-flex;gap:8px;align-items:center;font-size:12.5px;color:var(--text-2);border:1px solid var(--line-2);background:rgba(5,15,34,.6);border-radius:999px;padding:5px 14px}
 .chip b{color:var(--orange);font-weight:600}
 .hero h1{font-size:clamp(40px,6vw,78px);margin-top:22px;letter-spacing:-.01em;line-height:1.25}
@@ -524,6 +524,32 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .s-ask .tz{display:none}
 @media (prefers-reduced-motion:reduce){.sl *{animation:none!important}.ab-st .w{opacity:1}.ql svg{stroke-dashoffset:0}.dt-img i{transform:translate(-50%,-50%)}}
 
+
+/* hero tablet */
+.hstage{position:relative;max-width:100%;padding:6% 0 4%}
+.htab{position:relative;aspect-ratio:600/430;max-width:100%;perspective:1400px}
+.htilt{position:absolute;inset:0;transform:rotateX(18deg) rotateZ(-4deg);transform-origin:50% 70%;transform-style:preserve-3d;filter:drop-shadow(0 40px 40px rgba(0,0,0,.55))}
+.hsvg{width:100%;height:100%;display:block;overflow:visible}
+.hui{font-family:var(--mono);font-size:9px;fill:#7f8fb0}
+.hui2{font-family:var(--mono);font-size:10px;fill:#7fe0a4;letter-spacing:.1em;transition:opacity .6s}
+#hArt .s{fill:none;stroke:#9cbcec;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+#hArt .r{fill:none;stroke:rgba(156,188,236,.7);stroke-width:1;stroke-linecap:round}
+#hArt .o{fill:none;stroke:#ffb072;stroke-width:1.6;stroke-linecap:round}
+#hArt.done .s,#hArt.done .r,#hArt.done .o{opacity:.18;transition:opacity 1s}
+#hRender{transition:opacity 1s}
+.hpop{position:absolute;left:31.7%;top:26%;width:36.7%;opacity:0;pointer-events:none;transform-origin:50% 60%;filter:drop-shadow(0 30px 28px rgba(0,0,0,.55));z-index:2}
+.hpop.on{animation:hPop 1.6s var(--ease) forwards,hFloat 6s 1.6s ease-in-out infinite}
+@keyframes hPop{0%{opacity:0;transform:none}15%{opacity:1}100%{opacity:1;transform:translateY(-34%) scale(1.32)}}
+@keyframes hFloat{0%,100%{opacity:1;transform:translateY(-34%) scale(1.32)}50%{opacity:1;transform:translateY(-38%) scale(1.32) rotate(1.5deg)}}
+.hshadow{position:absolute;left:33%;top:62%;width:34%;height:9%;border-radius:50%;background:radial-gradient(ellipse,rgba(0,0,0,.55),transparent 70%);opacity:0;transform:scale(.6);transition:opacity 1.4s,transform 1.4s var(--ease);z-index:1}
+.hshadow.on{opacity:1;transform:scale(1)}
+.hreplay{position:absolute;left:0;bottom:-6px;font-family:var(--body);font-size:12px;color:var(--text-2);background:rgba(var(--ln),.06);border:1px solid var(--line);border-radius:999px;padding:5px 12px;cursor:pointer;opacity:0;transition:opacity .5s}
+.hreplay.on{opacity:1}
+@media (max-width:900px){.hstage{max-width:520px;margin-inline:auto;width:100%}}
+.s-cover .mnt[data-for="hstage"]{flex:1 1 auto;min-height:0;display:grid;place-items:center}
+.s-cover .hstage{width:100%;padding:0}
+.s-cover .hreplay{display:none}
+
 /* reveal */
 .rv{transition:transform 1s var(--ease),opacity 1s}
 .js .rv.pre{transform:translateY(34px);opacity:.15}
@@ -608,11 +634,42 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           <div class="fig"><div class="v"><span data-count="20">0</span><small>L</small></div><span>درب گالن پلمپ‌دار</span></div>
         </div>
       </div>
-      <div class="capstage" aria-hidden="true">
-        <div class="ring r1"></div><div class="ring r2"></div><div class="glow"></div>
-        <img src="png/newcap-cap-navy.png" alt="">
-        <span class="tag" style="top:14%;right:2%">MATERIAL <b>PE · PP</b></span>
-        <span class="tag" style="bottom:16%;left:0">COLOR <b>CUSTOM</b></span>
+      <div class="hstage" id="hstage">
+        <div class="htab" id="htab" role="img" aria-label="قلم روی تبلت درپوش نیوکپ را طراحی می‌کند و درپوش از صفحه بیرون می‌آید">
+          <div class="htilt">
+            <svg class="hsvg" viewBox="0 0 600 430" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="hBez" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a3f48"/><stop offset=".35" stop-color="#15171c"/><stop offset="1" stop-color="#0a0b0e"/></linearGradient>
+                <pattern id="hG" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="rgba(150,178,235,.07)"/></pattern>
+                <pattern id="hG2" width="100" height="100" patternUnits="userSpaceOnUse"><rect width="100" height="100" fill="url(#hG)"/><path d="M100 0H0V100" fill="none" stroke="rgba(150,178,235,.14)"/></pattern>
+                <radialGradient id="hScr" cx=".5" cy=".4" r=".75"><stop offset="0" stop-color="#11305a"/><stop offset="1" stop-color="#071428"/></radialGradient>
+                <linearGradient id="hGl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="rgba(255,255,255,.10)"/><stop offset=".35" stop-color="rgba(255,255,255,.02)"/><stop offset=".5" stop-color="rgba(255,255,255,0)"/></linearGradient>
+                <linearGradient id="hPen" x1="0" x2="1"><stop offset="0" stop-color="#c9ced6"/><stop offset=".25" stop-color="#ffffff"/><stop offset=".7" stop-color="#e6e9ee"/><stop offset="1" stop-color="#9ea5b0"/></linearGradient>
+                <filter id="hBl"><feGaussianBlur stdDeviation="5"/></filter>
+                <clipPath id="hClip"><rect x="26" y="24" width="548" height="382" rx="18"/></clipPath>
+              </defs>
+              <rect x="6" y="6" width="588" height="418" rx="36" fill="url(#hBez)" stroke="#6b717c" stroke-width="1.5"/>
+              <circle cx="300" cy="15" r="2.6" fill="#2c3a58"/>
+              <rect x="26" y="24" width="548" height="382" rx="18" fill="url(#hScr)"/>
+              <g clip-path="url(#hClip)">
+                <rect x="26" y="24" width="548" height="382" fill="url(#hG2)"/>
+                <rect x="26" y="24" width="548" height="24" fill="rgba(4,10,22,.75)"/>
+                <circle cx="44" cy="36" r="4" fill="#ff5f57"/><circle cx="57" cy="36" r="4" fill="#febc2e"/><circle cx="70" cy="36" r="4" fill="#28c840"/>
+                <text x="300" y="40" text-anchor="middle" class="hui">newcap-cap.dwg — NEWCAP Studio</text>
+                <g id="hArt"></g>
+                <image id="hRender" href="png/cap-navy.webp" x="190" y="112" width="220" height="220" opacity="0"/>
+                <text id="hDone" x="300" y="392" text-anchor="middle" class="hui2" opacity="0">✓ RENDER COMPLETE · NC-0001</text>
+                <rect x="26" y="24" width="548" height="382" fill="url(#hGl)" pointer-events="none"/>
+                <rect id="hSweep" x="-200" y="24" width="140" height="382" fill="rgba(255,255,255,.12)" transform="skewX(-18)"/>
+              </g>
+              <g id="hPenS" opacity=".35"><g transform="rotate(30)"><rect x="-5" y="-200" width="10" height="190" rx="5" fill="#000" filter="url(#hBl)"/></g></g>
+              <g id="hPenG"><g transform="rotate(30)"><path d="M0 0 L-5 -19 L5 -19 Z" fill="#e8eaee"/><path d="M0 0 L-1.3 -5 L1.3 -5 Z" fill="#3a3f47"/><rect x="-6" y="-205" width="12" height="187" rx="6" fill="url(#hPen)"/><rect x="-6" y="-21" width="12" height="4" fill="#d8dce2"/><rect x="-3.8" y="-196" width="1.4" height="160" rx=".7" fill="rgba(255,255,255,.9)"/></g></g>
+            </svg>
+          </div>
+          <img class="hpop" id="hPop" src="png/cap-navy.webp" alt="">
+          <span class="hshadow" id="hShadow" aria-hidden="true"></span>
+        </div>
+        <button type="button" class="hreplay" id="hReplay">دوباره ببینید</button>
       </div>
     </div>
   </section>
@@ -893,9 +950,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <div class="stop"><img src="img/logo-white.webp" alt="NEWCAP" width="92" height="17"><button type="button" class="sx" id="storyClose">کاتالوگ کامل</button></div>
     <div class="slides" id="slides">
 
-      <section class="sl s-cover" data-dur="6500">
-        <div class="cv-stage"><div class="cv-rings" aria-hidden="true"><i></i><i></i><i></i></div>
-        <img class="cv-cap" src="png/cap-navy.webp" alt="درپوش سرمه‌ای نیوکپ"></div>
+      <section class="sl s-cover" data-dur="9500" data-mount="hstage">
+        <div class="mnt" data-for="hstage"></div>
         <div class="cv-txt">
           <span class="sc-chip">کاتالوگ محصولات ۱۴۰۵ · <b class="rcp">ویژهٔ همکاران صنعت بسته‌بندی</b></span>
           <h2 class="cv-h"><span>جزئی کوچک،</span><span>تفاوتی بزرگ.</span></h2>
@@ -1001,6 +1057,42 @@ function draw(){cx.clearRect(0,0,W,H);
   if(k>.4){cx.beginPath();cx.arc(x,y,1.4,0,Math.PI*2);cx.fillStyle=`rgba(240,122,26,${k})`;cx.fill()}
  }}
 (function loop(){requestAnimationFrame(loop);if(!vis)return;t+=.02;draw()})();})();
+
+
+/* hero: a stylus sketches the cap on the tablet, it renders and lifts out of the screen */
+(()=>{
+const NS='http://www.w3.org/2000/svg',$=id=>D.getElementById(id),art=$('hArt'),pen=$('hPenG'),sh=$('hPenS');
+const CX=300,TY=172,RX=96,RY=30,BY=300;let run=0,px=470,py=330,h=40;
+const el=(t,a)=>{const e=D.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);art.append(e);return e};
+function place(x,y,hh){px=x;py=y;h=hh;pen.setAttribute('transform',`translate(${x.toFixed(1)} ${(y-hh*.3).toFixed(1)})`);sh.setAttribute('transform',`translate(${(x+hh*.7).toFixed(1)} ${(y+hh*.45).toFixed(1)})`);sh.setAttribute('opacity',(.4-hh*.004).toFixed(2))}
+function build(){art.innerHTML='';art.classList.remove('done');const P=[];
+ P.push(el('path',{d:`M${CX-RX} ${TY} A${RX} ${RY} 0 1 0 ${CX+RX} ${TY} A${RX} ${RY} 0 1 0 ${CX-RX} ${TY}`,class:'s'}));
+ P.push(el('path',{d:`M${CX-66} ${TY+4} A66 20 0 1 0 ${CX+66} ${TY+4} A66 20 0 1 0 ${CX-66} ${TY+4}`,class:'s'}));
+ P.push(el('path',{d:`M${CX-RX} ${TY} V${TY+38} M${CX+RX} ${TY} V${TY+38}`,class:'s'}));
+ P.push(el('path',{d:`M${CX-RX} ${TY+38} A${RX} ${RY} 0 0 0 ${CX+RX} ${TY+38}`,class:'s'}));
+ P.push(el('path',{d:`M${CX-RX+2} ${TY+40} L${CX-RX+6} ${BY} A${RX-6} ${RY-2} 0 0 0 ${CX+RX-6} ${BY} L${CX+RX-2} ${TY+40}`,class:'s'}));
+ for(let a=-80;a<=80;a+=8){const sn=Math.sin(a*Math.PI/180),cs=Math.cos(a*Math.PI/180),x=CX+(RX-4)*sn,y0=TY+38+RY*cs+4,y1=BY+(RY-2)*cs-2;P.push(el('path',{d:`M${x.toFixed(1)} ${y0.toFixed(1)} V${y1.toFixed(1)}`,class:'r',fast:1}))}
+ P.push(el('path',{d:`M${CX+48} ${TY+24} q3 10 1 20 h6 q2-10-1-20z`,class:'o'}));
+ return P}
+const sleep=(ms,id)=>new Promise(r=>setTimeout(()=>r(id===run),ms));
+function move(x,y,id){return new Promise(res=>{const x0=px,y0=py,h0=h,d=Math.hypot(x-x0,y-y0),dur=Math.min(420,90+d*1.1),t0=performance.now();(function f(n){if(id!==run)return res(false);const k=Math.min(1,(n-t0)/dur),e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;place(x0+(x-x0)*e,y0+(y-y0)*e,h0*(1-k)+Math.sin(k*Math.PI)*Math.min(22,6+d*.2));k<1?requestAnimationFrame(f):res(true)})(t0)})}
+function draw(p,id){return new Promise(res=>{const L=p.getTotalLength(),fast=p.getAttribute('fast');p.style.strokeDasharray=L;p.style.strokeDashoffset=L;const dur=Math.max(fast?40:220,L/(fast?2.6:.85)),t0=performance.now();(function f(n){if(id!==run)return res(false);const k=Math.min(1,(n-t0)/dur),e=fast?k:k*k*(3-2*k);p.style.strokeDashoffset=L*(1-e);const pt=p.getPointAtLength(L*e);place(pt.x,pt.y,0);k<1?requestAnimationFrame(f):res(true)})(t0)})}
+async function play(){const id=++run,P=build(),rd=$('hRender'),pop=$('hPop'),sd=$('hShadow'),done=$('hDone'),rp=$('hReplay');
+ rd.setAttribute('opacity',0);done.setAttribute('opacity',0);pop.classList.remove('on');sd.classList.remove('on');rp.classList.remove('on');place(470,330,40);
+ P.forEach(p=>{const L=p.getTotalLength();p.style.strokeDasharray=L;p.style.strokeDashoffset=L});
+ if(RM){P.forEach(p=>p.style.strokeDashoffset=0);art.classList.add('done');rd.setAttribute('opacity',.25);pop.style.opacity=1;pop.style.transform='translateY(-34%) scale(1.32)';sd.classList.add('on');place(500,300,50);return}
+ if(!await sleep(700,id))return;
+ for(const p of P){const st=p.getPointAtLength(0);if(!await move(st.x,st.y,id))return;if(!await draw(p,id))return}
+ if(!await move(500,330,id))return;
+ art.classList.add('done');rd.setAttribute('opacity',1);const sw=$('hSweep');sw.animate([{transform:'skewX(-18deg) translateX(0px)'},{transform:'skewX(-18deg) translateX(900px)'}],{duration:1300,easing:'cubic-bezier(.2,.8,.2,1)'});
+ if(!await sleep(900,id))return;done.setAttribute('opacity',1);
+ {const tb=$('htab').getBoundingClientRect(),rr=rd.getBoundingClientRect();pop.style.left=((rr.left-tb.left)/tb.width*100)+'%';pop.style.top=((rr.top-tb.top)/tb.height*100)+'%';pop.style.width=(rr.width/tb.width*100)+'%';sd.style.left=((rr.left-tb.left+rr.width*.08)/tb.width*100)+'%';sd.style.width=(rr.width*.84/tb.width*100)+'%';sd.style.top=((rr.bottom-tb.top-rr.height*.12)/tb.height*100)+'%'}
+ pop.classList.add('on');sd.classList.add('on');rd.setAttribute('opacity',.25);
+ if(!await sleep(1700,id))return;rp.classList.add('on')}
+$('hReplay').addEventListener('click',play);
+window.__heroPlay=play;
+play();
+})();
 
 /* count up */
 const countEls=[...D.querySelectorAll('[data-count]')];
@@ -1395,7 +1487,7 @@ const homes={};
 function mount(sl){(sl.dataset.mount||'').split(',').filter(Boolean).forEach(id=>{const n=D.getElementById(id);if(!n)return;if(!homes[id]){const ph=D.createComment('home:'+id);n.parentNode.insertBefore(ph,n);homes[id]=ph}sl.querySelector(`.mnt[data-for="${id}"]`).append(n)})}
 function unmountAll(){for(const id in homes){const n=D.getElementById(id),ph=homes[id];if(n&&ph.parentNode){ph.parentNode.insertBefore(n,ph);ph.remove()}delete homes[id]}}
 function show(i){if(i<0||i>=slides.length)return;const prev=slides[idx];if(prev){prev.classList.remove('on');if(prev.dataset.mount)unmountAll()}
- idx=i;const sl=slides[i];if(sl.dataset.mount)mount(sl);void sl.offsetWidth;sl.classList.add('on');
+ idx=i;const sl=slides[i];if(sl.dataset.mount)mount(sl);if(sl.dataset.mount==='hstage'&&window.__heroPlay)window.__heroPlay();void sl.offsetWidth;sl.classList.add('on');
  segs.forEach((s,k)=>{s.classList.toggle('done',k<i);s.querySelector('b').style.width=k<i?'100%':'0'});elapsed=0;t0=performance.now();
  D.getElementById('shint').style.display=i===0?'block':'none'}
 function tick(n){raf=requestAnimationFrame(tick);if(!open||paused)return;const sl=slides[idx],dur=+sl.dataset.dur;if(!dur){segs[idx].querySelector('b').style.width='100%';return}
