@@ -935,6 +935,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         </div>
         <div class="contact">
           <div class="row"><div><div class="k">واتساپ فروش</div><div class="v mono" id="wa">+98 903 262 0344</div></div><button class="copy" type="button" id="copyWa">کپی</button></div>
+          <div class="row"><div><div class="k">تلفن فروش</div><div class="v mono" id="tel1">0930 168 2111</div></div><button class="copy" type="button" data-copy="09301682111" data-sel="tel1">کپی</button></div>
           <div class="row"><div><div class="k">وب‌سایت</div><div class="v lat">newcapgroup.com</div></div></div>
           <div class="row"><div><div class="k">کارخانه</div><div class="v">شهرک صنعتی اشتهارد</div></div></div>
         </div>
@@ -1019,6 +1020,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <p>مشخصات ظرف و تیراژ را بفرستید؛ پیشنهاد فنی و قیمت را برای <b class="rcp2">شما</b> آماده می‌کنیم.</p>
         <a class="btn p ak-b" href="https://wa.me/989032620344">پیام در واتساپ</a>
         <div class="ak-row"><span class="mono" id="waS">+98 903 262 0344</span><button type="button" class="copy" id="copyWaS">کپی</button></div>
+        <div class="ak-row"><span class="mono" id="telS">0930 168 2111</span><button type="button" class="copy" data-copy="09301682111" data-sel="telS">کپی</button></div>
         <div class="ak-links"><a href="https://newcapgroup.com/">newcapgroup.com</a><button type="button" class="sx2" id="storyFull">دیدن کاتالوگ کامل</button></div>
       </section>
     </div>
@@ -1518,6 +1520,8 @@ let seen=false;try{seen=sessionStorage.getItem('nc-story')==='1'}catch(_){}
 if(matchMedia('(max-width:700px)').matches&&!seen){try{sessionStorage.setItem('nc-story','1')}catch(_){}setTimeout(openStory,300)}
 })();
 
+/* copy: phone numbers */
+D.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',()=>{const sel=()=>{const r=D.createRange();r.selectNodeContents(D.getElementById(b.dataset.sel));const s=getSelection();s.removeAllRanges();s.addRange(r)};try{navigator.clipboard.writeText(b.dataset.copy).then(()=>{b.textContent='کپی شد';setTimeout(()=>b.textContent='کپی',1600)},sel)}catch(_){sel()}}));
 /* copy */
 D.getElementById('copyWa').addEventListener('click',e=>{const b=e.currentTarget;const sel=()=>{const r=D.createRange();r.selectNodeContents(D.getElementById('wa'));const s=getSelection();s.removeAllRanges();s.addRange(r)};try{navigator.clipboard.writeText('+989032620344').then(()=>{b.textContent='کپی شد';setTimeout(()=>b.textContent='کپی',1600)},sel)}catch(_){sel()}});
 </script>
