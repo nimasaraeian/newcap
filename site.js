@@ -1063,7 +1063,7 @@ resources: () => `
 <section class="psec"><div class="wrap">
   <h2 class="label" data-rv><span data-t="pr_dL">Documents &amp; advice</span><i></i></h2>
   <div class="tiles" data-rv>
-    <a class="tile" href="${HREF('contact')}"><div class="k" data-t="pr_d1k">View online · Persian</div><h4 data-t="pr_d1">Product catalogue</h4>
+    <a class="tile" href="https://catalog.newcapgroup.com/" target="_blank" rel="noopener"><div class="k" data-t="pr_d1k">View online · Persian</div><h4 data-t="pr_d1">Product catalogue</h4>
       <p data-t="pr_d1p">The full NEWCAP range in an interactive catalogue. Open it in your browser or on your phone (in Persian).</p></a>
     <a class="tile" href="${HREF('contact')}"><div class="k" data-t="pr_d2k">On request</div><h4 data-t="pr_d2">Product specifications</h4>
       <p data-t="pr_d2p">Material, size, weight and colour for each product, supplied on request.</p></a>
