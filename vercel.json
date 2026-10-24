@@ -10,7 +10,20 @@
    ],
    "status": 308,
    "headers": {
-    "Location": "https://newcapgroup.com/"
+    "Location": "https://newcapgroup.com/",
+    "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
+    "Clear-Site-Data": "\"cache\", \"storage\"",
+    "X-Robots-Tag": "noindex, nofollow"
+   }
+  },
+  {
+   "src": "/catalog(?:/.*)?",
+   "status": 308,
+   "headers": {
+    "Location": "https://newcapgroup.com/",
+    "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
+    "Clear-Site-Data": "\"cache\"",
+    "X-Robots-Tag": "noindex, nofollow"
    }
   },
   {
