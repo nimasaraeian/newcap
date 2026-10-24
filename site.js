@@ -249,7 +249,7 @@ const FA = {
   pr_eb:"منابع", pr_h1:"مدارک و پاسخ‌ها",
   pr_lede:"هر چیزی که معمولاً باید درخواستش کنید — جزئیات محصول، مدارک بنا به درخواست، و سؤال‌هایی که خریداران بیش از همه از ما می‌پرسند.",
   pr_dL:"مدارک و مشاوره",
-  pr_d1k:"مشاهدهٔ آنلاین", pr_d1:"کاتالوگ محصولات", pr_d1p:"کاتالوگ تعاملی همهٔ محصولات نیوکپ؛ همین حالا در مرورگر یا روی گوشی ببینید.",
+  pr_d1k:"بنا به درخواست", pr_d1:"کاتالوگ محصولات", pr_d1p:"کل سبد درپوش‌ها و کپ‌ها. نسخه‌ای از آن را از طریق واتساپ یا صفحهٔ تماس درخواست کنید.",
   pr_d2k:"بنا به درخواست", pr_d2:"مشخصات محصولات", pr_d2p:"جنس، ابعاد، وزن و رنگ هر محصول، بنا به درخواست.",
   pr_d3k:"مشاوره", pr_d3:"انتخاب درپوش", pr_d3p:"از محصولتان بگویید تا درپوش مناسبش را پیشنهاد کنیم.",
   pr_fL:"پرسش‌های پرتکرار",
@@ -423,7 +423,7 @@ const TR = {
   pr_eb:"Kaynaklar", pr_h1:"Belgeler ve yanıtlar",
   pr_lede:"Normalde istemeniz gereken her şey — ürün ayrıntıları, talep üzerine belgeler ve alıcıların bize en sık sorduğu sorular.",
   pr_dL:"Belgeler ve danışmanlık",
-  pr_d1k:"Çevrimiçi · Farsça", pr_d1:"Ürün kataloğu", pr_d1p:"NEWCAP ürün yelpazesinin tamamı etkileşimli bir katalogda. Tarayıcınızda veya telefonunuzda açın (Farsça).",
+  pr_d1k:"Talep üzerine", pr_d1:"Ürün kataloğu", pr_d1p:"Tüm kapak yelpazesi. Bir kopyasını WhatsApp veya iletişim sayfası üzerinden isteyin.",
   pr_d2k:"Talep üzerine", pr_d2:"Ürün özellikleri", pr_d2p:"Her ürünün malzemesi, ölçüsü, ağırlığı ve rengi; talep üzerine iletilir.",
   pr_d3k:"Danışmanlık", pr_d3:"Kapak seçimi", pr_d3p:"Ürününüzü anlatın, ona uygun kapağı önerelim.",
   pr_fL:"Sık sorulanlar",
@@ -1063,8 +1063,8 @@ resources: () => `
 <section class="psec"><div class="wrap">
   <h2 class="label" data-rv><span data-t="pr_dL">Documents &amp; advice</span><i></i></h2>
   <div class="tiles" data-rv>
-    <a class="tile" href="https://catalog.newcapgroup.com/" target="_blank" rel="noopener"><div class="k" data-t="pr_d1k">View online · Persian</div><h4 data-t="pr_d1">Product catalogue</h4>
-      <p data-t="pr_d1p">The full NEWCAP range in an interactive catalogue. Open it in your browser or on your phone (in Persian).</p></a>
+    <a class="tile" href="${HREF('contact')}"><div class="k" data-t="pr_d1k">On request</div><h4 data-t="pr_d1">Product catalogue</h4>
+      <p data-t="pr_d1p">The full range of closures and caps. Ask us for a copy on WhatsApp or through the contact page.</p></a>
     <a class="tile" href="${HREF('contact')}"><div class="k" data-t="pr_d2k">On request</div><h4 data-t="pr_d2">Product specifications</h4>
       <p data-t="pr_d2p">Material, size, weight and colour for each product, supplied on request.</p></a>
     <a class="tile" href="${HREF('contact')}"><div class="k" data-t="pr_d3k">Consultation</div><h4 data-t="pr_d3">Choosing a closure</h4>
