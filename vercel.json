@@ -1,6 +1,19 @@
 {
  "routes": [
   {
+   "src": "/(.*)",
+   "has": [
+    {
+     "type": "host",
+     "value": "catalog.newcapgroup.com"
+    }
+   ],
+   "status": 308,
+   "headers": {
+    "Location": "https://newcapgroup.com/"
+   }
+  },
+  {
    "src": "/fa",
    "status": 308,
    "headers": {
